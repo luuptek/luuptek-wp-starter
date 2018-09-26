@@ -1,0 +1,384 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"Project-Id-Version: Luuptek WP-Base\n"
+"POT-Creation-Date: 2016-04-07 23:15+0300\n"
+"PO-Revision-Date: 2016-04-07 23:13+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.6\n"
+"X-Poedit-Basepath: ../..\n"
+"X-Poedit-WPHeader: style.css\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: functions.php:131
+msgid "Title"
+msgstr ""
+
+#: library/classes/Breadcrumbs.php:255
+msgid "Browse:"
+msgstr ""
+
+#: library/classes/Breadcrumbs.php:256
+msgctxt "breadcrumbs aria label"
+msgid "Breadcrumbs"
+msgstr ""
+
+#: library/classes/Breadcrumbs.php:257
+msgid "Home"
+msgstr ""
+
+#: library/classes/Breadcrumbs.php:258
+msgid "404 Not Found"
+msgstr ""
+
+#: library/classes/Breadcrumbs.php:259
+msgid "Archives"
+msgstr ""
+
+#: library/classes/Breadcrumbs.php:261
+#, php-format
+msgid "Search results for &#8220;%s&#8221;"
+msgstr ""
+
+#: library/classes/Breadcrumbs.php:263 library/classes/Initialization.php:417
+#, php-format
+msgid "Page %s"
+msgstr ""
+
+#: library/classes/Breadcrumbs.php:265
+#, php-format
+msgid "Minute %s"
+msgstr ""
+
+#: library/classes/Breadcrumbs.php:267
+#, php-format
+msgid "Week %s"
+msgstr ""
+
+#: library/classes/Breadcrumbs.php:722
+msgctxt "minute and hour archives time format"
+msgid "g:i a"
+msgstr ""
+
+#: library/classes/Breadcrumbs.php:741
+msgctxt "minute archives time format"
+msgid "i"
+msgstr ""
+
+#: library/classes/Breadcrumbs.php:760
+msgctxt "hour archives time format"
+msgid "g a"
+msgstr ""
+
+#: library/classes/Breadcrumbs.php:778 library/classes/Breadcrumbs.php:812
+#: library/classes/Breadcrumbs.php:844 library/classes/Breadcrumbs.php:874
+#: library/classes/Breadcrumbs.php:1239
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr ""
+
+#: library/classes/Breadcrumbs.php:780 library/classes/Breadcrumbs.php:846
+#: library/classes/Breadcrumbs.php:1245
+msgctxt "monthly archives date format"
+msgid "F"
+msgstr ""
+
+#: library/classes/Breadcrumbs.php:782 library/classes/Breadcrumbs.php:1251
+msgctxt "daily archives date format"
+msgid "j"
+msgstr ""
+
+#: library/classes/Breadcrumbs.php:814
+msgctxt "weekly archives date format"
+msgid "W"
+msgstr ""
+
+#: library/classes/CPT-base.php:488
+msgid "Add New"
+msgstr ""
+
+#: library/classes/CPT-base.php:489 library/classes/CPT-base.php:607
+#, php-format
+msgid "Add New %s"
+msgstr ""
+
+#: library/classes/CPT-base.php:491 library/classes/CPT-base.php:601
+#, php-format
+msgid "Edit %s"
+msgstr ""
+
+#: library/classes/CPT-base.php:493
+#, php-format
+msgid "New %s"
+msgstr ""
+
+#: library/classes/CPT-base.php:495 library/classes/CPT-base.php:603
+#, php-format
+msgid "View %s"
+msgstr ""
+
+#: library/classes/CPT-base.php:497 library/classes/CPT-base.php:615
+#, php-format
+msgid "Search %s"
+msgstr ""
+
+#: library/classes/CPT-base.php:499 library/classes/CPT-base.php:625
+#, php-format
+msgid "No %s found"
+msgstr ""
+
+#: library/classes/CPT-base.php:501
+#, php-format
+msgid "No %s found in Trash"
+msgstr ""
+
+#: library/classes/CPT-base.php:503 library/classes/CPT-base.php:613
+#, php-format
+msgid "Parent %s:"
+msgstr ""
+
+#: library/classes/CPT-base.php:599
+#, php-format
+msgid "All %s"
+msgstr ""
+
+#: library/classes/CPT-base.php:605
+#, php-format
+msgid "Update %s"
+msgstr ""
+
+#: library/classes/CPT-base.php:609
+#, php-format
+msgid "New %s Name"
+msgstr ""
+
+#: library/classes/CPT-base.php:611
+#, php-format
+msgid "Parent %s"
+msgstr ""
+
+#: library/classes/CPT-base.php:617
+#, php-format
+msgid "Popular %s"
+msgstr ""
+
+#: library/classes/CPT-base.php:619
+#, php-format
+msgid "Separate %s with commas"
+msgstr ""
+
+#: library/classes/CPT-base.php:621
+#, php-format
+msgid "Add or remove %s"
+msgstr ""
+
+#: library/classes/CPT-base.php:623
+#, php-format
+msgid "Choose from most used %s"
+msgstr ""
+
+#: library/classes/CPT-base.php:743
+#, php-format
+msgid "%s"
+msgstr ""
+
+#: library/classes/CPT-base.php:819
+#, php-format
+msgid "No %s"
+msgstr ""
+
+#: library/classes/CPT-base.php:946
+#, php-format
+msgid "Show all %s"
+msgstr ""
+
+#: library/classes/CPT-base.php:1168 library/classes/CPT-base.php:1171
+#: library/classes/CPT-base.php:1174
+#, php-format
+msgid "%s updated."
+msgstr ""
+
+#: library/classes/CPT-base.php:1169
+msgid "Custom field updated."
+msgstr ""
+
+#: library/classes/CPT-base.php:1170
+msgid "Custom field deleted."
+msgstr ""
+
+#: library/classes/CPT-base.php:1172
+#, php-format
+msgid "%2$s restored to revision from %1$s"
+msgstr ""
+
+#: library/classes/CPT-base.php:1175
+#, php-format
+msgid "%s saved."
+msgstr ""
+
+#: library/classes/CPT-base.php:1176
+#, php-format
+msgid "%s submitted."
+msgstr ""
+
+#: library/classes/CPT-base.php:1178
+#, php-format
+msgid "%2$s scheduled for: <strong>%1$s</strong>."
+msgstr ""
+
+#: library/classes/CPT-base.php:1179
+msgid "M j, Y @ G:i"
+msgstr ""
+
+#: library/classes/CPT-base.php:1182
+#, php-format
+msgid "%s draft updated."
+msgstr ""
+
+#: library/classes/CPT-base.php:1201 library/classes/CPT-base.php:1203
+#: library/classes/CPT-base.php:1205 library/classes/CPT-base.php:1207
+#: library/classes/CPT-base.php:1209
+#, php-format
+msgid "%s "
+msgid_plural "%s "
+msgstr[0] ""
+msgstr[1] ""
+
+#: library/classes/Initialization.php:456
+#, php-format
+msgid "Please make sure your <a href=\"%s\">.htaccess</a> file is writable "
+msgstr ""
+
+#: library/classes/Settings.php:35
+msgid "Theme Options"
+msgstr ""
+
+#: library/classes/Settings.php:124
+msgid "General options"
+msgstr ""
+
+#: library/classes/Settings.php:129
+msgid "Tag-manager"
+msgstr ""
+
+#: library/classes/Settings.php:130
+msgid "Add here the full Tag-manager -snippet."
+msgstr ""
+
+#: library/classes/Settings.php:136
+msgid "Default post image"
+msgstr ""
+
+#: library/classes/Settings.php:137
+msgid "define default post image if no images are attached to post / page"
+msgstr ""
+
+#: library/classes/Settings.php:148
+msgid "Advanced Settings"
+msgstr ""
+
+#: library/classes/Settings.php:153
+msgid "Some code-area"
+msgstr ""
+
+#: library/classes/Settings.php:154
+msgid "Add here some code, which will be rendered somewhere"
+msgstr ""
+
+#: library/classes/Utils.php:35
+msgctxt "Previous post link"
+msgid "&larr;"
+msgstr ""
+
+#: library/classes/Utils.php:38
+msgctxt "Next post link"
+msgid "&rarr;"
+msgstr ""
+
+#: library/classes/Utils.php:43
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr ""
+
+#: library/classes/Utils.php:47
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: library/widgets/nav-menus.php:32
+msgid "Main menu"
+msgstr ""
+
+#: library/widgets/widgets.php:15
+msgid "Sidebar"
+msgstr ""
+
+#: partials/no-results-404.php:13
+msgid "Error 404: Page not found"
+msgstr ""
+
+#: partials/no-results-404.php:14
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+
+#: partials/no-results-search.php:13
+#, php-format
+msgid "No results found for %s"
+msgstr ""
+
+#: partials/no-results-search.php:14
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: partials/no-results.php:13
+msgid "Nothing found"
+msgstr ""
+
+#: partials/no-results.php:14
+msgid "It seems there's no content at this time. "
+msgstr ""
+
+#: search.php:16
+#, php-format
+msgid "Search Results for: %s"
+msgstr ""
+
+#: searchform.php:13
+msgctxt "label"
+msgid "Search for:"
+msgstr ""
+
+#: searchform.php:15
+msgid "Input search terms"
+msgstr ""
+
+#: searchform.php:16
+msgctxt "submit button"
+msgid "Search"
+msgstr ""
+
+#. Theme Name of the plugin/theme
+#. Description of the plugin/theme
+msgid "WP-Base"
+msgstr ""
+
+#. Theme URI of the plugin/theme
+#. Author URI of the plugin/theme
+msgid "https://www.luuptek.fi"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Luuptek"
+msgstr ""

@@ -1,0 +1,29 @@
+@import "common/fonts";
+@import "common/functions";
+@import "common/variables";
+
+// Import npm dependencies
+@import "~bootstrap/scss/bootstrap";
+@import "~font-awesome/scss/font-awesome";
+
+// Leaflet & Slick available..
+//@import "~leaflet/dist/leaflet.css";
+//@import "~slick-carousel/slick/slick.scss";
+//@import "~slick-carousel/slick/slick-theme.scss";
+
+// Global
+@import "common/global";
+@import "common/mixins";
+
+// Components
+@import "components/wp-classes";
+@import "components/buttons";
+@import "components/comments";
+@import "components/forms";
+@import "components/tinymce";
+@import "components/pagination";
+
+// Layouts & pages
+@import "layouts/header";
+@import "layouts/sidebar";
+@import "layouts/footer";
