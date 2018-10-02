@@ -42,3 +42,29 @@
     }
   }
 }
+
+.pagination {
+  a {
+    &.page-numbers {
+      padding: 0.5rem 1rem;
+      background-color: $primary;
+      color: #FFF;
+      text-decoration: none;
+      font-size: 1rem;
+
+      &:hover, &:focus, &:active {
+        background-color: lighten($primary, 15%);
+      }
+
+      &.current {
+        color: #000;
+        background-color: transparent;
+      }
+
+    }
+  }
+
+  .page-numbers {
+    padding: 0.5rem 1rem;
+  }
+}
