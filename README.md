@@ -33,8 +33,7 @@
 
 
 #### Available npm-scripts:
-* `yarn start`: Start `webpack`
-* `yarn start --proxyUrl http://playground.test`: Start webpack with proxy to `http://playground.test`
+* `yarn start`: Start `webpack` to browsersync `localhost:3000`
 * `yarn run prod`: Build assets for production
 * `yarn test`: Test scripts
 * `yarn run config`: Run project-config (On a fresh clone of this repo)
