@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Luuptek WP-Base\n"
 "POT-Creation-Date: 2018-10-05 09:45+0300\n"
-"PO-Revision-Date: 2018-10-05 09:58+0300\n"
+"PO-Revision-Date: 2018-10-05 10:01+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fi\n"
@@ -346,7 +346,7 @@ msgstr "Kirjat"
 #: library/custom-posts/books.php:19
 msgctxt "Partitive"
 msgid "Book"
-msgstr "Kirjaa"
+msgstr "kirjaa"
 
 #: library/custom-posts/books.php:20
 msgctxt "Partitive plural"
