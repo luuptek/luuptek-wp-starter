@@ -87,8 +87,6 @@ add_action( 'wp_head', function () {
     <link rel="icon" type="image/png" sizes="228x228" href="{$imageUri}/icons/coast-228x228.png">
     <link rel="icon" type="image/png" sizes="16x16" href="{$imageUri}/icons/favicon-16x16.png">
     <link rel="icon" type="image/png" sizes="32x32" href="{$imageUri}/icons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="{$imageUri}/icons/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="230x230" href="{$imageUri}/icons/favicon-230x230.png">
     
     <link rel="shortcut icon" href="{$imageUri}/icons/favicon.ico">
     <link rel="yandex-tableau-widget" href="{$imageUri}/icons/yandex-browser-manifest.json">
