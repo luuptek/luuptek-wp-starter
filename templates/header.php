@@ -17,8 +17,6 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 
-	<title><?php wp_title( '|', true, 'right' ); ?></title>
-
 	<!-- ============================================================ -->
 	<?php wp_head(); ?>
 	<!-- ============================================================ -->
