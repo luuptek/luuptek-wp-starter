@@ -12,7 +12,7 @@ $labels = [
 	'view_item' => _x( 'Edit item', 'View string for cpt', TEXT_DOMAIN ),
 ];
 
-$books = new CPT( [
+$cpt = new CPT( [
 	'post_type_name'   => 'book',
 	'singular'         => _x( 'Book', 'Single', TEXT_DOMAIN ),
 	'plural'           => _x( 'Books', 'Plural', TEXT_DOMAIN ),
@@ -23,6 +23,7 @@ $books = new CPT( [
 	'labels'        => $labels,
 	'hierarchical'  => true,
 	'menu_position' => 20,
+	'show_in_rest' => true,
 	'supports'      => [
 		'title',
 		'editor',
@@ -37,9 +38,9 @@ $books = new CPT( [
 
 ] );
 
-$books->menu_icon( "dashicons-editor-textcolor" );
-$books->set_textdomain( TEXT_DOMAIN );
-$books->register_taxonomy( [
+$cpt->menu_icon( "dashicons-editor-textcolor" );
+$cpt->set_textdomain( TEXT_DOMAIN );
+$cpt->register_taxonomy( [
 	'taxonomy_name'    => 'topic',
 	'singular'         => _x( 'Topic', 'Single', TEXT_DOMAIN ),
 	'plural'           => _x( 'Topics', 'Plural', TEXT_DOMAIN ),
