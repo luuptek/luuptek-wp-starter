@@ -1,9 +1,9 @@
 const path = require('path');
 const argv = require('minimist')(process.argv.slice(2));
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const config = require('../../package.json').config;
 
-const isProduction = !!((argv.env && argv.env.production) || argv.p);
+const isProduction = !!(argv.mode && argv.mode === 'production');
 // A bit nonsense, yet works...
 const publicPath = `/${path.dirname(process.cwd()).split(path.sep).slice(-2).concat(path.basename(process.cwd())).join('/')}/assets/dist/`;
 const entry = {};
@@ -74,41 +74,42 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        loader: ['css-hot-loader'].concat(ExtractTextPlugin.extract({
-          fallback: 'style-loader',
           use: [
-            { loader: 'cache-loader' },
-            {
-              loader: 'css-loader',
-              options: {
-                sourceMap: !isProduction
+              'css-hot-loader',
+              isProduction ? MiniCssExtractPlugin.loader : 'style-loader',
+              'cache-loader',
+              {
+                  loader: 'css-loader',
+                  options: {
+                      sourceMap: !isProduction
+                  }
               }
-            }],
-        })),
+          ]
       },
       {
         test: /\.scss$/,
-        include: path.resolve(__dirname, '../'),
-        loader: ['css-hot-loader'].concat(ExtractTextPlugin.extract({
-          fallback: 'style-loader',
           use: [
-            {
-              loader: 'css-loader',
-              options: {
-                sourceMap: !isProduction
+              'css-hot-loader',
+              isProduction ? MiniCssExtractPlugin.loader : 'style-loader',
+              {
+                  loader: 'css-loader',
+                  options: {
+                      sourceMap: !isProduction
+                  }
+              },
+              {
+                  loader: 'resolve-url-loader',
+                  options: {
+                      sourceMap: !isProduction
+                  }
+              },
+              {
+                  loader: 'sass-loader',
+                  options: {
+                      sourceMap: !isProduction
+                  }
               }
-            },
-            {
-              loader: 'resolve-url-loader',
-            },
-            {
-              loader: 'sass-loader',
-              options: {
-                sourceMap: !isProduction
-              }
-            },
-          ],
-        }))
+          ]
       },
       {
         test: /\.svg$/,

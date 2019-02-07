@@ -6,11 +6,13 @@ const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const WebpackCleanupPlugin = require('webpack-cleanup-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const ImageminPlugin = require('imagemin-webpack-plugin').default;
 const imageminMozjpeg = require('imagemin-mozjpeg');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 // const DashboardPlugin = require('webpack-dashboard/plugin');
+
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 const pkg = require('../../package.json');
 
@@ -73,10 +75,12 @@ const commonPlugins = [
       quality: 75,
     })]
   }),
-  new ExtractTextPlugin({
-    filename: 'styles/[name].css',
-    allChunks: true,
-  }),
+    new MiniCssExtractPlugin({
+        // Options similar to the same options in webpackOptions.output
+        // both options are optional
+        filename: 'styles/[name].css',
+        chunkFilename: "[id].css"
+    })
 ];
 
 /**
@@ -121,11 +125,15 @@ const developPlugins = [
 const productionPLugins = [
   new WebpackCleanupPlugin(),
   new webpack.optimize.OccurrenceOrderPlugin(),
-  new webpack.optimize.UglifyJsPlugin({
-    compressor: {
-      warnings: false
-    }
-  }),
+    new UglifyJsPlugin({
+        uglifyOptions: {
+            ecma: 5,
+            compress: {
+                warnings: true,
+                drop_console: true,
+            },
+        },
+    }),
   new OptimizeCssAssetsPlugin({
     cssProcessorOptions: {
       discardComments: {
