@@ -28,4 +28,6 @@ get_header();
 	<?php echo UTILS()->pagination(); ?>
 </section>
 
+<?php do_action( 'luuptek_wp_base_after_page' ); ?>
+
 <?php get_footer(); ?>

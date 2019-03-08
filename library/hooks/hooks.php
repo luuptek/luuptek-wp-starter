@@ -50,12 +50,16 @@ add_action( 'luuptek_wp_base_after_body', function () {
 } );
 
 /**
- * Hook anything here to output before page content
+ * Hook anything here to output before and after page content
  *
  * @hook luuptek_wp_base_before_page
  */
 add_action('luuptek_wp_base_before_page', function(){
+	echo '<div class="container">';
+});
 
+add_action('luuptek_wp_base_after_page', function(){
+	echo '</div>';
 });
 
 /**
