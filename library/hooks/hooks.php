@@ -50,6 +50,15 @@ add_action( 'luuptek_wp_base_after_body', function () {
 } );
 
 /**
+ * Hook anything here to output before page content
+ *
+ * @hook luuptek_wp_base_before_page
+ */
+add_action('luuptek_wp_base_before_page', function(){
+
+});
+
+/**
  * Add favicons / app-icons / manifests to head
  *
  * @hook wp_head
