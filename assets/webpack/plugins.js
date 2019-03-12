@@ -141,22 +141,6 @@ const productionPLugins = [
       },
       safe: true,
     }
-  }),
-  new FaviconsWebpackPlugin({
-    title: pkg.description,
-    logo: path.resolve(__dirname, '../images/logo-favicon.png'),
-    prefix: 'images/icons/',
-    statsFilename: 'iconstats-[hash].json',
-    icons: {
-      android: true,              // Create Android homescreen icon. `boolean`
-      appleIcon: true,            // Create Apple touch icons. `boolean` or `{ offset: offsetInPercentage }`
-      appleStartup: false,        // Create Apple startup images. `boolean`
-      coast: { offset: 25 },      // Create Opera Coast icon with offset 25%. `boolean` or `{ offset: offsetInPercentage }`
-      favicons: true,             // Create regular favicons. `boolean`
-      firefox: true,              // Create Firefox OS icons. `boolean` or `{ offset: offsetInPercentage }`
-      windows: true,              // Create Windows 8 tile icons. `boolean`
-      yandex: true                // Create Yandex browser icon. `boolean`
-    }
   })
 ];
 
