@@ -25,7 +25,7 @@ function luuptek_wp_base_main_menu() {
         'link_after'      => '',
         'items_wrap'      => '%3$s',
         'depth'           => 4,
-        'walker'          => new LuuptekWP\WP_navwalker
+        'walker'          => new WP_Bootstrap_Navwalker,
     ] );
 }
 
