@@ -22,4 +22,6 @@ get_header();
 	<?php get_template_part( 'partials/no-results', 'search' ); ?>
 <?php endif; ?>
 
+<?php do_action( 'luuptek_wp_base_after_page' ); ?>
+
 <?php get_footer(); ?>
