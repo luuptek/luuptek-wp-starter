@@ -1,0 +1,23 @@
+// Gutenberg color options
+// -- see editor-color-palette in functions.php
+$colors: (
+        'theme-primary': $primary,
+        'theme-secondary': $secondary,
+        'solid-black': #000,
+        'solid-white': #FFF,
+);
+
+@each $name, $color in $colors {
+
+  .has-text-color {
+    &.has-#{$name}-color {
+      color: $color;
+    }
+  }
+
+  .has-background, .wp-block-cover {
+    &.has-#{$name}-background-color {
+      background-color: $color;
+    }
+  }
+}

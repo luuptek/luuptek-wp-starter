@@ -55,11 +55,11 @@ add_action( 'luuptek_wp_base_after_body', function () {
  * @hook luuptek_wp_base_before_page
  */
 add_action('luuptek_wp_base_before_page', function(){
-	echo '<div class="container">';
+
 });
 
 add_action('luuptek_wp_base_after_page', function(){
-	echo '</div>';
+
 });
 
 /**

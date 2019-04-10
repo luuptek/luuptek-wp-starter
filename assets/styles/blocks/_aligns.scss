@@ -1,0 +1,18 @@
+.gutenberg {
+  padding-right: 15px;
+  padding-left: 15px;
+
+  > * {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 750px !important;
+  }
+
+  > .alignwide {
+    max-width: 1000px !important;
+  }
+
+  > .alignfull {
+    max-width: none !important;
+  }
+}
