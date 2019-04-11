@@ -29,6 +29,10 @@
 @import "layouts/footer";
 
 // WP blocks / Gutenberg
-@import "blocks/colors";
 @import "blocks/aligns";
 @import "blocks/blockquote";
+@import "blocks/colors";
+@import "blocks/cover";
+@import "blocks/gallery";
+@import "blocks/image";
+@import "blocks/paragraph";

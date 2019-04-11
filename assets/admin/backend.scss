@@ -10,3 +10,21 @@
   width: 300px;
   height: 60px;
 }
+
+/**
+ * Gutenberg back end stuff
+ */
+@import "../styles/common/fonts";
+@import "../styles/common/functions";
+@import "../styles/common/variables";
+
+// Import npm dependencies
+@import "~bootstrap/scss/bootstrap";
+
+.editor-styles-wrapper {
+  @import "../styles/blocks/blockquote";
+  @import "../styles/blocks/cover";
+  @import "../styles/blocks/image";
+  @import "../styles/blocks/paragraph";
+  @import "../styles/blocks/gallery";
+}

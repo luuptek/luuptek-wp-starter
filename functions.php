@@ -137,6 +137,7 @@ if ( ! function_exists( 'luuptek_wp_base_setup' ) ) :
 			);
 
 			add_theme_support( 'align-wide' );
+			add_theme_support('responsive-embeds');
 		}
 
 		/**
