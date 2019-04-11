@@ -187,47 +187,12 @@ function luuptek_wp_base_admin_style() {
 add_action( 'login_head', 'luuptek_wp_base_admin_style' );
 add_action( 'admin_head', 'luuptek_wp_base_admin_style' );
 
-add_action( 'admin_enqueue_scripts', function () {
-	wp_enqueue_script(
-		'luuptek_admin',
-		asset_uri( 'scripts/admin.min.js' ),
-		[ 'jquery' ],
-		luuptek_wp_base_theme()->get( 'Version' )
-	);
-} );
 
 /**
  * Add text to theme footer
  */
 add_filter( 'admin_footer_text', function () {
 	return '<span id="footer-thankyou">' . luuptek_wp_base_theme()->Name . ' by: <a href="' . luuptek_wp_base_theme()->AuthorURI . '" target="_blank">' . luuptek_wp_base_theme()->Author . '</a><span>';
-} );
-
-/**
- * Enqueue scripts and styles
- */
-add_action( 'wp_enqueue_scripts', function () {
-
-	/**
-	 * Main scripts file
-	 */
-	wp_enqueue_script(
-		'luuptek_theme',
-		asset_uri( 'scripts/main.min.js' ),
-		[ 'jquery' ],
-		luuptek_wp_base_theme()->get( 'Version' ),
-		true
-	);
-
-	/**
-	 * Main style
-	 */
-	wp_enqueue_style(
-		'luuptek_style',
-		asset_uri( 'styles/main.css' ),
-		[],
-		luuptek_wp_base_theme()->get( 'Version' )
-	);
 } );
 
 /**
