@@ -7,11 +7,37 @@
     margin-left: auto;
     margin-top: 2rem;
     margin-bottom: 2rem;
-    max-width: 750px !important;
+    @include media-breakpoint-up(md) {
+      max-width: map_get($container-max-widths, 'md') - 100px !important;
+    }
+
+    @include media-breakpoint-up(lg) {
+      max-width: map_get($container-max-widths, 'lg') - 100px !important;
+    }
+
+    @include media-breakpoint-up(xl) {
+      max-width: map_get($container-max-widths, 'xl') - 150px !important;
+    }
   }
 
   > .alignwide {
-    max-width: 1000px !important;
+    @include media-breakpoint-up(md) {
+      max-width: map_get($container-max-widths, 'md') + 100px !important;
+    }
+
+    @include media-breakpoint-up(lg) {
+      max-width: map_get($container-max-widths, 'lg') + 100px !important;
+    }
+
+    @include media-breakpoint-up(xl) {
+      max-width: map_get($container-max-widths, 'xl') + 150px !important;
+    }
+  }
+
+  > figure.alignfull, > figure.alignwide {
+    img {
+      min-width: 100%;
+    }
   }
 
   > .alignfull {
