@@ -23,10 +23,12 @@
 
 .editor-styles-wrapper {
   @import "../styles/blocks/blockquote";
+  @import "../styles/blocks/button";
   @import "../styles/blocks/cover";
   @import "../styles/blocks/embeds";
   @import "../styles/blocks/gallery";
   @import "../styles/blocks/image";
+  @import "../styles/blocks/table";
 }
 
 .editor-styles-wrapper .wp-block-media-text {

@@ -19,4 +19,14 @@
     @include make-col(6);
   }
 
+  &.has-media-on-the-right {
+    .wp-block-media-text__media {
+      order: 2;
+    }
+
+    .wp-block-media-text__content {
+      order: 1;
+    }
+  }
+
 }

@@ -1,0 +1,25 @@
+/**
+ * Table block
+ */
+
+.wp-block-table {
+  @extend .table;
+  @extend .table-bordered;
+
+  &.has-fixed-layout {
+    table-layout: fixed;
+  }
+
+  &.is-style-stripes {
+    @extend .table-striped;
+    border: none;
+
+    td {
+      border: none;
+    }
+  }
+
+  td {
+    border: 1px solid $primary;
+  }
+}
