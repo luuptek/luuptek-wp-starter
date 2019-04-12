@@ -24,8 +24,16 @@
 .editor-styles-wrapper {
   @import "../styles/blocks/blockquote";
   @import "../styles/blocks/cover";
-  @import "../styles/blocks/image";
-  @import "../styles/blocks/paragraph";
-  @import "../styles/blocks/gallery";
   @import "../styles/blocks/embeds";
+  @import "../styles/blocks/gallery";
+  @import "../styles/blocks/image";
+}
+
+.editor-styles-wrapper .wp-block-media-text {
+
+  display: grid;
+  @include media-breakpoint-up(md) {
+    grid-template-columns: 50% 50%;
+  }
+
 }
