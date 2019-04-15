@@ -1,0 +1,12 @@
+.main-nav {
+  background-color: $secondary;
+  padding: 1rem;
+
+  .nav-logo {
+    height: 30px;
+
+    @include media-breakpoint-up(lg) {
+      height: 40px;
+    }
+  }
+}
