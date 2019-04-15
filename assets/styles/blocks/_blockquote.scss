@@ -1,0 +1,33 @@
+.wp-block-quote {
+  &.is-style-default, &.is-style-large {
+    border-left: 1.5rem solid $primary;
+    margin: 1.5rem auto;
+    padding-left: 1.5rem;
+  }
+
+  &.is-style-large {
+    > p {
+      font-size: 2rem;
+    }
+  }
+
+  &.is-style-large {
+    > cite {
+      font-size: 1rem;
+    }
+  }
+
+  > p {
+    font-size: 1.2rem;
+  }
+
+  > cite {
+    font-size: 0.8rem;
+    opacity: 0.8;
+  }
+}
+
+.wp-block-pullquote {
+  border-top: 0.5rem solid $primary;
+  border-bottom: 0.5rem solid $primary;
+}

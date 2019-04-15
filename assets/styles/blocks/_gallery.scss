@@ -1,0 +1,58 @@
+/**
+ * Gallery block
+ */
+
+.wp-block-gallery {
+  @include make-row();
+  align-items: center;
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+
+  @include media-breakpoint-up(md) {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .blocks-gallery-item {
+    @include make-col-ready();
+
+    figure {
+      > figcaption {
+        text-align: center;
+        opacity: 0.8;
+      }
+    }
+  }
+
+  &.columns-2 {
+    .blocks-gallery-item {
+      @include make-col-ready();
+
+      @include media-breakpoint-up(md) {
+        @include make-col(6);
+      }
+    }
+  }
+
+  &.columns-3 {
+    .blocks-gallery-item {
+      @include make-col-ready();
+
+      @include media-breakpoint-up(md) {
+        @include make-col(4);
+      }
+    }
+  }
+
+  &.columns-4 {
+    .blocks-gallery-item {
+      @include make-col-ready();
+
+      @include media-breakpoint-up(md) {
+        @include make-col(3);
+      }
+    }
+  }
+}

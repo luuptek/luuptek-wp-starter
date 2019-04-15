@@ -27,3 +27,18 @@
 @import "layouts/header";
 @import "layouts/sidebar";
 @import "layouts/footer";
+
+// WP blocks / Gutenberg
+@import "blocks/aligns";
+@import "blocks/blockquote";
+@import "blocks/button";
+@import "blocks/colors";
+@import "blocks/columns";
+@import "blocks/cover";
+@import "blocks/embeds";
+@import "blocks/gallery";
+@import "blocks/image";
+@import "blocks/media_and_text";
+@import "blocks/paragraph";
+@import "blocks/separator";
+@import "blocks/table";

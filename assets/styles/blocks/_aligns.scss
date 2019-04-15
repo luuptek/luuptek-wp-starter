@@ -1,0 +1,45 @@
+.gutenberg {
+  padding-right: 15px;
+  padding-left: 15px;
+
+  > * {
+    margin-right: auto;
+    margin-left: auto;
+
+    @include media-breakpoint-up(md) {
+      max-width: map_get($container-max-widths, 'md') - 100px !important;
+    }
+
+    @include media-breakpoint-up(lg) {
+      max-width: map_get($container-max-widths, 'lg') - 150px !important;
+    }
+
+    @include media-breakpoint-up(xl) {
+      max-width: map_get($container-max-widths, 'xl') - 300px !important;
+    }
+  }
+
+  > .alignwide {
+    @include media-breakpoint-up(md) {
+      max-width: map_get($container-max-widths, 'md') !important;
+    }
+
+    @include media-breakpoint-up(lg) {
+      max-width: map_get($container-max-widths, 'lg') !important;
+    }
+
+    @include media-breakpoint-up(xl) {
+      max-width: map_get($container-max-widths, 'xl') !important;
+    }
+  }
+
+  > figure.alignfull, > figure.alignwide {
+    img {
+      min-width: 100%;
+    }
+  }
+
+  > .alignfull {
+    max-width: none !important;
+  }
+}

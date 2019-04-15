@@ -20,7 +20,7 @@
   },
   "config": {
     "port": 3000,
-    "proxyUrl": "http://playground.local",
+    "proxyUrl": "http://playground.test",
     "entries": {
       "main": [
         "./assets/scripts/main.js",
