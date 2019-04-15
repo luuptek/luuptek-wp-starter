@@ -5,8 +5,6 @@
   > * {
     margin-right: auto;
     margin-left: auto;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
 
     @include media-breakpoint-up(md) {
       max-width: map_get($container-max-widths, 'md') - 100px !important;

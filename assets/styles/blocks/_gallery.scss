@@ -4,10 +4,13 @@
 
 .wp-block-gallery {
   @include make-row();
-  margin-right: auto;
-  margin-left: auto;
   list-style-type: none;
   padding-left: 0;
+
+  @include media-breakpoint-up(md) {
+    margin-right: auto;
+    margin-left: auto;
+  }
 
   .blocks-gallery-item {
     @include make-col-ready();

@@ -3,9 +3,25 @@
 // Variables should follow the `$component-state-property-size` formula for
 // consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
 
+
+// Gutenberg stuff
+$opacitys: (
+        '10': 0.1,
+        '20': 0.2,
+        '30': 0.3,
+        '40': 0.4,
+        '50': 0.5,
+        '60': 0.6,
+        '70': 0.7,
+        '80': 0.8,
+        '90': 0.9,
+        '100': 1,
+);
+
 //Brand colors
 $luuptek-green: #5b9279 !default;
 $luuptek-dark: #2e3532 !default;
+
 
 
 //

@@ -4,8 +4,13 @@
 
 .wp-block-columns {
   @include make-row();
-  margin-right: auto;
-  margin-left: auto;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+
+  @include media-breakpoint-up(md) {
+    margin-right: auto;
+    margin-left: auto;
+  }
 
   .wp-block-column {
     @include make-col-ready();
