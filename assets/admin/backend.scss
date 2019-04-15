@@ -14,12 +14,17 @@
 /**
  * Gutenberg back end stuff
  */
+
+// Import npm dependencies
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/buttons";
+@import "~bootstrap/scss/tables";
+@import "~bootstrap/scss/grid";
 @import "../styles/common/fonts";
 @import "../styles/common/functions";
 @import "../styles/common/variables";
-
-// Import npm dependencies
-@import "~bootstrap/scss/bootstrap";
 
 .editor-styles-wrapper {
   @import "../styles/blocks/blockquote";
