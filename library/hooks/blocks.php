@@ -34,6 +34,7 @@ add_filter( 'allowed_block_types', function ( $allowed_block_types, $post ) {
 	$blocks[] = 'core/media-text';
 	$blocks[] = 'core/columns';
 	$blocks[] = 'core/spacer';
+	$blocks[] = 'core/separator';
 
 	/**
 	 * Widgets
