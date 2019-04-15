@@ -132,3 +132,58 @@ add_filter( 'rest_endpoints', function( $endpoints ){
 	}
 	return $endpoints;
 });
+
+
+/**
+ * Gutenberg block rendering
+ *
+ * @param $block_content
+ * @param $block
+ *
+ * @return string
+ */
+function luuptek_modify_block_rendering( $block_content, $block ) {
+
+	if ( $block['blockName'] === 'mainiota-blocks/blockquote' ) {
+		return sprintf(
+			'<div class="wp-block-mainiota-blocks-blockquote-section">%s</div>',
+			$block_content
+		);
+	} else {
+		return sprintf(
+			'<div class="container">%s</div>',
+			$block_content
+		);
+	}
+}
+
+/**
+ * Block rendering filter
+ *
+ * You can alter the block rendering by block here
+ */
+add_filter( 'render_block', function ( $block_content, $block ) {
+
+	/**
+	 * Adds table-responsive class prior to table
+	 */
+	if ( $block['blockName'] === 'core/table' ) {
+
+		$classes = '';
+
+		if($block['attrs']['align'] === 'full') {
+			$classes = ' alignfull';
+		}
+
+		if($block['attrs']['align'] === 'wide') {
+			$classes = ' alignwide';
+		}
+
+		return sprintf(
+			'<div class="table-responsive%s">%s</div>',
+			$classes, $block_content
+		);
+	}
+
+	return $block_content;
+}, 10, 2 );
