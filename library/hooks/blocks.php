@@ -64,10 +64,12 @@ add_filter( 'allowed_block_types', function ( $allowed_block_types, $post ) {
 	/**
 	 * Plugins
 	 */
+	$blocks[] = 'block-gallery/masonry';
 
 	/**
 	 * Custom
 	 */
+	//$blocks[] = 'acf/block-name';
 
 	return $blocks;
 }, 10, 2 );
