@@ -50,8 +50,9 @@
 │   ├── fonts
 │   ├── images
 │   ├── scripts
-│   │   ├── main
-│   │   └── vendor
+│   │   ├── routes
+│   │   └── util
+│   │       └── main.js
 │   ├── styles
 │   │   ├── common
 │   │   ├── components
@@ -68,7 +69,11 @@
 │   ├── template.tpl.php
 |
 ├── 3. library
+│   ├── acf-blocks
+│   │   ├── blocks.php
+│   ├── acf-data
 │   ├── classes
+│   │   ├── Bootstrap-navwalker.php
 │   │   ├── Breadcrumbs.php
 │   │   ├── CPT-base.php
 │   │   ├── Initalization.php
@@ -79,7 +84,6 @@
 │   ├── functions
 │   ├── hooks
 │   ├── lang
-│   ├── metaboxes
 │   └── widgets
 |
 ├── 4. partials
@@ -111,6 +115,7 @@
 Place your images, styles & javascripts here (they get smushed and build to `assets/dist`-folder on WebPack `prod`). Javascripts will be compiled to `admin.min.js` (WP-admin-scripts), `customizer.min.js` (WP Customizer js) and `main.js.min` (the main js-file).
 
 `styles`-dir is divided into smaller sections, each with it's responsibilities:
+* `blocks`: Gutenberg block styling
 * `common`: Global functions, settings, mixins & fonts
 * `components`: Single components, e.g. buttons, breadcrumbs, paginations etc.
 * `layouts`: General layouts for header, different pages, sidebar(s), footer etc.
@@ -120,12 +125,12 @@ Place your images, styles & javascripts here (they get smushed and build to `ass
 * Place your WordPress [custom-templates](https://developer.wordpress.org/themes/template-files-section/page-template-files/) here.
 
 **3. library**
+* `acf-blocks`/ `acf-data`: ACF block registering and using ACF JSON data
 * `classes`: Holds the helper & utility-classes and is autorequired in `functions.php`
 * `custom-posts`: Place your custom posts here. See example usage in `books.php.tpl`
 * `functions`: The place for misc. helper functions
 * `hooks`: The place for WP's `hooks`, `pre_get_posts` etc.
 * `lang`: i18n for the theme
-* `metaboxes`: Metabox-logic (CMB2 etc.) which is not tied to post-types can be added here
 * `widgets`: WP-nav menus & widgets
 
 **4. partials**
