@@ -11,6 +11,14 @@
 //@import "~slick-carousel/slick/slick.scss";
 //@import "~slick-carousel/slick/slick-theme.scss";
 
+/**
+ * If you are using slick, add these into variables
+ * otherwise yarn prod will fail
+ */
+// Slick to work on yarn prod
+//$slick-font-path: "~slick-carousel/slick/fonts/";
+//$slick-loader-path: "~slick-carousel/slick/";
+
 // Global
 @import "common/global";
 @import "common/mixins";
