@@ -86,6 +86,8 @@
 │   └── widgets
 |
 ├── 4. partials
+│   ├── blocks
+│   │   └── example-block.php
 │   ├── components
 │   ├── content-excerpt.php
 │   ├── content-page.php
