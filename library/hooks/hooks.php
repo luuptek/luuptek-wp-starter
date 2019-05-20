@@ -135,29 +135,6 @@ add_filter( 'rest_endpoints', function( $endpoints ){
 
 
 /**
- * Gutenberg block rendering
- *
- * @param $block_content
- * @param $block
- *
- * @return string
- */
-function luuptek_modify_block_rendering( $block_content, $block ) {
-
-	if ( $block['blockName'] === 'mainiota-blocks/blockquote' ) {
-		return sprintf(
-			'<div class="wp-block-mainiota-blocks-blockquote-section">%s</div>',
-			$block_content
-		);
-	} else {
-		return sprintf(
-			'<div class="container">%s</div>',
-			$block_content
-		);
-	}
-}
-
-/**
  * Block rendering filter
  *
  * You can alter the block rendering by block here
