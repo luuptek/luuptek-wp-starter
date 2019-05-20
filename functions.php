@@ -38,7 +38,7 @@ function luuptek_wp_base_set_imagesizes() {
 /**
  * If defined, the feed will be shown on admin dashboard
  */
-// define( 'FEED_URI', '' );
+define( 'FEED_URI', 'https://www.luuptek.fi/feed/?post_type=guide' );
 
 /**
  * Define Translation domain which will be used on WP __() & _e() -functions
@@ -137,7 +137,7 @@ if ( ! function_exists( 'luuptek_wp_base_setup' ) ) :
 			);
 
 			add_theme_support( 'align-wide' );
-			add_theme_support('responsive-embeds');
+			add_theme_support( 'responsive-embeds' );
 		}
 
 		/**
@@ -160,15 +160,13 @@ add_action( 'after_setup_theme', 'luuptek_wp_base_setup' );
  */
 add_action( 'wp_dashboard_setup', function () {
 	if ( defined( 'FEED_URI' ) ) {
-		add_meta_box( 'dashboard_custom_feed', 'Feed', 'luuptek_wp_base_feed', 'dashboard', 'side', 'low' );
+		add_meta_box( 'dashboard_custom_feed', __( 'Latest from WP-quide', TEXT_DOMAIN ), 'luuptek_wp_base_feed', 'dashboard', 'side', 'low' );
 	}
 
 	function luuptek_wp_base_feed() {
 		echo '<div class="rss-widget">';
-		wp_widget_rss_output( [
-			'url'          => FEED_URI,
-			'title'        => __( 'Title', TEXT_DOMAIN ),
-			'items'        => 2,
+		wp_widget_rss_output( FEED_URI, [
+			'items'        => 5,
 			'show_title'   => 0,
 			'show_summary' => 1,
 			'show_author'  => 0,
