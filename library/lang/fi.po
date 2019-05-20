@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Luuptek WP-Base\n"
-"POT-Creation-Date: 2018-10-05 09:45+0300\n"
-"PO-Revision-Date: 2018-10-05 10:01+0300\n"
+"POT-Creation-Date: 2019-05-20 09:46+0300\n"
+"PO-Revision-Date: 2019-05-20 09:47+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fi\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 2.1.1\n"
+"X-Generator: Poedit 2.2.1\n"
 "X-Poedit-Basepath: ../..\n"
 "X-Poedit-WPHeader: style.css\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -20,9 +20,33 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
-#: functions.php:144
-msgid "Title"
-msgstr "Otsikko"
+#: functions.php:117
+msgid "Theme primary"
+msgstr "Teeman pääväri"
+
+#: functions.php:122
+msgid "Theme secondary"
+msgstr "Teeman toissijainen väri"
+
+#: functions.php:127
+msgid "Solid black"
+msgstr "Musta"
+
+#: functions.php:132
+msgid "Solid white"
+msgstr "Valkoinen"
+
+#: functions.php:163
+msgid "Latest from WP-quide"
+msgstr "Viimeisintä WP-oppaasta"
+
+#: library/acf-blocks/blocks.php:20
+msgid "Block name"
+msgstr "Lohkon nimi"
+
+#: library/classes/Bootstrap-navwalker.php:366
+msgid "Add a menu"
+msgstr "Lisää menu"
 
 #: library/classes/Breadcrumbs.php:255
 msgid "Browse:"
@@ -257,7 +281,7 @@ msgstr[1] ""
 #: library/classes/Initialization.php:440
 #, php-format
 msgid "Please make sure your <a href=\"%s\">.htaccess</a> file is writable "
-msgstr ""
+msgstr "Onhan<a href=“%s”>.htaccess</a> tiedosto kirjoitettavissa "
 
 #: library/classes/Settings.php:35
 msgid "Theme Options"
@@ -353,22 +377,22 @@ msgctxt "Partitive plural"
 msgid "Books"
 msgstr "kirjoja"
 
-#: library/custom-posts/books.php:44
+#: library/custom-posts/books.php:45
 msgctxt "Single"
 msgid "Topic"
 msgstr "Aihe"
 
-#: library/custom-posts/books.php:45
+#: library/custom-posts/books.php:46
 msgctxt "Plural"
 msgid "Topics"
 msgstr "Aiheet"
 
-#: library/custom-posts/books.php:46
+#: library/custom-posts/books.php:47
 msgctxt "Partitive"
 msgid "Topic"
 msgstr "aihetta"
 
-#: library/custom-posts/books.php:47
+#: library/custom-posts/books.php:48
 msgctxt "Partitive plural"
 msgid "Topics"
 msgstr "aiheita"
@@ -377,9 +401,17 @@ msgstr "aiheita"
 msgid "Main menu"
 msgstr "Päävalikko"
 
-#: library/widgets/widgets.php:22
-msgid "Sidebar"
-msgstr "Sivuvalikko"
+#: library/widgets/widgets.php:23
+msgid "Footer 1/2"
+msgstr ""
+
+#: library/widgets/widgets.php:29
+msgid "Footer 2/2"
+msgstr ""
+
+#: partials/components/main-nav.php:8
+msgid "Toggle navigation"
+msgstr "Näytä navigaatio"
 
 #: partials/no-results-404.php:13
 msgid "Error 404: Page not found"
@@ -444,3 +476,9 @@ msgstr ""
 #. Author of the plugin/theme
 msgid "Luuptek"
 msgstr ""
+
+#~ msgid "Title"
+#~ msgstr "Otsikko"
+
+#~ msgid "Sidebar"
+#~ msgstr "Sivuvalikko"
