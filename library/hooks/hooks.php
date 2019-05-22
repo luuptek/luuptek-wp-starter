@@ -54,13 +54,13 @@ add_action( 'luuptek_wp_base_after_body', function () {
  *
  * @hook luuptek_wp_base_before_page
  */
-add_action('luuptek_wp_base_before_page', function(){
+add_action( 'luuptek_wp_base_before_page', function () {
 
-});
+} );
 
-add_action('luuptek_wp_base_after_page', function(){
+add_action( 'luuptek_wp_base_after_page', function () {
 
-});
+} );
 
 /**
  * Add favicons / app-icons / manifests to head
@@ -89,7 +89,7 @@ add_filter( 'excerpt_more', function () {
 /*
  * Let polylang to copy post title, content and excerpt when making a new language version
  */
-add_filter( 'default_content', function($content) {
+add_filter( 'default_content', function ( $content ) {
 	if ( isset( $_GET['from_post'] ) ) {
 		$my_post = get_post( $_GET['from_post'] );
 		if ( $my_post ) {
@@ -99,7 +99,7 @@ add_filter( 'default_content', function($content) {
 
 	return $content;
 } );
-add_filter( 'default_excerpt', function($content) {
+add_filter( 'default_excerpt', function ( $content ) {
 	if ( isset( $_GET['from_post'] ) ) {
 		$my_post = get_post( $_GET['from_post'] );
 		if ( $my_post ) {
@@ -109,7 +109,7 @@ add_filter( 'default_excerpt', function($content) {
 
 	return $content;
 } );
-add_filter( 'default_title', function($content) {
+add_filter( 'default_title', function ( $content ) {
 	if ( isset( $_GET['from_post'] ) ) {
 		$my_post = get_post( $_GET['from_post'] );
 		if ( $my_post ) {
@@ -123,15 +123,16 @@ add_filter( 'default_title', function($content) {
 /**
  * Disable users endpoint in api
  */
-add_filter( 'rest_endpoints', function( $endpoints ){
+add_filter( 'rest_endpoints', function ( $endpoints ) {
 	if ( isset( $endpoints['/wp/v2/users'] ) ) {
 		unset( $endpoints['/wp/v2/users'] );
 	}
 	if ( isset( $endpoints['/wp/v2/users/(?P<id>[\d]+)'] ) ) {
 		unset( $endpoints['/wp/v2/users/(?P<id>[\d]+)'] );
 	}
+
 	return $endpoints;
-});
+} );
 
 
 /**
@@ -148,11 +149,11 @@ add_filter( 'render_block', function ( $block_content, $block ) {
 
 		$classes = '';
 
-		if($block['attrs']['align'] === 'full') {
+		if ( $block['attrs']['align'] === 'full' ) {
 			$classes = ' alignfull';
 		}
 
-		if($block['attrs']['align'] === 'wide') {
+		if ( $block['attrs']['align'] === 'wide' ) {
 			$classes = ' alignwide';
 		}
 
@@ -164,3 +165,25 @@ add_filter( 'render_block', function ( $block_content, $block ) {
 
 	return $block_content;
 }, 10, 2 );
+
+/**
+ * Use filter to create new block categories
+ *
+ * @param $categories
+ * @param $post
+ *
+ * @return array
+ */
+function luuptek_wp_base_block_categories( $categories, $post ) {
+	return array_merge(
+		$categories,
+		[
+			[
+				'slug'  => 'new-luuptek-block-category',
+				'title' => __( 'Luuptek blocks', TEXT_DOMAIN ),
+			],
+		]
+	);
+}
+
+add_filter( 'block_categories', 'luuptek_wp_base_block_categories', 10, 2 );
