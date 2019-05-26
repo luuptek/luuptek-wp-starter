@@ -10,6 +10,10 @@
 ?>
 
 <article>
-	<?php _e( 'Nothing found', TEXT_DOMAIN ); ?>
-	<?php _e( 'It seems there\'s no content at this time. ', TEXT_DOMAIN ); ?>
+	<h1>
+        <?php _e( 'Nothing found', TEXT_DOMAIN ); ?>
+    </h1>
+	<p>
+        <?php _e( 'It seems there\'s no content at this time. ', TEXT_DOMAIN ); ?>
+    </p>
 </article>
