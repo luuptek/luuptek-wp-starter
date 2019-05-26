@@ -124,11 +124,13 @@ add_filter( 'default_title', function ( $content ) {
  * Disable users endpoint in api
  */
 add_filter( 'rest_endpoints', function ( $endpoints ) {
-	if ( isset( $endpoints['/wp/v2/users'] ) ) {
-		unset( $endpoints['/wp/v2/users'] );
-	}
-	if ( isset( $endpoints['/wp/v2/users/(?P<id>[\d]+)'] ) ) {
-		unset( $endpoints['/wp/v2/users/(?P<id>[\d]+)'] );
+	if ( ! current_user_can( 'list_users' ) ) {
+		if ( isset( $endpoints['/wp/v2/users'] ) ) {
+			unset( $endpoints['/wp/v2/users'] );
+		}
+		if ( isset( $endpoints['/wp/v2/users/(?P<id>[\d]+)'] ) ) {
+			unset( $endpoints['/wp/v2/users/(?P<id>[\d]+)'] );
+		}
 	}
 
 	return $endpoints;
