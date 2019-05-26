@@ -13,7 +13,7 @@ add_action( 'admin_enqueue_scripts', function () {
 	wp_enqueue_script(
 		'luuptek_admin',
 		asset_uri( 'scripts/admin.min.js' ),
-		[ 'jquery' ],
+		[ 'jquery', 'wp-i18n', 'wp-blocks', 'wp-dom-ready' ],
 		luuptek_wp_base_theme()->get( 'Version' )
 	);
 } );
