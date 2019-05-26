@@ -28,7 +28,7 @@ get_header();
 
 <section class="pagination">
     <div class="container">
-		<?php echo UTILS()->pagination(); ?>
+		<?php UTILS()->pagination(); ?>
     </div>
 </section>
 
