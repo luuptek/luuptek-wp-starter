@@ -78,7 +78,6 @@
 │   │   ├── Breadcrumbs.php
 │   │   ├── CPT-base.php
 │   │   ├── Initalization.php
-│   │   ├── Settings.php
 │   │   └── Utils.php
 │   ├── custom-posts
 │   ├── functions
