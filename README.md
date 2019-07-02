@@ -72,6 +72,7 @@
 │   ├── acf-blocks
 │   │   ├── blocks.php
 │   ├── acf-data
+│   ├── acf-options
 │   ├── classes
 │   │   ├── Bootstrap-navwalker.php
 │   │   ├── Breadcrumbs.php
@@ -126,7 +127,7 @@ Place your images, styles & javascripts here (they get smushed and build to `ass
 * Place your WordPress [custom-templates](https://developer.wordpress.org/themes/template-files-section/page-template-files/) here.
 
 **3. library**
-* `acf-blocks`/ `acf-data`: ACF block registering and using ACF JSON data
+* `acf-blocks` / `acf-data` / `acf-options`: ACF block registering, using ACF JSON data and creating options
 * `classes`: Holds the helper & utility-classes and is autorequired in `functions.php`
 * `custom-posts`: Place your custom posts here. See example usage in `books.php.tpl`
 * `functions`: The place for misc. helper functions
