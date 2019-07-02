@@ -37,19 +37,6 @@ add_filter( 'tiny_mce_before_init', function ( $init ) {
 } );
 
 /**
- * Add TagManager-script (if defined)
- *
- * @hook luuptek_wp_base_after_body
- */
-add_action( 'luuptek_wp_base_after_body', function () {
-	$options = get_option( 'luuptek_wp_base_general_options' );
-
-	if ( ! empty( $options['luuptek_wp_base_tagmanager_body'] ) ) :
-		echo $options['luuptek_wp_base_tagmanager_body'];
-	endif;
-} );
-
-/**
  * Hook anything here to output before and after page content
  *
  * @hook luuptek_wp_base_before_page
@@ -63,17 +50,43 @@ add_action( 'luuptek_wp_base_after_page', function () {
 } );
 
 /**
- * Add favicons / app-icons / manifests to head
+ * Add scripts to head
  *
  * @hook wp_head
  */
 add_action( 'wp_head', function () {
-	$options = get_option( 'luuptek_wp_base_general_options' );
+	$options = get_option( 'options_luuptek_wp_base_scripts_head' );
 
-	if ( ! empty( $options['luuptek_wp_base_tagmanager_head'] ) ) :
-		echo $options['luuptek_wp_base_tagmanager_head'];
+	if ( ! empty( $options ) ) :
+		echo $options;
 	endif;
 }, 999 );
+
+/**
+ * Add scripts to footer
+ *
+ * @hook wp_head
+ */
+add_action( 'wp_footer', function () {
+	$options = get_option( 'options_luuptek_wp_base_scripts_footer' );
+
+	if ( ! empty( $options ) ) :
+		echo $options;
+	endif;
+}, 999 );
+
+/**
+ * Add scripts after opening body
+ *
+ * @hook luuptek_wp_base_after_body
+ */
+add_action( 'luuptek_wp_base_after_body', function () {
+	$options = get_option( 'options_luuptek_wp_base_scripts_after_body' );
+
+	if ( ! empty( $options ) ) :
+		echo $options;
+	endif;
+} );
 
 /**
  * Modify excerpt lenght and style

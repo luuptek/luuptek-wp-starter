@@ -28,8 +28,8 @@ class Utils {
 		$nav_class = ( is_single() ) ? 'post-navigation' : 'paging-navigation';
 
 		?>
-		<nav role="navigation" id="<?php echo esc_attr( $nav_id ); ?>" class="<?php echo $nav_class; ?>">
-			<ul class="pager">
+        <nav role="navigation" id="<?php echo esc_attr( $nav_id ); ?>" class="<?php echo $nav_class; ?>">
+            <ul class="pager">
 				<?php if ( is_single() ) : ?>
 					<?php previous_post_link( '<li class="nav-previous previous">%link</li>',
 						'<span class="meta-nav">' . _x( '&larr;', 'Previous post link',
@@ -40,16 +40,16 @@ class Utils {
 
 				<?php elseif ( $wp_query->max_num_pages > 1 && ( is_home() || is_archive() || is_search() ) ) : // navigation links for home, archive, and search pages ?>
 					<?php if ( get_next_posts_link() ) : ?>
-						<li class="nav-previous previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts',
+                        <li class="nav-previous previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts',
 								TEXT_DOMAIN ) ); ?></li>
 					<?php endif; ?>
 					<?php if ( get_previous_posts_link() ) : ?>
-						<li class="nav-next next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>',
+                        <li class="nav-next next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>',
 								TEXT_DOMAIN ) ); ?></li>
 					<?php endif; ?>
 				<?php endif; ?>
-			</ul>
-		</nav>
+            </ul>
+        </nav>
 		<?php
 	}
 
@@ -158,7 +158,7 @@ class Utils {
 	 */
 	public function get_category_hierarchy( $taxonomy = 'category' ) {
 
-		$cats     = [ ];
+		$cats     = [];
 		$category = wp_get_object_terms( get_the_ID(), $taxonomy )[0];
 		$cat_tree = get_ancestors( $category->term_id, $taxonomy );
 		array_push( $cat_tree, $category->term_id );
@@ -190,7 +190,7 @@ class Utils {
 	 * @return string
 	 */
 	public function get_image_uri() {
-		return asset_uri('images');
+		return asset_uri( 'images' );
 	}
 
 	/**
@@ -201,25 +201,26 @@ class Utils {
 	 * @return array|false
 	 */
 	public function get_default_image( $size = 'full' ) {
-		$image_id = isset( get_option( 'luuptek_wp_base_general_options' )['luuptek_wp_base_default_image_id'] ) ? get_option( 'luuptek_wp_base_general_options' )['luuptek_wp_base_default_image_id'] : null;
+		$image_id = ! empty( get_option( 'options_luuptek_wp_base_default_image_id' ) ) ? get_option( 'options_luuptek_wp_base_default_image_id' ) : null;
 
 		return wp_get_attachment_image_src( $image_id, $size )[0];
 	}
-    
-    /**
-    * Get first paragraph from text content.
-    *
-    * @param $text
-    *
-    * @return string
-    */
-    public function get_first_paragraph( $text ) {
-        $str = wpautop( $text );
-        $str = substr( $str, 0, strpos( $str, '</p>' ) + 4 );
-        $str = strip_tags($str, '<a><strong><em>');
-        $str = preg_replace( "/\[.*\]\s*/", "", $str );
-        return '<p>' . $str . '</p>';
-    }
+
+	/**
+	 * Get first paragraph from text content.
+	 *
+	 * @param $text
+	 *
+	 * @return string
+	 */
+	public function get_first_paragraph( $text ) {
+		$str = wpautop( $text );
+		$str = substr( $str, 0, strpos( $str, '</p>' ) + 4 );
+		$str = strip_tags( $str, '<a><strong><em>' );
+		$str = preg_replace( "/\[.*\]\s*/", "", $str );
+
+		return '<p>' . $str . '</p>';
+	}
 
 	/**
 	 * Retrive post thumbnail (featured image) if defined,
@@ -233,10 +234,10 @@ class Utils {
 	public function get_the_featured_image_url( $size = 'full', $postId = null ) {
 		$featuredImageUrl = get_the_post_thumbnail_url( $postId, $size );
 
-		if($featuredImageUrl) {
+		if ( $featuredImageUrl ) {
 			return $featuredImageUrl;
 		} else {
-		    return $this->get_default_image( $size );
+			return $this->get_default_image( $size );
 		}
 	}
 

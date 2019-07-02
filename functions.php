@@ -74,6 +74,12 @@ if ( ! function_exists( 'luuptek_wp_base_setup' ) ) :
 		add_editor_style( asset_uri( 'styles/main.css' ) );
 
 		/**
+		 * Require ACF stuff
+		 */
+		require_files( dirname( __FILE__ ) . '/library/acf-blocks' );
+		require_files( dirname( __FILE__ ) . '/library/acf-options' );
+
+		/**
 		 * Require some classes
 		 */
 		require_files( dirname( __FILE__ ) . '/library/classes' );

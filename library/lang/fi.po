@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Luuptek WP-Base\n"
-"POT-Creation-Date: 2019-05-22 11:35+0300\n"
-"PO-Revision-Date: 2019-05-22 11:36+0300\n"
+"POT-Creation-Date: 2019-07-02 12:59+0300\n"
+"PO-Revision-Date: 2019-07-02 12:59+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fi\n"
@@ -20,29 +20,41 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
-#: functions.php:117
+#: functions.php:123
 msgid "Theme primary"
 msgstr "Teeman pääväri"
 
-#: functions.php:122
+#: functions.php:128
 msgid "Theme secondary"
 msgstr "Teeman toissijainen väri"
 
-#: functions.php:127
+#: functions.php:133
 msgid "Solid black"
 msgstr "Musta"
 
-#: functions.php:132
+#: functions.php:138
 msgid "Solid white"
 msgstr "Valkoinen"
 
-#: functions.php:163
+#: functions.php:169
 msgid "Latest from WP-quide"
 msgstr "Viimeisintä WP-oppaasta"
 
 #: library/acf-blocks/blocks.php:20
 msgid "Block name"
 msgstr "Lohkon nimi"
+
+#: library/acf-options/options.php:6 library/classes/Settings.php:35
+msgid "Theme Options"
+msgstr "Teema-asetukset"
+
+#: library/acf-options/options.php:8
+msgid "Update options"
+msgstr "Päivitä asetukset"
+
+#: library/acf-options/options.php:9
+msgid "Options updated"
+msgstr "Asetukset päivitetty"
 
 #: library/classes/Bootstrap-navwalker.php:366
 msgid "Add a menu"
@@ -283,10 +295,6 @@ msgstr[1] ""
 msgid "Please make sure your <a href=\"%s\">.htaccess</a> file is writable "
 msgstr "Onhan<a href=“%s”>.htaccess</a> tiedosto kirjoitettavissa "
 
-#: library/classes/Settings.php:35
-msgid "Theme Options"
-msgstr "Teema-asetukset"
-
 #: library/classes/Settings.php:124
 msgid "General options"
 msgstr "Yleiset asetukset"
@@ -397,7 +405,7 @@ msgctxt "Partitive plural"
 msgid "Topics"
 msgstr "aiheita"
 
-#: library/hooks/hooks.php:183
+#: library/hooks/hooks.php:198
 msgid "Luuptek blocks"
 msgstr "Luuptek lohkot"
 
@@ -417,22 +425,22 @@ msgstr ""
 msgid "Toggle navigation"
 msgstr "Näytä navigaatio"
 
-#: partials/no-results-404.php:13
+#: partials/no-results-404.php:16
 msgid "Error 404: Page not found"
 msgstr "Error 404: Sivua ei löydy"
 
-#: partials/no-results-404.php:14
+#: partials/no-results-404.php:19
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
 msgstr "Näyttää siltä, että hakemaasi sivua ei löydy. Ehkä haku auttaa."
 
-#: partials/no-results-search.php:13
+#: partials/no-results-search.php:14
 #, php-format
 msgid "No results found for %s"
 msgstr "Ei tuloksia hakusanalla %s"
 
-#: partials/no-results-search.php:14
+#: partials/no-results-search.php:17
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
@@ -440,15 +448,15 @@ msgstr ""
 "Valitettavasti mikään julkaisu ei vastannut hakuasi. Voit yrittää "
 "erilaisilla hakusanoilla uudelleen."
 
-#: partials/no-results.php:13
+#: partials/no-results.php:14
 msgid "Nothing found"
 msgstr "Mitään ei löytynyt"
 
-#: partials/no-results.php:14
+#: partials/no-results.php:17
 msgid "It seems there's no content at this time. "
 msgstr "Näyttää siltä, että sisältöä ei tällä hetkellä ole."
 
-#: templates/search.php:16
+#: templates/search.php:19
 #, php-format
 msgid "Search Results for: %s"
 msgstr "Hakutulokset: %s"
@@ -462,7 +470,7 @@ msgstr "Hae:"
 msgid "Input search terms"
 msgstr "Hakutermit"
 
-#: templates/searchform.php:16
+#: templates/searchform.php:17
 msgctxt "submit button"
 msgid "Search"
 msgstr "Hae"
