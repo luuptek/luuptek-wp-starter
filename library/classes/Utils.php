@@ -255,4 +255,32 @@ class Utils {
 
 		return $post_type_object->labels->{$name};
 	}
+
+	/**
+	 * Echoes some-links
+     *
+     * You can render these anywhere in the theme you want to..
+	 *
+	 */
+	function get_social_media_links() {
+		$social_medias = [ 'facebook', 'twitter', 'instagram', 'youtube', 'linkedin', 'github' ];
+
+		foreach ( $social_medias as $social_media ) {
+			$field = 'options_luuptek_wp_base_contact_details_' . $social_media . '_url';
+			$option = get_option($field);
+
+			if ( ! empty( $option ) ) {
+				$faClass = 'fa-' . $social_media . '-square';
+				if ( $social_media === 'instagram' ) {
+					$faClass = 'fa-' . $social_media;
+				}
+				?>
+                <li>
+                    <a href="<?php echo $option ?>" target="_blank"><i
+                                class="fa <?php echo $faClass ?>" aria-hidden="true"></i></a>
+                </li>
+				<?php
+			}
+		}
+	}
 }
