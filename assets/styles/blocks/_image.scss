@@ -2,6 +2,15 @@
  * Image blocks
  */
 
+.gutenberg {
+  .wp-block-image {
+    &.alignfull {
+      margin-left: -15px;
+      margin-right: -15px;
+    }
+  }
+}
+
 .wp-block-image {
   figcaption {
     text-align: center;
