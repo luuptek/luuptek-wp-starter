@@ -51,19 +51,16 @@
     }
   }
 
-  .wp-block-cover-text, .wp-block-cover__inner-container {
-    text-align: center;
+  .wp-block-cover__inner-container {
     font-size: 1.5rem;
-    font-weight: 600;
     color: #FFF;
     z-index: 1;
     padding: 1.5rem;
     max-width: map-get($container-max-widths, 'lg');
     margin-bottom: 0;
 
-    @include media-breakpoint-up(xl) {
-      font-size: 2.5rem;
-    }
+    @include add-block-aligns;
+    @include add-block-text-sizes;
   }
 
   &.has-right-content {

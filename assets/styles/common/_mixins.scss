@@ -43,3 +43,47 @@
   -o-transform: rotate($degrees);
   transform: rotate($degrees);
 }
+
+@mixin add-block-text-sizes() {
+  .has-small-font-size {
+    font-size: 0.7rem;
+  }
+
+  .has-small-font-size {
+    font-size: 0.8rem;
+  }
+
+  .has-formal-font-size {
+    font-size: 1rem;
+  }
+
+  .has-formal-font-size {
+    font-size: 1.2rem;
+  }
+
+  .has-large-font-size {
+    font-size: 2rem;
+  }
+
+  .has-huge-font-size {
+    font-size: 2.5rem;
+
+    @include media-breakpoint-up(lg) {
+      font-size: 3.5rem;
+    }
+  }
+}
+
+@mixin add-block-aligns() {
+  .has-text-align-center {
+    text-align: center;
+  }
+
+  .has-text-align-right {
+    text-align: right;
+  }
+
+  .has-text-align-left {
+    text-align: left;
+  }
+}
