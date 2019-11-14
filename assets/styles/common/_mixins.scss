@@ -87,3 +87,17 @@
     text-align: left;
   }
 }
+
+@mixin add-block-vertical-aligns() {
+  &.is-vertically-aligned-center {
+    align-items: center;
+  }
+
+  &.is-vertically-aligned-top {
+    align-items: flex-start;
+  }
+
+  &.is-vertically-aligned-bottom {
+    align-items: flex-end;
+  }
+}

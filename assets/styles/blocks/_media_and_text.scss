@@ -9,6 +9,8 @@
   margin-top: 2rem;
   margin-bottom: 2rem;
 
+  @include add-block-vertical-aligns();
+
   @include media-breakpoint-up(md) {
     margin-right: auto;
     margin-left: auto;
