@@ -41,7 +41,7 @@ class Initialization {
         add_filter( 'the_generator', '__return_false' );
         add_action( 'init', [ $this, 'head_cleanup' ] );
         add_filter( 'language_attributes', [ $this, 'language_attributes' ] );
-        add_filter( 'style_loader_tag', [ $this, 'clean_style_tag' ] );
+        //add_filter( 'style_loader_tag', [ $this, 'clean_style_tag' ] );
         add_filter( 'body_class', [ $this, 'body_class' ] );
         add_filter( 'embed_oembed_html', [ $this, 'embed_wrap' ], 10, 4 );
         add_action( 'admin_init', [ $this, 'remove_dashboard_widgets' ] );
