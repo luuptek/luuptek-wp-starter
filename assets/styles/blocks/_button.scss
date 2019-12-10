@@ -32,7 +32,9 @@
 
   &.is-style-outline {
     .wp-block-button__link {
+      @extend .btn;
       @include button-outline-variant($primary);
+      border-radius: 20px;
     }
   }
 }
