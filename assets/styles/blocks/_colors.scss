@@ -12,6 +12,14 @@ $colors: (
   .has-text-color {
     &.has-#{$name}-color {
       color: $color;
+
+      a {
+        color: $color;
+
+        &:hover, &:focus, &:active {
+          color: $color;
+        }
+      }
     }
   }
 
