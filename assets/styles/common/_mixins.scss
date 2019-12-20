@@ -138,3 +138,117 @@
     align-items: flex-end;
   }
 }
+
+@mixin make-h1-heading($margin-top: 0, $margin-bottom: 0) {
+  font-size: 2.5rem;
+  margin-top: $margin-top;
+  margin-bottom: $margin-bottom;
+  word-break: break-word;
+
+  @include media-breakpoint-up(md) {
+    font-size: 3rem;
+  }
+
+  @include media-breakpoint-up(lg) {
+    font-size: 4rem;
+  }
+
+  @include media-breakpoint-up(xl) {
+    font-size: 4.5rem;
+  }
+}
+
+@mixin make-h2-heading($margin-top: 0, $margin-bottom: 0) {
+  font-size: 2.2rem;
+  margin-top: $margin-top;
+  margin-bottom: $margin-bottom;
+  word-break: break-word;
+
+  @include media-breakpoint-up(md) {
+    font-size: 2.7rem;
+  }
+
+  @include media-breakpoint-up(lg) {
+    font-size: 3.7rem;
+  }
+
+  @include media-breakpoint-up(xl) {
+    font-size: 4rem;
+  }
+}
+
+@mixin make-h3-heading($margin-top: 0, $margin-bottom: 0) {
+  font-size: 2rem;
+  margin-top: $margin-top;
+  margin-bottom: $margin-bottom;
+  word-break: break-word;
+
+  @include media-breakpoint-up(md) {
+    font-size: 2.5rem;
+  }
+
+  @include media-breakpoint-up(lg) {
+    font-size: 3rem;
+  }
+
+  @include media-breakpoint-up(xl) {
+    font-size: 3.5rem;
+  }
+}
+
+@mixin make-h4-heading($margin-top: 0, $margin-bottom: 0) {
+  font-size: 1.6rem;
+  margin-top: $margin-top;
+  margin-bottom: $margin-bottom;
+  word-break: break-word;
+
+  @include media-breakpoint-up(md) {
+    font-size: 2.2rem;
+  }
+
+  @include media-breakpoint-up(lg) {
+    font-size: 2.4rem;
+  }
+
+  @include media-breakpoint-up(xl) {
+    font-size: 3rem;
+  }
+}
+
+@mixin make-h5-heading($margin-top: 0, $margin-bottom: 0) {
+  font-size: 1.3rem;
+  margin-top: $margin-top;
+  margin-bottom: $margin-bottom;
+  word-break: break-word;
+
+  @include media-breakpoint-up(md) {
+    font-size: 1.8rem;
+  }
+
+  @include media-breakpoint-up(lg) {
+    font-size: 2rem;
+  }
+
+  @include media-breakpoint-up(xl) {
+    font-size: 2.5rem;
+  }
+}
+
+@mixin make-h6-heading($margin-top: 0, $margin-bottom: 0) {
+  font-size: 1rem;
+  margin-top: $margin-top;
+  margin-bottom: $margin-bottom;
+  word-break: break-word;
+
+  @include media-breakpoint-up(md) {
+    font-size: 1.2rem;
+  }
+
+  @include media-breakpoint-up(lg) {
+    font-size: 1.6rem;
+  }
+
+  @include media-breakpoint-up(xl) {
+    font-size: 2rem;
+  }
+}
