@@ -126,15 +126,15 @@
 }
 
 @mixin add-block-vertical-aligns() {
-  &.is-vertically-aligned-center {
+  .is-vertically-aligned-center, .are-vertically-aligned-center {
     align-items: center;
   }
 
-  &.is-vertically-aligned-top {
+  .is-vertically-aligned-top, .are-vertically-aligned-top {
     align-items: flex-start;
   }
 
-  &.is-vertically-aligned-bottom {
+  .is-vertically-aligned-bottom, .are-vertically-aligned-bottom {
     align-items: flex-end;
   }
 }
