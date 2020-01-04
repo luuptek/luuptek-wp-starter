@@ -119,6 +119,15 @@ $theme-colors: map-merge(
   $theme-colors
 );
 
+// Gutenberg color options
+// -- see editor-color-palette in functions.php
+$page-theme-colors: (
+        'theme-primary': $primary,
+        'theme-secondary': $secondary,
+        'solid-black': #000,
+        'solid-white': #FFF,
+);
+
 // Set a specific jump point for requesting color jumps
 $theme-color-interval:      8% !default;
 

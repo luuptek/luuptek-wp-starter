@@ -1,13 +1,4 @@
-// Gutenberg color options
-// -- see editor-color-palette in functions.php
-$colors: (
-        'theme-primary': $primary,
-        'theme-secondary': $secondary,
-        'solid-black': #000,
-        'solid-white': #FFF,
-);
-
-@each $name, $color in $colors {
+@each $name, $color in $page-theme-colors {
 
   .has-text-color {
     &.has-#{$name}-color {
