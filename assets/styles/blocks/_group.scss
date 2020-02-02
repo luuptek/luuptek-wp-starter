@@ -14,9 +14,40 @@
 .wp-block-group {
   position: relative;
 
+  &.alignfull, &.alignwide {
+    .wp-block-group__inner-container {
+      padding: 1.5rem 15px;
+
+      @include media-breakpoint-up(md) {
+        padding: 1.5rem 0;
+      }
+    }
+  }
+
+  &.wp-block-group--text-content {
+    .wp-block-group__inner-container {
+      @include media-breakpoint-up(md) {
+        max-width: map_get($container-max-widths, 'md') - 100px !important;
+      }
+
+      @include media-breakpoint-up(lg) {
+        max-width: map_get($container-max-widths, 'lg') - 150px !important;
+      }
+
+      @include media-breakpoint-up(xl) {
+        max-width: map_get($container-max-widths, 'xl') - 300px !important;
+      }
+    }
+  }
+
   .wp-block-group__inner-container {
-    padding: 1.5rem;
+    padding: 1.5rem 15px;
     margin: 0 auto;
-    max-width: map-get($container-max-widths, 'lg');
+
+    @each $name, $width in $container-max-widths {
+      @include media-breakpoint-up(#{$name}) {
+        max-width: $width;
+      }
+    }
   }
 }
