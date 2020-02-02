@@ -27,11 +27,19 @@ add_filter( 'embed_oembed_html', function ( $html, $url, $attr, $post_id ) {
 }, 99, 4 );
 
 /**
- * Remove h1-tag from tinyMCE, show second row by default
+ * Customise tags in tinyMCE
  */
 add_filter( 'tiny_mce_before_init', function ( $init ) {
-	$tinymce['wordpress_adv_hidden'] = false;
-	$init['block_formats']           = "Paragraph=p;Address=address;Pre=pre;Heading 2=h2;Heading 3=h3;Heading 4=h4";
+	$block_formats = array(
+		'Paragraph=p',
+		'Heading 1=h1',
+		'Heading 2=h2',
+		'Heading 3=h3',
+		'Heading 4=h4',
+		'Heading 5=h5',
+		'Heading 6=h6',
+	);
+	$init['block_formats'] = implode( ';', $block_formats );
 
 	return $init;
 } );
