@@ -252,6 +252,16 @@ add_filter( 'acf/settings/load_json', function () {
 } );
 
 /**
+ * Add translatable string to pll
+ */
+if ( function_exists( 'pll_register_string' ) ) {
+	$translatables = require( get_template_directory() . '/library/translation-strings.php' );
+	foreach ( $translatables as $name => $string ) {
+		pll_register_string( $name, $string );
+	}
+}
+
+/**
  * Update google maps api key for ACF
  */
 //function update_acf_google_maps_api_key() {
