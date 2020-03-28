@@ -2,6 +2,15 @@
  * Embed block
  */
 
+.gutenberg {
+  .wp-block-embed {
+    &.alignfull {
+      margin-left: -15px;
+      margin-right: -15px;
+    }
+  }
+}
+
 .wp-block-embed {
   &.is-type-video {
     .framecontainer, .wp-block-embed__wrapper {
@@ -10,6 +19,10 @@
       height: 0;
       padding-bottom: 56.25%;
       overflow: hidden;
+
+      &:before {
+        display: none !important; //fix issue with default styles
+      }
 
       iframe {
         position: absolute;
@@ -27,6 +40,6 @@
 .wp-block-embed {
   figcaption {
     text-align: center;
-    opacity: 0.8;
+    opacity: 0.5;
   }
 }

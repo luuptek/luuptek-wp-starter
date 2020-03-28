@@ -2,49 +2,21 @@
  * Table block
  */
 
-//Default Gutenberg bg color options
-$table-colors: (
-        'subtle-pale-blue': rgb(231, 245, 254),
-        'subtle-pale-pink': rgb(252, 240, 239),
-        'subtle-pale-green': rgb(233, 251, 229),
-        'subtle-light-gray': rgb(243, 244, 245),
-);
+.gutenberg {
+  .wp-block-table {
+    &.alignfull {
+      margin-left: -15px;
+      margin-right: -15px;
+    }
+  }
+}
 
 .wp-block-table {
-  > table {
-    @extend .table;
-    @extend .table-bordered;
+  th, td {
+    padding: 0.5rem;
   }
 
-  > table {
-
-    &.has-fixed-layout {
-      table-layout: fixed;
-    }
-
-    @each $name, $color in $table-colors {
-
-      &.has-background {
-        &.has-#{$name}-background-color {
-          background-color: $color;
-        }
-      }
-    }
-  }
-
-  &.is-style-stripes {
-
-    > table {
-      @extend .table-striped;
-      border: none;
-
-      td {
-        border: none;
-      }
-    }
-  }
-
-  td {
-    border: 1px solid $primary;
+  tfoot {
+    opacity: 0.5;
   }
 }

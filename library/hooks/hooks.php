@@ -162,32 +162,34 @@ add_filter( 'rest_endpoints', function ( $endpoints ) {
  * Block rendering filter
  *
  * You can alter the block rendering by block here
+ *
+ * Leaving this here as an example..
  */
-add_filter( 'render_block', function ( $block_content, $block ) {
-
-	/**
-	 * Adds table-responsive class prior to table
-	 */
-	if ( $block['blockName'] === 'core/table' ) {
-
-		$classes = '';
-
-		if ( $block['attrs']['align'] === 'full' ) {
-			$classes = ' alignfull';
-		}
-
-		if ( $block['attrs']['align'] === 'wide' ) {
-			$classes = ' alignwide';
-		}
-
-		return sprintf(
-			'<div class="table-responsive%s">%s</div>',
-			$classes, $block_content
-		);
-	}
-
-	return $block_content;
-}, 10, 2 );
+//add_filter( 'render_block', function ( $block_content, $block ) {
+//
+//	/**
+//	 * Adds table-responsive class prior to table
+//	 */
+//	if ( $block['blockName'] === 'core/table' ) {
+//
+//		$classes = '';
+//
+//		if ( $block['attrs']['align'] === 'full' ) {
+//			$classes = ' alignfull';
+//		}
+//
+//		if ( $block['attrs']['align'] === 'wide' ) {
+//			$classes = ' alignwide';
+//		}
+//
+//		return sprintf(
+//			'<div class="table-responsive%s">%s</div>',
+//			$classes, $block_content
+//		);
+//	}
+//
+//	return $block_content;
+//}, 10, 2 );
 
 /**
  * Use filter to create new block categories

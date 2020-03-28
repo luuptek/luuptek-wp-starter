@@ -13,43 +13,5 @@
 
 /**
  * Gutenberg back end stuff
+ * None here any more...
  */
-
-// Import npm dependencies
-@import "../styles/common/fonts";
-@import "../styles/common/functions";
-@import "../styles/common/variables";
-@import "../styles/common/mixins";
-@import "~bootstrap/scss/functions";
-@import "~bootstrap/scss/variables";
-@import "~bootstrap/scss/mixins";
-@import "~bootstrap/scss/buttons";
-@import "~bootstrap/scss/tables";
-@import "~bootstrap/scss/grid";
-
-.editor-styles-wrapper {
-  @import "../styles/blocks/blockquote";
-  @import "../styles/blocks/button";
-  @import "../styles/blocks/colors";
-  //@import "../styles/blocks/columns"; not needed
-  @import "../styles/blocks/cover";
-  @import "../styles/blocks/embeds";
-  @import "../styles/blocks/gallery";
-  @import "../styles/blocks/group";
-  @import "../styles/blocks/image";
-  //@import "../styles/blocks/media_and_text"; not needed
-  @import "../styles/blocks/paragraph";
-  @import "../styles/blocks/separator";
-  @import "../styles/blocks/table";
-  @import "../styles/blocks/text-aligns";
-  @import "../styles/blocks/text-sizes";
-}
-
-.editor-styles-wrapper .wp-block-media-text {
-
-  display: grid;
-  @include media-breakpoint-up(md) {
-    grid-template-columns: 50% 50%;
-  }
-
-}
