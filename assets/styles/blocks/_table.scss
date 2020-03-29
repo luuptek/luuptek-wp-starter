@@ -16,7 +16,24 @@
     padding: 0.5rem;
   }
 
+  td {
+    border: 1px solid $primary;
+  }
+
   tfoot {
     opacity: 0.5;
+  }
+
+  &.is-style-stripes {
+
+    > table {
+      @extend .table-striped;
+      border: none;
+
+      td {
+        border: none;
+      }
+    }
+
   }
 }
