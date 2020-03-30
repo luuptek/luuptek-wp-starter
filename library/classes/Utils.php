@@ -200,13 +200,13 @@ class Utils {
 
 			if ( ! empty( $option ) ) {
 				$faClass = 'fa-' . $social_media . '-square';
-				if ( $social_media === 'instagram' ) {
+				if ( $social_media === 'instagram' || $social_media === 'linkedin' ) {
 					$faClass = 'fa-' . $social_media;
 				}
 				?>
                 <li>
-                    <a href="<?php echo $option ?>" target="_blank"><i
-                                class="fa <?php echo $faClass ?>" aria-hidden="true"></i></a>
+                    <a href="<?php echo $option ?>" target="_blank"><em
+                                class="fab <?php echo $faClass ?>" aria-hidden="true"></em></a>
                 </li>
 				<?php
 			}

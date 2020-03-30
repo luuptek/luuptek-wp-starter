@@ -7,6 +7,11 @@
   resolved "https://registry.yarnpkg.com/@fancyapps/fancybox/-/fancybox-3.5.6.tgz#d5e513def9aa18acb5767ce6155dc8a2e430a24a"
   integrity sha512-Hp83AAWb0uNR7ekGQExGv0fMJEa/0t97Ab1aPk2hopWnKKpFI6acnIssJ2SD2YCBqv5Rb4W+lHDJTtJPRbcqhA==
 
+"@fortawesome/fontawesome-free@^5.13.0":
+  version "5.13.0"
+  resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-free/-/fontawesome-free-5.13.0.tgz#fcb113d1aca4b471b709e8c9c168674fbd6e06d9"
+  integrity sha512-xKOeQEl5O47GPZYIMToj6uuA2syyFlq9EMSl2ui0uytjY9xbe8XS0pexNWmxrdcCyNGyDmLyYw5FtKsalBUeOg==
+
 "@webassemblyjs/ast@1.7.11":
   version "1.7.11"
   resolved "https://registry.yarnpkg.com/@webassemblyjs/ast/-/ast-1.7.11.tgz#b988582cafbb2b095e8b556526f30c90d057cace"
