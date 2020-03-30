@@ -9,4 +9,14 @@
       height: 40px;
     }
   }
+
+  .navbar-brand {
+    line-height: 1;
+  }
+
+  @include media-breakpoint-up(xl) {
+    .hamburger {
+      display: none;
+    }
+  }
 }
