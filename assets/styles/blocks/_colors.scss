@@ -1,6 +1,6 @@
 @each $name, $color in $page-theme-colors {
 
-  .has-text-color {
+  .has-text-color, .has-inline-color {
     &.has-#{$name}-color {
       color: $color;
 

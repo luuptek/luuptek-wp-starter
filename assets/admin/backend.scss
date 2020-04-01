@@ -15,3 +15,31 @@
  * Gutenberg back end stuff
  * None here any more...
  */
+@import "../styles/common/functions";
+@import "../styles/common/variables";
+@import "../styles/common/variables";
+
+.editor-styles-wrapper {
+  @each $name, $color in $page-theme-colors {
+
+    .has-text-color, .has-inline-color {
+      &.has-#{$name}-color {
+        color: $color;
+
+        a {
+          color: $color;
+
+          &:hover, &:focus, &:active {
+            color: $color;
+          }
+        }
+      }
+    }
+
+    .has-background, .wp-block-cover {
+      &.has-#{$name}-background-color {
+        background-color: $color;
+      }
+    }
+  }
+}
