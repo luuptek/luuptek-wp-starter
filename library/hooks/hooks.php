@@ -212,3 +212,18 @@ function luuptek_wp_base_block_categories( $categories, $post ) {
 }
 
 add_filter( 'block_categories', 'luuptek_wp_base_block_categories', 10, 2 );
+
+/**
+ * Remove jquery-migrate from front end
+ *
+ * @param $scripts
+ */
+function dequeue_jquery_migrate( $scripts ) {
+	if ( ! is_admin() && ! empty( $scripts->registered['jquery'] ) ) {
+		$scripts->registered['jquery']->deps = array_diff(
+			$scripts->registered['jquery']->deps,
+			[ 'jquery-migrate' ]
+		);
+	}
+}
+add_action( 'wp_default_scripts', 'dequeue_jquery_migrate' );

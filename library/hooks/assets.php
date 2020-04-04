@@ -44,6 +44,13 @@ add_action( 'wp_enqueue_scripts', function () {
 		luuptek_wp_base_theme()->get( 'Version' )
 	);
 
+	/**
+	 * Move jQuery to the footer.
+	 */
+	wp_scripts()->add_data( 'jquery', 'group', 1 );
+	wp_scripts()->add_data( 'jquery-core', 'group', 1 );
+	wp_scripts()->add_data( 'jquery-migrate', 'group', 1 );
+
 } );
 
 /**
