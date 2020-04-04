@@ -27,7 +27,12 @@
   &.is-style-stripes {
 
     > table {
-      @extend .table-striped;
+
+      //Same as table-striped in bootstrap
+      tbody tr:nth-of-type(#{$table-striped-order}) {
+        background-color: $table-accent-bg;
+      }
+
       border: none;
 
       td {
