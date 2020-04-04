@@ -13,4 +13,15 @@
 
 .wp-block-cover {
   width: auto;
+
+  .wp-block-cover__inner-container {
+    padding: 0 15px;
+    margin: 0 auto;
+
+    @each $name, $width in $container-max-widths {
+      @include media-breakpoint-up(#{$name}) {
+        max-width: $width;
+      }
+    }
+  }
 }
