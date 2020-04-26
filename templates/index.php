@@ -16,19 +16,16 @@ get_header();
     <div class="container">
         <h1><?php echo get_the_archive_title(); ?></h1>
 		<?php
-		if ( have_posts() ) : while ( have_posts() ) : the_post();
-			get_template_part( 'partials/content', 'excerpt' );
-		endwhile;
+		if ( have_posts() ):
+			while ( have_posts() ):
+				the_post();
+				get_template_part( 'partials/content', 'excerpt' );
+			endwhile;
+			get_template_part( 'partials/pagination' );
 		else :
 			get_template_part( 'partials/no-results' );
 		endif;
 		?>
-    </div>
-</section>
-
-<section class="pagination">
-    <div class="container">
-		<?php UTILS()->pagination(); ?>
     </div>
 </section>
 

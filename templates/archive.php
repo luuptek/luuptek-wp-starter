@@ -15,15 +15,15 @@ get_header();
 <section>
     <div class="container">
         <h1><?php echo get_the_archive_title(); ?></h1>
-		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-			<?php get_template_part( 'partials/content', 'excerpt' ); ?>
-		<?php endwhile; endif; ?>
-    </div>
-</section>
-
-<section class="pagination">
-    <div class="container">
-		<?php echo UTILS()->pagination(); ?>
+		<?php
+		if ( have_posts() ) :
+			while ( have_posts() ) :
+				the_post();
+				get_template_part( 'partials/content', 'excerpt' );
+			endwhile;
+			get_template_part( 'partials/pagination' );
+		endif;
+		?>
     </div>
 </section>
 
