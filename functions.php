@@ -211,20 +211,6 @@ add_filter( 'upload_mimes', function ( $mimes ) {
 } );
 
 /**
- * Change default WP-API endpoints
- *
- * @return mixed|void
- */
-
-add_filter( 'rest_url_prefix', function () {
-	return 'api';
-} );
-
-add_filter( 'json_url_prefix', function () {
-	return 'api';
-} );
-
-/**
  * Move WP-templates to templates-folder for cleaner experience on dev
  */
 add_filter( 'stylesheet', function ( $stylesheet ) {
