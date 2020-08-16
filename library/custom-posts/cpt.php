@@ -56,7 +56,7 @@ function custom_post_type() {
 		'capability_type'     => 'page',
 		'show_in_rest'        => true,
 	);
-	register_post_type( 'post_type', $args );
+	register_post_type( 'custom_post_type', $args );
 
 }
 
