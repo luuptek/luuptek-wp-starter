@@ -42,7 +42,7 @@
     "test": "eslint assets/scripts"
   },
   "engines": {
-    "node": ">= 6.9"
+    "node": "= 12.18.0"
   },
   "dependencies": {
     "@fancyapps/fancybox": "^3.5.6",
