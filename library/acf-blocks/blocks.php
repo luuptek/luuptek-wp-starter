@@ -9,6 +9,10 @@
  */
 
 add_action( 'acf/init', 'register_luuptek_wp_base_acf_blocks' );
+
+/**
+ * Function where ACF custom blocks are resgitered
+ */
 function register_luuptek_wp_base_acf_blocks() {
 
 	// check function exists.

@@ -13,7 +13,7 @@ class Utils {
 		return get_post_types(
 			[
 				'public'   => true,
-				'_builtin' => false
+				'_builtin' => false,
 			]
 		);
 	}
