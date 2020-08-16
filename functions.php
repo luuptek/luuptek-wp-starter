@@ -42,13 +42,6 @@ function luuptek_wp_base_set_imagesizes() {
 define( 'FEED_URI', 'https://www.luuptek.fi/feed/?post_type=guide' );
 
 /**
- * Define Translation domain which will be used on WP __() & _e() -functions
- *
- * note: change also the one on style.css also
- */
-define( 'TEXT_DOMAIN', 'luuptek_wp_base' );
-
-/**
  * Set the content width based on the theme's design and stylesheet.
  */
 if ( ! isset( $content_width ) ) {
@@ -70,7 +63,7 @@ if ( ! function_exists( 'luuptek_wp_base_setup' ) ) :
 		/**
 		 * Load textdomain
 		 */
-		load_theme_textdomain( TEXT_DOMAIN, get_template_directory() . '/library/lang' );
+		load_theme_textdomain( 'luuptek_wp_base', get_template_directory() . '/library/lang' );
 
 		/**
 		 * Add editor styling
@@ -125,22 +118,22 @@ if ( ! function_exists( 'luuptek_wp_base_setup' ) ) :
 				'editor-color-palette',
 				[
 					[
-						'name'  => __( 'Theme primary', TEXT_DOMAIN ),
+						'name'  => __( 'Theme primary', 'luuptek_wp_base' ),
 						'slug'  => 'theme-primary',
 						'color' => '#5b9279',
 					],
 					[
-						'name'  => __( 'Theme secondary', TEXT_DOMAIN ),
+						'name'  => __( 'Theme secondary', 'luuptek_wp_base' ),
 						'slug'  => 'theme-secondary',
 						'color' => '#2e3532',
 					],
 					[
-						'name'  => __( 'Solid black', TEXT_DOMAIN ),
+						'name'  => __( 'Solid black', 'luuptek_wp_base' ),
 						'slug'  => 'solid-black',
 						'color' => '#000',
 					],
 					[
-						'name'  => __( 'Solid white', TEXT_DOMAIN ),
+						'name'  => __( 'Solid white', 'luuptek_wp_base' ),
 						'slug'  => 'solid-white',
 						'color' => '#FFF',
 					],
@@ -174,7 +167,7 @@ add_action(
 	'wp_dashboard_setup',
 	function () {
 		if ( defined( 'FEED_URI' ) ) {
-			add_meta_box( 'dashboard_custom_feed', __( 'Latest from WP-quide', TEXT_DOMAIN ), 'luuptek_wp_base_feed', 'dashboard', 'side', 'low' );
+			add_meta_box( 'dashboard_custom_feed', __( 'Latest from WP-quide', 'luuptek_wp_base' ), 'luuptek_wp_base_feed', 'dashboard', 'side', 'low' );
 		}
 
 		/**

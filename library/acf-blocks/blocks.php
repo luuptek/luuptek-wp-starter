@@ -18,7 +18,7 @@ function register_luuptek_wp_base_acf_blocks() {
 		acf_register_block_type(
 			[
 				'name'            => 'block-name', // don't need acf/block-name
-				'title'           => __( 'Block name', TEXT_DOMAIN ),
+				'title'           => __( 'Block name', 'luuptek_wp_base' ),
 				'render_template' => 'partials/blocks/block.php',
 				'category'        => 'formatting',
 				'supports'        => [

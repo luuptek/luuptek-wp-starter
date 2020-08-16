@@ -8,16 +8,16 @@
  */
 
 $labels = [
-	'add_new'   => _x( 'Add new', 'Add new string for cpt', TEXT_DOMAIN ),
-	'view_item' => _x( 'Edit item', 'View string for cpt', TEXT_DOMAIN ),
+	'add_new'   => _x( 'Add new', 'Add new string for cpt', 'luuptek_wp_base' ),
+	'view_item' => _x( 'Edit item', 'View string for cpt', 'luuptek_wp_base' ),
 ];
 
 $cpt = new CPT( [
 	'post_type_name'   => 'book',
-	'singular'         => _x( 'Book', 'Single', TEXT_DOMAIN ),
-	'plural'           => _x( 'Books', 'Plural', TEXT_DOMAIN ),
-	'partitive'        => _x( 'Book', 'Partitive', TEXT_DOMAIN ),
-	'partitive_plural' => _x( 'Books', 'Partitive plural', TEXT_DOMAIN ),
+	'singular'         => _x( 'Book', 'Single', 'luuptek_wp_base' ),
+	'plural'           => _x( 'Books', 'Plural', 'luuptek_wp_base' ),
+	'partitive'        => _x( 'Book', 'Partitive', 'luuptek_wp_base' ),
+	'partitive_plural' => _x( 'Books', 'Partitive plural', 'luuptek_wp_base' ),
 	'slug'             => 'book'
 ], [
 	'labels'        => $labels,
@@ -39,13 +39,13 @@ $cpt = new CPT( [
 ] );
 
 $cpt->menu_icon( "dashicons-editor-textcolor" );
-$cpt->set_textdomain( TEXT_DOMAIN );
+$cpt->set_textdomain( 'luuptek_wp_base' );
 $cpt->register_taxonomy( [
 	'taxonomy_name'    => 'topic',
-	'singular'         => _x( 'Topic', 'Single', TEXT_DOMAIN ),
-	'plural'           => _x( 'Topics', 'Plural', TEXT_DOMAIN ),
-	'partitive'        => _x( 'Topic', 'Partitive', TEXT_DOMAIN ),
-	'partitive_plural' => _x( 'Topics', 'Partitive plural', TEXT_DOMAIN ),
+	'singular'         => _x( 'Topic', 'Single', 'luuptek_wp_base' ),
+	'plural'           => _x( 'Topics', 'Plural', 'luuptek_wp_base' ),
+	'partitive'        => _x( 'Topic', 'Partitive', 'luuptek_wp_base' ),
+	'partitive_plural' => _x( 'Topics', 'Partitive plural', 'luuptek_wp_base' ),
 	'slug'             => 'topic',
 	[
 		'query_var' => true,

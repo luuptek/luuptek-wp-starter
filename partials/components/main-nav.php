@@ -4,7 +4,7 @@
 			<img src="<?php echo esc_url( UTILS()->get_image_uri() . '/logo.svg' ); ?>" class="nav-logo" alt="Logo"/>
 		</a>
 		<button class="hamburger hamburger--elastic" type="button" data-toggle="collapse" data-target="#mainNav"
-		        aria-label="<?php esc_html_e( 'Toggle navigation', TEXT_DOMAIN ); ?>" aria-controls="navigation"
+		        aria-label="<?php esc_html_e( 'Toggle navigation', 'luuptek_wp_base' ); ?>" aria-controls="navigation"
 		        aria-expanded="false">
             <span class="hamburger-box">
               <span class="hamburger-inner"></span>

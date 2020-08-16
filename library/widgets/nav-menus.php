@@ -36,6 +36,6 @@ function luuptek_wp_base_main_menu() {
  */
 register_nav_menus(
 	[
-		'top_nav' => __( 'Main menu', TEXT_DOMAIN ),
+		'top_nav' => __( 'Main menu', 'luuptek_wp_base' ),
 	]
 );

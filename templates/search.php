@@ -16,7 +16,8 @@ get_header();
 	<div class="container">
 		<?php if ( have_posts() ) : ?>
 			<h1>
-				<?php printf( esc_html( __( 'Search Results for: %s', TEXT_DOMAIN ) ), '<span>' . get_search_query() . '</span>' ); ?>
+				<?php /* translators: %s: search term */ ?>
+				<?php printf( esc_html( __( 'Search Results for: %s', 'luuptek_wp_base' ) ), '<span>' . get_search_query() . '</span>' ); ?>
 			</h1>
 			<?php while ( have_posts() ) : the_post(); ?>
 				<?php get_template_part( 'partials/content', 'search' ); ?>

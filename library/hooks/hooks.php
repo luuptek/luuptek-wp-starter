@@ -251,7 +251,7 @@ function luuptek_wp_base_block_categories( $categories, $post ) {
 		[
 			[
 				'slug'  => 'new-luuptek-block-category',
-				'title' => __( 'Luuptek blocks', TEXT_DOMAIN ),
+				'title' => __( 'Luuptek blocks', 'luuptek_wp_base' ),
 			],
 		]
 	);
