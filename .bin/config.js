@@ -42,6 +42,7 @@ prompt.get(schema, function (err, result) {
     files: [
       path.resolve(__dirname, '../**/*.php'),
       path.resolve(__dirname, '../style.css'),
+      path.resolve(__dirname, '../library/acf-data/*.json'),
     ],
     from: [/Luuptek WP-Base/g, /luuptek_wp_base/g],
     to: [result.packageName, snakeCase(result.packageName)],
