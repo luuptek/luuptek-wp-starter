@@ -13,6 +13,7 @@ require dirname( __FILE__ ) . '/library/functions/helpers.php';
 
 /**
  * Set theme name which will be referenced from style & script registrations
+ *
  * @return WP_Theme
  */
 function luuptek_wp_base_theme() {
@@ -26,12 +27,12 @@ function luuptek_wp_base_theme() {
  */
 function luuptek_wp_base_set_imagesizes() {
 	return [
-		//[
-		//    'name'   => 'article_lift',
-		//    'width'  => 360,
-		//    'height' => 200,
-		//    'crop'   => true
-		//]
+		[
+			'name'   => 'article_lift',
+			'width'  => 360,
+			'height' => 200,
+			'crop'   => true,
+		],
 	];
 }
 
@@ -59,6 +60,9 @@ if ( ! isset( $content_width ) ) {
  */
 if ( ! function_exists( 'luuptek_wp_base_setup' ) ) :
 
+	/**
+	 * WP base setup here
+	 */
 	function luuptek_wp_base_setup() {
 
 		global $cap, $content_width;
@@ -117,7 +121,8 @@ if ( ! function_exists( 'luuptek_wp_base_setup' ) ) :
 			add_theme_support( 'html5', [ 'caption', 'comment-form', 'comment-list', 'gallery', 'search-form' ] );
 			add_theme_support( 'post-thumbnails' );
 			add_theme_support( 'title-tag' );
-			add_theme_support( 'editor-color-palette',
+			add_theme_support(
+				'editor-color-palette',
 				[
 					[
 						'name'  => __( 'Theme primary', TEXT_DOMAIN ),
@@ -165,23 +170,32 @@ add_action( 'after_setup_theme', 'luuptek_wp_base_setup' );
 /**
  * Add feed (if defined) to dashboard
  */
-add_action( 'wp_dashboard_setup', function () {
-	if ( defined( 'FEED_URI' ) ) {
-		add_meta_box( 'dashboard_custom_feed', __( 'Latest from WP-quide', TEXT_DOMAIN ), 'luuptek_wp_base_feed', 'dashboard', 'side', 'low' );
-	}
+add_action(
+	'wp_dashboard_setup',
+	function () {
+		if ( defined( 'FEED_URI' ) ) {
+			add_meta_box( 'dashboard_custom_feed', __( 'Latest from WP-quide', TEXT_DOMAIN ), 'luuptek_wp_base_feed', 'dashboard', 'side', 'low' );
+		}
 
-	function luuptek_wp_base_feed() {
-		echo '<div class="rss-widget">';
-		wp_widget_rss_output( FEED_URI, [
-			'items'        => 5,
-			'show_title'   => 0,
-			'show_summary' => 1,
-			'show_author'  => 0,
-			'show_date'    => 1
-		] );
-		echo "</div>";
+		/**
+		 * Setup post guide feed into dashboard
+		 */
+		function luuptek_wp_base_feed() {
+			echo '<div class="rss-widget">';
+			wp_widget_rss_output(
+				FEED_URI,
+				[
+					'items'        => 5,
+					'show_title'   => 0,
+					'show_summary' => 1,
+					'show_author'  => 0,
+					'show_date'    => 1,
+				]
+			);
+			echo '</div>';
+		}
 	}
-} );
+);
 
 /**
  * Add admin scripts & styles
@@ -197,45 +211,63 @@ add_action( 'admin_head', 'luuptek_wp_base_admin_style' );
 /**
  * Add text to theme footer
  */
-add_filter( 'admin_footer_text', function () {
-	return '<span id="footer-thankyou">' . luuptek_wp_base_theme()->Name . ' by: <a href="' . luuptek_wp_base_theme()->AuthorURI . '" target="_blank">' . luuptek_wp_base_theme()->Author . '</a><span>';
-} );
+add_filter(
+	'admin_footer_text',
+	function () {
+		return '<span id="footer-thankyou">' . luuptek_wp_base_theme()->Name . ' by: <a href="' . luuptek_wp_base_theme()->AuthorURI . '" target="_blank">' . luuptek_wp_base_theme()->Author . '</a><span>';
+	}
+);
 
 /**
  * Allow svg-uploads
  */
-add_filter( 'upload_mimes', function ( $mimes ) {
-	$mimes['svg'] = 'image/svg+xml';
+add_filter(
+	'upload_mimes',
+	function ( $mimes ) {
+		$mimes['svg'] = 'image/svg+xml';
 
-	return $mimes;
-} );
+		return $mimes;
+	}
+);
 
 /**
  * Move WP-templates to templates-folder for cleaner experience on dev
  */
-add_filter( 'stylesheet', function ( $stylesheet ) {
-	return dirname( $stylesheet );
-} );
-
-add_action( 'after_switch_theme', function () {
-	$stylesheet = get_option( 'stylesheet' );
-	if ( basename( $stylesheet ) !== 'templates' ) {
-		update_option( 'stylesheet', $stylesheet . '/templates' );
+add_filter(
+	'stylesheet',
+	function ( $stylesheet ) {
+		return dirname( $stylesheet );
 	}
-} );
+);
+
+add_action(
+	'after_switch_theme',
+	function () {
+		$stylesheet = get_option( 'stylesheet' );
+		if ( basename( $stylesheet ) !== 'templates' ) {
+			update_option( 'stylesheet', $stylesheet . '/templates' );
+		}
+	}
+);
 
 /**
  * Register local ACF-json
  */
-add_filter( 'acf/settings/save_json', function () {
-	return get_stylesheet_directory() . '/library/acf-data';
-} );
+add_filter(
+	'acf/settings/save_json',
+	function () {
+		return get_stylesheet_directory() . '/library/acf-data';
+	}
+);
 
-add_filter( 'acf/settings/load_json', function () {
-	$paths[] = get_stylesheet_directory() . '/library/acf-data';
+add_filter(
+	'acf/settings/load_json',
+	function () {
+		$paths[] = get_stylesheet_directory() . '/library/acf-data';
 
-	return $paths;
-} );
+		return $paths;
+	}
+);
 
 /**
  * Add translatable string to pll
@@ -250,8 +282,11 @@ if ( function_exists( 'pll_register_string' ) ) {
 /**
  * Update google maps api key for ACF
  */
-//function update_acf_google_maps_api_key() {
-//
-//	acf_update_setting( 'google_api_key', 'your-api-here' );
-//}
-//add_action( 'acf/init', 'update_acf_google_maps_api_key' );
+function update_acf_google_maps_api_key() {
+
+	if ( function_exists( 'acf_update_setting' ) ) {
+		acf_update_setting( 'google_api_key', 'your-api-here' );
+	}
+}
+
+add_action( 'acf/init', 'update_acf_google_maps_api_key' );
