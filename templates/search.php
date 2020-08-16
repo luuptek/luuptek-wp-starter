@@ -13,11 +13,11 @@ get_header();
 <?php do_action( 'luuptek_wp_base_before_page' ); ?>
 
 <section>
-    <div class="container">
+	<div class="container">
 		<?php if ( have_posts() ) : ?>
-            <h1>
-				<?php printf( __( 'Search Results for: %s', TEXT_DOMAIN ), '<span>' . get_search_query() . '</span>' ); ?>
-            </h1>
+			<h1>
+				<?php printf( esc_html( __( 'Search Results for: %s', TEXT_DOMAIN ) ), '<span>' . get_search_query() . '</span>' ); ?>
+			</h1>
 			<?php while ( have_posts() ) : the_post(); ?>
 				<?php get_template_part( 'partials/content', 'search' ); ?>
 			<?php endwhile; ?>
@@ -25,7 +25,7 @@ get_header();
 		<?php else : ?>
 			<?php get_template_part( 'partials/no-results', 'search' ); ?>
 		<?php endif; ?>
-    </div>
+	</div>
 </section>
 
 <?php do_action( 'luuptek_wp_base_after_page' ); ?>

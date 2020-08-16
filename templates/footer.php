@@ -9,8 +9,8 @@
 ?>
 
 <footer>
-    <div class="container">
-        <div class="row">
+	<div class="container">
+		<div class="row">
 			<?php
 
 			$footer_widgets = [ 'footer-1', 'footer-2' ];
@@ -21,16 +21,16 @@
 				}
 			}
 			?>
-        </div>
-    </div>
-    <div class="container">
-        <ul class="some-nav">
-	        <?php
-            //Just render these anywhere you want to..
-            Utils()->get_social_media_links();
-	        ?>
-        </ul>
-    </div>
+		</div>
+	</div>
+	<div class="container">
+		<ul class="some-nav">
+			<?php
+			// Just render these anywhere you want to..
+			Utils()->get_social_media_links();
+			?>
+		</ul>
+	</div>
 </footer>
 
 <?php wp_footer(); ?>

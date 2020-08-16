@@ -13,8 +13,8 @@ get_header();
 <?php do_action( 'luuptek_wp_base_before_page' ); ?>
 
 <section>
-    <div class="container">
-        <h1><?php echo get_the_archive_title(); ?></h1>
+	<div class="container">
+		<h1><?php echo esc_html( get_the_archive_title() ); ?></h1>
 		<?php
 		if ( have_posts() ) :
 			while ( have_posts() ) :
@@ -24,7 +24,7 @@ get_header();
 			get_template_part( 'partials/pagination' );
 		endif;
 		?>
-    </div>
+	</div>
 </section>
 
 <?php do_action( 'luuptek_wp_base_after_page' ); ?>
