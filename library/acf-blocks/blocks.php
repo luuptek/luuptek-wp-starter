@@ -15,14 +15,16 @@ function register_luuptek_wp_base_acf_blocks() {
 	if ( function_exists( 'acf_register_block_type' ) ) {
 
 		// Registering block
-		acf_register_block_type( [
-			'name'            => 'block-name', //don't need acf/block-name
-			'title'           => __( 'Block name', TEXT_DOMAIN ),
-			'render_template' => 'partials/blocks/block.php',
-			'category'        => 'formatting',
-			'supports'        => [
-				'align' => ['full', 'wide'],
-			],
-		] );
+		acf_register_block_type(
+			[
+				'name'            => 'block-name', // don't need acf/block-name
+				'title'           => __( 'Block name', TEXT_DOMAIN ),
+				'render_template' => 'partials/blocks/block.php',
+				'category'        => 'formatting',
+				'supports'        => [
+					'align' => [ 'full', 'wide' ],
+				],
+			]
+		);
 	}
 }

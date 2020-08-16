@@ -6,46 +6,51 @@ use LuuptekWP\Utils;
  * Helper-functions
  *
  * @package Luuptek WP-Base
- *
  */
 
 /**
- * @param $filename
+ * Used to get the asset uri
+ *
+ * @param string $filename File name
  *
  * @return string
  */
 function asset_uri( $filename ) {
-    return trailingslashit( get_template_directory_uri() ) . "assets/dist/{$filename}";
+	return trailingslashit( get_template_directory_uri() ) . "assets/dist/{$filename}";
 }
 
 /**
  * Include all files from folder
  *
- * @param        $dir
- * @param string $suffix
+ * @param string $dir Directory
+ * @param string $suffix Suffix of the file
  */
 function require_files( $dir, $suffix = 'php' ) {
-    $dir = trailingslashit( $dir );
+	$dir = trailingslashit( $dir );
 
-    if ( ! is_dir( $dir ) ) {
-        return;
-    }
+	if ( ! is_dir( $dir ) ) {
+		return;
+	}
 
-    $files = new DirectoryIterator( $dir );
+	$files = new DirectoryIterator( $dir );
 
-    foreach ( $files as $file ) {
-        if ( ! $file->isDot() && $file->getExtension() === $suffix ) {
-            $filename = $dir . $file->getFilename();
-            require_once( $filename );
-        }
-    }
+	foreach ( $files as $file ) {
+		if ( ! $file->isDot() && $file->getExtension() === $suffix ) {
+			$filename = $dir . $file->getFilename();
+			require_once( $filename );
+		}
+	}
 }
 
 /**
  * Utils-class as function-wrapper
  */
-if ( ! function_exists( 'UTILS' ) ):
-    function UTILS() {
-        return new Utils;
-    }
+if ( ! function_exists( 'UTILS' ) ) :
+
+	/**
+	 * UTILS() function to create Utils class in classes/Utils.php
+	 */
+	function UTILS() {
+		return new Utils();
+	}
 endif;

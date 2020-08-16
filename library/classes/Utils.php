@@ -5,70 +5,23 @@ namespace LuuptekWP;
 class Utils {
 
 	/**
-	 * Display navigation to next/previous pages when applicable
-	 *
-	 * @param $nav_id
-	 */
-	function content_nav( $nav_id ) {
-		global $wp_query, $post;
-
-		if ( is_single() ) {
-			$previous = ( is_attachment() ) ? get_post( $post->post_parent ) : get_adjacent_post( false, '', true );
-			$next     = get_adjacent_post( false, '', false );
-
-			if ( ! $next && ! $previous ) {
-				return;
-			}
-		}
-
-		if ( $wp_query->max_num_pages < 2 && ( is_home() || is_archive() || is_search() ) ) {
-			return;
-		}
-
-		$nav_class = ( is_single() ) ? 'post-navigation' : 'paging-navigation';
-
-		?>
-        <nav role="navigation" id="<?php echo esc_attr( $nav_id ); ?>" class="<?php echo $nav_class; ?>">
-            <ul class="pager">
-				<?php if ( is_single() ) : ?>
-					<?php previous_post_link( '<li class="nav-previous previous">%link</li>',
-						'<span class="meta-nav">' . _x( '&larr;', 'Previous post link',
-							TEXT_DOMAIN ) . '</span> %title' ); ?>
-					<?php next_post_link( '<li class="nav-next next">%link</li>',
-						'%title <span class="meta-nav">' . _x( '&rarr;', 'Next post link',
-							TEXT_DOMAIN ) . '</span>' ); ?>
-
-				<?php elseif ( $wp_query->max_num_pages > 1 && ( is_home() || is_archive() || is_search() ) ) : // navigation links for home, archive, and search pages ?>
-					<?php if ( get_next_posts_link() ) : ?>
-                        <li class="nav-previous previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts',
-								TEXT_DOMAIN ) ); ?></li>
-					<?php endif; ?>
-					<?php if ( get_previous_posts_link() ) : ?>
-                        <li class="nav-next next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>',
-								TEXT_DOMAIN ) ); ?></li>
-					<?php endif; ?>
-				<?php endif; ?>
-            </ul>
-        </nav>
-		<?php
-	}
-
-	/**
 	 * Get custom CPTs
 	 *
 	 * @return array
 	 */
 	public function get_custom_post_types() {
-		return get_post_types( [
-			'public'   => true,
-			'_builtin' => false
-		] );
+		return get_post_types(
+			[
+				'public'   => true,
+				'_builtin' => false
+			]
+		);
 	}
 
 	/**
 	 * Get first category-item
 	 *
-	 * @param string $taxonomy
+	 * @param string $taxonomy Taxonomy name
 	 *
 	 * @return mixed
 	 */
@@ -81,7 +34,7 @@ class Utils {
 	/**
 	 * Get whole category-hierarchy
 	 *
-	 * @param string $taxonomy
+	 * @param string $taxonomy Taxonomy name
 	 *
 	 * @return array
 	 */
@@ -103,7 +56,7 @@ class Utils {
 	/**
 	 * Get parent-most category
 	 *
-	 * @param string $taxonomy
+	 * @param string $taxonomy Taxonomy name
 	 *
 	 * @return mixed
 	 */
@@ -125,7 +78,7 @@ class Utils {
 	/**
 	 * Get default image
 	 *
-	 * @param string $size
+	 * @param string $size Thumbmail size
 	 *
 	 * @return array|false
 	 */
@@ -138,7 +91,7 @@ class Utils {
 	/**
 	 * Get first paragraph from text content.
 	 *
-	 * @param $text
+	 * @param string $text Text of the paragraph
 	 *
 	 * @return string
 	 */
@@ -146,7 +99,7 @@ class Utils {
 		$str = wpautop( $text );
 		$str = substr( $str, 0, strpos( $str, '</p>' ) + 4 );
 		$str = strip_tags( $str, '<a><strong><em>' );
-		$str = preg_replace( "/\[.*\]\s*/", "", $str );
+		$str = preg_replace( '/\[.*\]\s*/', '', $str );
 
 		return '<p>' . $str . '</p>';
 	}
@@ -155,8 +108,8 @@ class Utils {
 	 * Retrive post thumbnail (featured image) if defined,
 	 * if not, retrieve default post image that's defined in theme settings
 	 *
-	 * @param string $size
-	 * @param null $postId
+	 * @param string $size Post thumbnail size
+	 * @param int $postId ID of the post
 	 *
 	 * @return false|string
 	 */
@@ -173,8 +126,8 @@ class Utils {
 	/**
 	 * Return post type name by post id
 	 *
-	 * @param $post_id
-	 * @param string $name (can be set to name or singular_name)
+	 * @param int $post_id ID of the post
+	 * @param string $name What to return (name/slug)
 	 *
 	 * @return mixed
 	 */
@@ -187,27 +140,26 @@ class Utils {
 
 	/**
 	 * Echoes some-links
-     *
-     * You can render these anywhere in the theme you want to..
 	 *
+	 * You can render these anywhere in the theme you want to..
 	 */
 	function get_social_media_links() {
 		$social_medias = [ 'facebook', 'twitter', 'instagram', 'youtube', 'linkedin', 'github' ];
 
 		foreach ( $social_medias as $social_media ) {
-			$field = 'options_luuptek_wp_base_contact_details_' . $social_media . '_url';
-			$option = get_option($field);
+			$field  = 'options_luuptek_wp_base_contact_details_' . $social_media . '_url';
+			$option = get_option( $field );
 
 			if ( ! empty( $option ) ) {
 				$faClass = 'fa-' . $social_media . '-square';
-				if ( $social_media === 'instagram' || $social_media === 'linkedin' ) {
+				if ( 'instagram' === $social_media || 'linkedin' === $social_media ) {
 					$faClass = 'fa-' . $social_media;
 				}
 				?>
-                <li>
-                    <a href="<?php echo $option ?>" target="_blank"><em
-                                class="fab <?php echo $faClass ?>" aria-hidden="true"></em></a>
-                </li>
+				<li>
+					<a href="<?php echo esc_url( $option ); ?>" target="_blank"><em
+							class="fab <?php echo $faClass ?>" aria-hidden="true"></em></a>
+				</li>
 				<?php
 			}
 		}
