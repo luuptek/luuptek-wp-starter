@@ -198,17 +198,6 @@ add_action(
 );
 
 /**
- * Add admin scripts & styles
- */
-function luuptek_wp_base_admin_style() {
-	echo '<link rel="stylesheet" href="' . asset_uri( 'styles/admin.css' ) . '" type="text/css" media="all" />';
-}
-
-add_action( 'login_head', 'luuptek_wp_base_admin_style' );
-add_action( 'admin_head', 'luuptek_wp_base_admin_style' );
-
-
-/**
  * Add text to theme footer
  */
 add_filter(

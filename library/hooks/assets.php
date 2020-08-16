@@ -18,6 +18,34 @@ add_action(
 			[ 'jquery', 'wp-i18n', 'wp-blocks', 'wp-dom-ready' ],
 			luuptek_wp_base_theme()->get( 'Version' )
 		);
+
+		/**
+		 * Main admin style
+		 */
+		wp_enqueue_style(
+			'luuptek_admin_style',
+			asset_uri( 'styles/admin.css' ),
+			[],
+			luuptek_wp_base_theme()->get( 'Version' )
+		);
+	}
+);
+
+/**
+ * Login stuff
+ */
+add_action(
+	'login_enqueue_scripts',
+	function () {
+		/**
+		 * Main admin style
+		 */
+		wp_enqueue_style(
+			'luuptek_admin_style',
+			asset_uri( 'styles/admin.css' ),
+			[],
+			luuptek_wp_base_theme()->get( 'Version' )
+		);
 	}
 );
 
