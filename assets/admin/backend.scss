@@ -18,6 +18,8 @@
 @import "../styles/common/functions";
 @import "../styles/common/variables";
 @import "../styles/common/variables";
+@import "../styles/common/mixins";
+@import "~bootstrap/scss/mixins";
 
 .editor-styles-wrapper {
   @each $name, $color in $page-theme-colors {
@@ -42,4 +44,6 @@
       }
     }
   }
+
+  @import "../styles/blocks/acf/acf-gb-blocks";
 }
