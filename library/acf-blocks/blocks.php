@@ -23,7 +23,7 @@ function register_luuptek_wp_base_acf_blocks() {
 			[
 				'name'            => 'hero', // don't need acf/block-name
 				'title'           => __( 'Hero', 'luuptek_wp_base' ),
-				'render_template' => 'partials/blocks/acf-hero.php',
+				'render_template' => 'partials/gb-blocks/gb-acf-hero.php',
 				'category'        => 'formatting',
 				'icon'            => 'format-image',
 				'supports'        => [
