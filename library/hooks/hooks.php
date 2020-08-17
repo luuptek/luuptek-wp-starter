@@ -139,6 +139,21 @@ add_filter(
 	}
 );
 
+add_filter(
+	'get_the_excerpt',
+	function ( $excerpt, $post ) {
+		if ( has_excerpt( $post ) ) {
+			$excerpt_length = apply_filters( 'excerpt_length', 12 );
+			$excerpt_more   = apply_filters( 'excerpt_more', '...' );
+			$excerpt        = wp_trim_words( $excerpt, $excerpt_length, $excerpt_more );
+		}
+
+		return $excerpt;
+	},
+	10,
+	2
+);
+
 /*
  * Let polylang to copy post title, content and excerpt when making a new language version
  */
