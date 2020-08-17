@@ -17,10 +17,12 @@ get_header();
 		<h1><?php echo esc_html( get_the_archive_title() ); ?></h1>
 		<?php
 		if ( have_posts() ) :
+			echo '<div class="post-lifts-row">';
 			while ( have_posts() ) :
 				the_post();
-				get_template_part( 'partials/content', 'excerpt' );
+				get_template_part( 'partials/content', 'post-lift' );
 			endwhile;
+			echo '</div>';
 			get_template_part( 'partials/pagination' );
 		else :
 			get_template_part( 'partials/no-results' );

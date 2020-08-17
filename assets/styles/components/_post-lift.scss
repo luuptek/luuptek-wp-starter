@@ -1,0 +1,50 @@
+.post-lifts-row {
+  @include make-row();
+}
+
+.post-lift-item {
+  @include make-col-ready();
+  margin-bottom: 15px;
+
+  @include media-breakpoint-up(md) {
+    @include make-col(6);
+  }
+
+  @include media-breakpoint-up(xl) {
+    @include make-col(4);
+  }
+}
+
+.post-lift-item__content {
+  position: relative;
+  background-color: #FFF;
+  height: 100%;
+  -webkit-box-shadow: 0 0 20px 0 transparentize(#CCC, 0.25);
+  -moz-box-shadow: 0 0 20px 0 transparentize(#CCC, 0.25);
+  box-shadow: 0 0 20px 0 transparentize(#CCC, 0.25);
+}
+
+.post-lift-item__text-content {
+  padding: 1rem;
+  text-align: center;
+}
+
+.post-lift-item__title {
+  font-family: $font-family--heading;
+  font-size: 1.8rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.post-lift-item__date {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.post-lift-item__link {
+  color: inherit;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
