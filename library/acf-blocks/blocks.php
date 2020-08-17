@@ -21,12 +21,13 @@ function register_luuptek_wp_base_acf_blocks() {
 		// Registering block
 		acf_register_block_type(
 			[
-				'name'            => 'block-name', // don't need acf/block-name
-				'title'           => __( 'Block name', 'luuptek_wp_base' ),
-				'render_template' => 'partials/blocks/block.php',
+				'name'            => 'hero', // don't need acf/block-name
+				'title'           => __( 'Hero', 'luuptek_wp_base' ),
+				'render_template' => 'partials/blocks/acf-hero.php',
 				'category'        => 'formatting',
+				'icon'            => 'format-image',
 				'supports'        => [
-					'align' => [ 'full', 'wide' ],
+					'align' => [ 'full' ],
 				],
 			]
 		);
