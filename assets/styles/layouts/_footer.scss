@@ -20,3 +20,29 @@ footer {
     @include make-col(6);
   }
 }
+
+.footer-copyrights {
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  background-color: darken($primary, 7.5%);
+  color: #FFF;
+  text-align: center;
+
+  .footer-copyright-img {
+    width: 1.2rem;
+    height: 1.2rem;
+    display: inline;
+
+    .fillpath {
+      fill: #FFFFFF;
+    }
+  }
+
+  a {
+    color: #FFF;
+
+    &:hover {
+      color: #FFF;
+    }
+  }
+}
