@@ -62,7 +62,7 @@ add_action(
 		wp_enqueue_script(
 			'luuptek_theme',
 			asset_uri( 'scripts/main.min.js' ),
-			[ 'jquery' ],
+			[],
 			luuptek_wp_base_theme()->get( 'Version' ),
 			true
 		);
@@ -78,11 +78,9 @@ add_action(
 		);
 
 		/**
-		 * Move jQuery to the footer.
+		 * No Jquery anymore!
 		 */
-		wp_scripts()->add_data( 'jquery', 'group', 1 );
-		wp_scripts()->add_data( 'jquery-core', 'group', 1 );
-		wp_scripts()->add_data( 'jquery-migrate', 'group', 1 );
+		wp_deregister_script( 'jquery' );
 
 	}
 );
