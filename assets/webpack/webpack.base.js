@@ -45,7 +45,7 @@ module.exports = {
     publicPath: `http://localhost:8080${publicPath}`,
   },
   externals: {
-
+	  jquery: 'jQuery'
   },
   module: {
     rules: [
