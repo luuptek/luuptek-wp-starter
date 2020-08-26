@@ -143,6 +143,7 @@ if ( ! function_exists( 'luuptek_wp_base_setup' ) ) :
 			add_theme_support( 'align-wide' );
 			add_theme_support( 'responsive-embeds' );
 			add_theme_support( 'disable-custom-colors' );
+			add_theme_support( 'disable-custom-gradients' );
 			add_theme_support( 'disable-custom-font-sizes' );
 		}
 
