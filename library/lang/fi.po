@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Luuptek WP-Base\n"
-"POT-Creation-Date: 2019-07-02 12:59+0300\n"
-"PO-Revision-Date: 2019-07-02 12:59+0300\n"
+"POT-Creation-Date: 2020-08-28 10:34+0300\n"
+"PO-Revision-Date: 2020-08-28 10:34+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fi\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 2.2.3\n"
+"X-Generator: Poedit 2.3.1\n"
 "X-Poedit-Basepath: ../..\n"
 "X-Poedit-WPHeader: style.css\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -20,31 +20,35 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
-#: functions.php:123
+#: functions.php:121
 msgid "Theme primary"
 msgstr "Teeman pääväri"
 
-#: functions.php:128
+#: functions.php:126
 msgid "Theme secondary"
 msgstr "Teeman toissijainen väri"
 
-#: functions.php:133
+#: functions.php:131
 msgid "Solid black"
 msgstr "Musta"
 
-#: functions.php:138
+#: functions.php:136
 msgid "Solid white"
 msgstr "Valkoinen"
 
-#: functions.php:169
+#: functions.php:172
 msgid "Latest from WP-quide"
 msgstr "Viimeisintä WP-oppaasta"
 
-#: library/acf-blocks/blocks.php:20
-msgid "Block name"
-msgstr "Lohkon nimi"
+#: library/acf-blocks/blocks.php:25
+msgid "Hero"
+msgstr ""
 
-#: library/acf-options/options.php:6 library/classes/Settings.php:35
+#: library/acf-blocks/blocks.php:38
+msgid "Latest posts"
+msgstr "Viimeisimmät julkaisut"
+
+#: library/acf-options/options.php:6
 msgid "Theme Options"
 msgstr "Teema-asetukset"
 
@@ -56,372 +60,177 @@ msgstr "Päivitä asetukset"
 msgid "Options updated"
 msgstr "Asetukset päivitetty"
 
-#: library/classes/Bootstrap-navwalker.php:366
+#: library/classes/Bootstrap-navwalker.php:364
 msgid "Add a menu"
 msgstr "Lisää menu"
 
-#: library/classes/Breadcrumbs.php:255
-msgid "Browse:"
-msgstr "Selaa:"
-
-#: library/classes/Breadcrumbs.php:256
-msgctxt "breadcrumbs aria label"
-msgid "Breadcrumbs"
-msgstr ""
-
-#: library/classes/Breadcrumbs.php:257
-msgid "Home"
-msgstr "Etusivu"
-
-#: library/classes/Breadcrumbs.php:258
-msgid "404 Not Found"
-msgstr "404 sivua ei löydy"
-
-#: library/classes/Breadcrumbs.php:259
-msgid "Archives"
-msgstr "Arkistot"
-
-#: library/classes/Breadcrumbs.php:261
-#, php-format
-msgid "Search results for &#8220;%s&#8221;"
-msgstr ""
-
-#: library/classes/Breadcrumbs.php:263 library/classes/Initialization.php:401
+#: library/classes/Initialization.php:401
 #, php-format
 msgid "Page %s"
 msgstr ""
-
-#: library/classes/Breadcrumbs.php:265
-#, php-format
-msgid "Minute %s"
-msgstr ""
-
-#: library/classes/Breadcrumbs.php:267
-#, php-format
-msgid "Week %s"
-msgstr ""
-
-#: library/classes/Breadcrumbs.php:722
-msgctxt "minute and hour archives time format"
-msgid "g:i a"
-msgstr ""
-
-#: library/classes/Breadcrumbs.php:741
-msgctxt "minute archives time format"
-msgid "i"
-msgstr ""
-
-#: library/classes/Breadcrumbs.php:760
-msgctxt "hour archives time format"
-msgid "g a"
-msgstr ""
-
-#: library/classes/Breadcrumbs.php:778 library/classes/Breadcrumbs.php:812
-#: library/classes/Breadcrumbs.php:844 library/classes/Breadcrumbs.php:874
-#: library/classes/Breadcrumbs.php:1239
-msgctxt "yearly archives date format"
-msgid "Y"
-msgstr ""
-
-#: library/classes/Breadcrumbs.php:780 library/classes/Breadcrumbs.php:846
-#: library/classes/Breadcrumbs.php:1245
-msgctxt "monthly archives date format"
-msgid "F"
-msgstr ""
-
-#: library/classes/Breadcrumbs.php:782 library/classes/Breadcrumbs.php:1251
-msgctxt "daily archives date format"
-msgid "j"
-msgstr ""
-
-#: library/classes/Breadcrumbs.php:814
-msgctxt "weekly archives date format"
-msgid "W"
-msgstr ""
-
-#: library/classes/CPT-base.php:488
-msgid "Add New"
-msgstr "Lisää uusi"
-
-#: library/classes/CPT-base.php:489 library/classes/CPT-base.php:609
-#, php-format
-msgid "Add New %s"
-msgstr "Lisää uusi %s"
-
-#: library/classes/CPT-base.php:491 library/classes/CPT-base.php:603
-#, php-format
-msgid "Edit %s"
-msgstr "Muokkaa %s"
-
-#: library/classes/CPT-base.php:493
-#, php-format
-msgid "New %s"
-msgstr "Uusi %s"
-
-#: library/classes/CPT-base.php:495 library/classes/CPT-base.php:605
-#, php-format
-msgid "View %s"
-msgstr "Katso %s"
-
-#: library/classes/CPT-base.php:497 library/classes/CPT-base.php:617
-#, php-format
-msgid "Search %s"
-msgstr "Hae %s"
-
-#: library/classes/CPT-base.php:499 library/classes/CPT-base.php:627
-#, php-format
-msgid "No %s found"
-msgstr "%s ei löytynyt"
-
-#: library/classes/CPT-base.php:501
-#, php-format
-msgid "No %s found in Trash"
-msgstr "%s ei löytynyt roskakorista"
-
-#: library/classes/CPT-base.php:503 library/classes/CPT-base.php:615
-#, php-format
-msgid "Parent %s:"
-msgstr "Ylätason %s"
-
-#: library/classes/CPT-base.php:601
-#, php-format
-msgid "All %s"
-msgstr "Kaikki %s"
-
-#: library/classes/CPT-base.php:607
-#, php-format
-msgid "Update %s"
-msgstr "Päivitä %s"
-
-#: library/classes/CPT-base.php:611
-#, php-format
-msgid "New %s Name"
-msgstr "Uusi %s nimi"
-
-#: library/classes/CPT-base.php:613
-#, php-format
-msgid "Parent %s"
-msgstr "Ylätason %s"
-
-#: library/classes/CPT-base.php:619
-#, php-format
-msgid "Popular %s"
-msgstr "Suosittu %s"
-
-#: library/classes/CPT-base.php:621
-#, php-format
-msgid "Separate %s with commas"
-msgstr "Erota %s pilkuilla"
-
-#: library/classes/CPT-base.php:623
-#, php-format
-msgid "Add or remove %s"
-msgstr "Lisää ja poista %s"
-
-#: library/classes/CPT-base.php:625
-#, php-format
-msgid "Choose from most used %s"
-msgstr "Valitse usein käytetyistä %s"
-
-#: library/classes/CPT-base.php:745
-#, php-format
-msgid "%s"
-msgstr "%s"
-
-#: library/classes/CPT-base.php:821
-#, php-format
-msgid "No %s"
-msgstr "Ei %s"
-
-#: library/classes/CPT-base.php:948
-#, php-format
-msgid "Show all %s"
-msgstr "Näytä kaikki %s"
-
-#: library/classes/CPT-base.php:1173 library/classes/CPT-base.php:1176
-#: library/classes/CPT-base.php:1179
-#, php-format
-msgid "%s updated."
-msgstr "%s päivitetty"
-
-#: library/classes/CPT-base.php:1174
-msgid "Custom field updated."
-msgstr "Kenttä päivitetty."
-
-#: library/classes/CPT-base.php:1175
-msgid "Custom field deleted."
-msgstr "Kenttä poistettu."
-
-#: library/classes/CPT-base.php:1177
-#, php-format
-msgid "%2$s restored to revision from %1$s"
-msgstr "%2$s palautettu versiosta %1$s"
-
-#: library/classes/CPT-base.php:1180
-#, php-format
-msgid "%s saved."
-msgstr "%s tallennettu."
-
-#: library/classes/CPT-base.php:1181
-#, php-format
-msgid "%s submitted."
-msgstr "%s lähetetty."
-
-#: library/classes/CPT-base.php:1183
-#, php-format
-msgid "%2$s scheduled for: <strong>%1$s</strong>."
-msgstr "%2$s ajoitettu <strong>%1$s</strong>."
-
-#: library/classes/CPT-base.php:1184
-msgid "M j, Y @ G:i"
-msgstr ""
-
-#: library/classes/CPT-base.php:1187
-#, php-format
-msgid "%s draft updated."
-msgstr "%s luonnos päivitetty."
-
-#: library/classes/CPT-base.php:1210 library/classes/CPT-base.php:1212
-#: library/classes/CPT-base.php:1214 library/classes/CPT-base.php:1216
-#: library/classes/CPT-base.php:1218
-#, php-format
-msgid "%s "
-msgid_plural "%s "
-msgstr[0] ""
-msgstr[1] ""
 
 #: library/classes/Initialization.php:440
 #, php-format
 msgid "Please make sure your <a href=\"%s\">.htaccess</a> file is writable "
 msgstr "Onhan<a href=“%s”>.htaccess</a> tiedosto kirjoitettavissa "
 
-#: library/classes/Settings.php:124
-msgid "General options"
-msgstr "Yleiset asetukset"
-
-#: library/classes/Settings.php:129
-msgid "Tag-manager head"
+#: library/custom-posts/cpt.php:11
+msgctxt "Post Type General Name"
+msgid "Post Types"
 msgstr ""
 
-#: library/classes/Settings.php:130
-msgid "Add here the full Tag-manager -snippet that goes to head."
-msgstr "Head-osioon liitettävä tag manager koodi."
-
-#: library/classes/Settings.php:136
-msgid "Tag-manager body"
+#: library/custom-posts/cpt.php:12
+msgctxt "Post Type Singular Name"
+msgid "Post Type"
 msgstr ""
 
-#: library/classes/Settings.php:137
-msgid "Add here the full Tag-manager -snippet that goes to beginning of body."
-msgstr "Body-tagin alkuun liitettävä tag manager koodi."
-
-#: library/classes/Settings.php:143
-msgid "Default post image"
-msgstr "Julkaisun oletuskuva"
-
-#: library/classes/Settings.php:144
-msgid "define default post image if no images are attached to post / page"
-msgstr ""
-"Voit määrittää oletuskuvan, jos julkaisulle ei ole määritettynä "
-"artikkelikuvaa."
-
-#: library/classes/Settings.php:155
-msgid "Advanced Settings"
-msgstr "Lisäasetukset"
-
-#: library/classes/Settings.php:160
-msgid "Some code-area"
-msgstr "Jotain koodialuetta"
-
-#: library/classes/Settings.php:161
-msgid "Add here some code, which will be rendered somewhere"
-msgstr "Tähän voi lisäillä kenttiä tarpeen vaatiessa."
-
-#: library/classes/Utils.php:35
-msgctxt "Previous post link"
-msgid "&larr;"
+#: library/custom-posts/cpt.php:13
+msgid "Post Types"
 msgstr ""
 
-#: library/classes/Utils.php:38
-msgctxt "Next post link"
-msgid "&rarr;"
+#: library/custom-posts/cpt.php:14 library/custom-posts/cpt.php:40
+msgid "Post Type"
 msgstr ""
 
-#: library/classes/Utils.php:43
-msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+#: library/custom-posts/cpt.php:15
+#, fuzzy
+#| msgid "Archives"
+msgid "Item Archives"
+msgstr "Arkistot"
+
+#: library/custom-posts/cpt.php:16
+msgid "Item Attributes"
 msgstr ""
 
-#: library/classes/Utils.php:47
-msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
-msgstr ""
+#: library/custom-posts/cpt.php:17
+#, fuzzy
+#| msgid "Parent %s:"
+msgid "Parent Item:"
+msgstr "Ylätason %s"
 
-#: library/custom-posts/books.php:11
-msgctxt "Add new string for cpt"
-msgid "Add new"
+#: library/custom-posts/cpt.php:18
+#, fuzzy
+#| msgid "All %s"
+msgid "All Items"
+msgstr "Kaikki %s"
+
+#: library/custom-posts/cpt.php:19
+#, fuzzy
+#| msgid "Add New"
+msgid "Add New Item"
 msgstr "Lisää uusi"
 
-#: library/custom-posts/books.php:12
-msgctxt "View string for cpt"
-msgid "Edit item"
+#: library/custom-posts/cpt.php:20
+msgid "Add New"
+msgstr "Lisää uusi"
+
+#: library/custom-posts/cpt.php:21
+msgid "New Item"
+msgstr ""
+
+#: library/custom-posts/cpt.php:22
+#, fuzzy
+#| msgctxt "View string for cpt"
+#| msgid "Edit item"
+msgid "Edit Item"
 msgstr "Katso julkaisu"
 
-#: library/custom-posts/books.php:17
-msgctxt "Single"
-msgid "Book"
-msgstr "Kirja"
+#: library/custom-posts/cpt.php:23
+#, fuzzy
+#| msgid "Update %s"
+msgid "Update Item"
+msgstr "Päivitä %s"
 
-#: library/custom-posts/books.php:18
-msgctxt "Plural"
-msgid "Books"
-msgstr "Kirjat"
+#: library/custom-posts/cpt.php:24
+#, fuzzy
+#| msgid "View %s"
+msgid "View Item"
+msgstr "Katso %s"
 
-#: library/custom-posts/books.php:19
-msgctxt "Partitive"
-msgid "Book"
-msgstr "kirjaa"
+#: library/custom-posts/cpt.php:25
+#, fuzzy
+#| msgid "View %s"
+msgid "View Items"
+msgstr "Katso %s"
 
-#: library/custom-posts/books.php:20
-msgctxt "Partitive plural"
-msgid "Books"
-msgstr "kirjoja"
+#: library/custom-posts/cpt.php:26
+#, fuzzy
+#| msgctxt "submit button"
+#| msgid "Search"
+msgid "Search Item"
+msgstr "Hae"
 
-#: library/custom-posts/books.php:45
-msgctxt "Single"
-msgid "Topic"
-msgstr "Aihe"
+#: library/custom-posts/cpt.php:27
+#, fuzzy
+#| msgid "Nothing found"
+msgid "Not found"
+msgstr "Mitään ei löytynyt"
 
-#: library/custom-posts/books.php:46
-msgctxt "Plural"
-msgid "Topics"
-msgstr "Aiheet"
+#: library/custom-posts/cpt.php:28
+#, fuzzy
+#| msgid "No %s found in Trash"
+msgid "Not found in Trash"
+msgstr "%s ei löytynyt roskakorista"
 
-#: library/custom-posts/books.php:47
-msgctxt "Partitive"
-msgid "Topic"
-msgstr "aihetta"
+#: library/custom-posts/cpt.php:29
+msgid "Featured Image"
+msgstr ""
 
-#: library/custom-posts/books.php:48
-msgctxt "Partitive plural"
-msgid "Topics"
-msgstr "aiheita"
+#: library/custom-posts/cpt.php:30
+msgid "Set featured image"
+msgstr ""
 
-#: library/hooks/hooks.php:198
+#: library/custom-posts/cpt.php:31
+msgid "Remove featured image"
+msgstr ""
+
+#: library/custom-posts/cpt.php:32
+msgid "Use as featured image"
+msgstr ""
+
+#: library/custom-posts/cpt.php:33
+msgid "Insert into item"
+msgstr ""
+
+#: library/custom-posts/cpt.php:34
+msgid "Uploaded to this item"
+msgstr ""
+
+#: library/custom-posts/cpt.php:35
+msgid "Items list"
+msgstr ""
+
+#: library/custom-posts/cpt.php:36
+#, fuzzy
+#| msgid "Toggle navigation"
+msgid "Items list navigation"
+msgstr "Näytä navigaatio"
+
+#: library/custom-posts/cpt.php:37
+msgid "Filter items list"
+msgstr ""
+
+#: library/custom-posts/cpt.php:41
+msgid "Post Type Description"
+msgstr ""
+
+#: library/hooks/hooks.php:269
 msgid "Luuptek blocks"
 msgstr "Luuptek lohkot"
 
-#: library/widgets/nav-menus.php:36
+#: library/widgets/nav-menus.php:39
 msgid "Main menu"
 msgstr "Päävalikko"
 
-#: library/widgets/widgets.php:23
+#: library/widgets/widgets.php:25
 msgid "Footer 1/2"
 msgstr ""
 
-#: library/widgets/widgets.php:29
+#: library/widgets/widgets.php:32
 msgid "Footer 2/2"
 msgstr ""
 
-#: partials/components/main-nav.php:8
+#: partials/components/main-nav.php:7
 msgid "Toggle navigation"
 msgstr "Näytä navigaatio"
 
@@ -435,12 +244,12 @@ msgid ""
 "searching can help."
 msgstr "Näyttää siltä, että hakemaasi sivua ei löydy. Ehkä haku auttaa."
 
-#: partials/no-results-search.php:14
+#: partials/no-results-search.php:15
 #, php-format
 msgid "No results found for %s"
 msgstr "Ei tuloksia hakusanalla %s"
 
-#: partials/no-results-search.php:17
+#: partials/no-results-search.php:19
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
@@ -456,7 +265,11 @@ msgstr "Mitään ei löytynyt"
 msgid "It seems there's no content at this time. "
 msgstr "Näyttää siltä, että sisältöä ei tällä hetkellä ole."
 
-#: templates/search.php:19
+#: templates/footer.php:51
+msgid "Code by"
+msgstr ""
+
+#: templates/search.php:20
 #, php-format
 msgid "Search Results for: %s"
 msgstr "Hakutulokset: %s"
@@ -488,6 +301,167 @@ msgstr ""
 #. Author of the plugin/theme
 msgid "Luuptek"
 msgstr ""
+
+#~ msgid "Block name"
+#~ msgstr "Lohkon nimi"
+
+#~ msgid "Browse:"
+#~ msgstr "Selaa:"
+
+#~ msgid "Home"
+#~ msgstr "Etusivu"
+
+#~ msgid "404 Not Found"
+#~ msgstr "404 sivua ei löydy"
+
+#, php-format
+#~ msgid "Add New %s"
+#~ msgstr "Lisää uusi %s"
+
+#, php-format
+#~ msgid "Edit %s"
+#~ msgstr "Muokkaa %s"
+
+#, php-format
+#~ msgid "New %s"
+#~ msgstr "Uusi %s"
+
+#, php-format
+#~ msgid "Search %s"
+#~ msgstr "Hae %s"
+
+#, php-format
+#~ msgid "No %s found"
+#~ msgstr "%s ei löytynyt"
+
+#, php-format
+#~ msgid "New %s Name"
+#~ msgstr "Uusi %s nimi"
+
+#, php-format
+#~ msgid "Parent %s"
+#~ msgstr "Ylätason %s"
+
+#, php-format
+#~ msgid "Popular %s"
+#~ msgstr "Suosittu %s"
+
+#, php-format
+#~ msgid "Separate %s with commas"
+#~ msgstr "Erota %s pilkuilla"
+
+#, php-format
+#~ msgid "Add or remove %s"
+#~ msgstr "Lisää ja poista %s"
+
+#, php-format
+#~ msgid "Choose from most used %s"
+#~ msgstr "Valitse usein käytetyistä %s"
+
+#, php-format
+#~ msgid "%s"
+#~ msgstr "%s"
+
+#, php-format
+#~ msgid "No %s"
+#~ msgstr "Ei %s"
+
+#, php-format
+#~ msgid "Show all %s"
+#~ msgstr "Näytä kaikki %s"
+
+#, php-format
+#~ msgid "%s updated."
+#~ msgstr "%s päivitetty"
+
+#~ msgid "Custom field updated."
+#~ msgstr "Kenttä päivitetty."
+
+#~ msgid "Custom field deleted."
+#~ msgstr "Kenttä poistettu."
+
+#, php-format
+#~ msgid "%2$s restored to revision from %1$s"
+#~ msgstr "%2$s palautettu versiosta %1$s"
+
+#, php-format
+#~ msgid "%s saved."
+#~ msgstr "%s tallennettu."
+
+#, php-format
+#~ msgid "%s submitted."
+#~ msgstr "%s lähetetty."
+
+#, php-format
+#~ msgid "%2$s scheduled for: <strong>%1$s</strong>."
+#~ msgstr "%2$s ajoitettu <strong>%1$s</strong>."
+
+#, php-format
+#~ msgid "%s draft updated."
+#~ msgstr "%s luonnos päivitetty."
+
+#~ msgid "General options"
+#~ msgstr "Yleiset asetukset"
+
+#~ msgid "Add here the full Tag-manager -snippet that goes to head."
+#~ msgstr "Head-osioon liitettävä tag manager koodi."
+
+#~ msgid ""
+#~ "Add here the full Tag-manager -snippet that goes to beginning of body."
+#~ msgstr "Body-tagin alkuun liitettävä tag manager koodi."
+
+#~ msgid "Default post image"
+#~ msgstr "Julkaisun oletuskuva"
+
+#~ msgid "define default post image if no images are attached to post / page"
+#~ msgstr ""
+#~ "Voit määrittää oletuskuvan, jos julkaisulle ei ole määritettynä "
+#~ "artikkelikuvaa."
+
+#~ msgid "Advanced Settings"
+#~ msgstr "Lisäasetukset"
+
+#~ msgid "Some code-area"
+#~ msgstr "Jotain koodialuetta"
+
+#~ msgid "Add here some code, which will be rendered somewhere"
+#~ msgstr "Tähän voi lisäillä kenttiä tarpeen vaatiessa."
+
+#~ msgctxt "Add new string for cpt"
+#~ msgid "Add new"
+#~ msgstr "Lisää uusi"
+
+#~ msgctxt "Single"
+#~ msgid "Book"
+#~ msgstr "Kirja"
+
+#~ msgctxt "Plural"
+#~ msgid "Books"
+#~ msgstr "Kirjat"
+
+#~ msgctxt "Partitive"
+#~ msgid "Book"
+#~ msgstr "kirjaa"
+
+#~ msgctxt "Partitive plural"
+#~ msgid "Books"
+#~ msgstr "kirjoja"
+
+#~ msgctxt "Single"
+#~ msgid "Topic"
+#~ msgstr "Aihe"
+
+#~ msgctxt "Plural"
+#~ msgid "Topics"
+#~ msgstr "Aiheet"
+
+#~ msgctxt "Partitive"
+#~ msgid "Topic"
+#~ msgstr "aihetta"
+
+#~ msgctxt "Partitive plural"
+#~ msgid "Topics"
+#~ msgstr "aiheita"
 
 #~ msgid "Title"
 #~ msgstr "Otsikko"
