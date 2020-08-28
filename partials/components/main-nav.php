@@ -14,6 +14,7 @@
 		<div class="collapse navbar-collapse" id="mainNav">
 			<ul class="navbar-nav ml-auto">
 				<?php luuptek_wp_base_main_menu(); ?>
+				<?php get_template_part( 'partials/components/lang-selector' ); ?>
 			</ul>
 		</div>
 	</div>
