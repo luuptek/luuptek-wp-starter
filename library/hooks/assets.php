@@ -62,7 +62,7 @@ add_action(
 		wp_enqueue_script(
 			'luuptek_theme',
 			asset_uri( 'scripts/main.min.js' ),
-			[],
+			[ 'jquery' ],
 			luuptek_wp_base_theme()->get( 'Version' ),
 			true
 		);
