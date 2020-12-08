@@ -78,7 +78,7 @@ class Utils {
 	/**
 	 * Get default image
 	 *
-	 * @param string $size Thumbmail size
+	 * @param string $size Thumbnail size
 	 *
 	 * @return array|false
 	 */
@@ -86,6 +86,15 @@ class Utils {
 		$image_id = ! empty( get_option( 'options_luuptek_wp_base_default_image_id' ) ) ? get_option( 'options_luuptek_wp_base_default_image_id' ) : null;
 
 		return wp_get_attachment_image_src( $image_id, $size )[0];
+	}
+
+	/**
+	 * Echoes svg directly from images-folder (as inline)
+	 *
+	 * @param string $file_name Name of the svg without .svg
+	 */
+	function the_svg( $file_name ) {
+		readfile( asset_uri( 'images' ) . '/' . $file_name . '.svg' );
 	}
 
 	/**
