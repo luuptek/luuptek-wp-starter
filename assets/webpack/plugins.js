@@ -128,9 +128,9 @@ const productionPLugins = [
     new UglifyJsPlugin({
         uglifyOptions: {
             ecma: 5,
+			warnings: true,
             compress: {
-                warnings: true,
-                drop_console: true,
+                drop_console: true
             },
         },
     }),
