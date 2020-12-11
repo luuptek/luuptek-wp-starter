@@ -42,11 +42,11 @@ figure {
 }
 
 .wp-caption-text {
-  padding: rem-calc(5) rem-calc(10);
+  padding: rem(5px 10px);
 }
 
 // Text meant only for screen readers
-.screen-reader-text {
-  @extend .sr-only;
-  @extend .sr-only-focusable;
+.sr-only {
+  @include sr-only();
+  @include sr-only-focusable();
 }
