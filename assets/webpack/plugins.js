@@ -26,8 +26,8 @@ const commonPlugins = [
   new CopyWebpackPlugin([
     {
       from: path.resolve(__dirname, '../images/**/*'),
-      to: 'images',
-      flatten: true
+      to: 'images/',
+		context: "./assets/images/"
     }
   ], {
 
