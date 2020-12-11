@@ -1,33 +1,33 @@
 .wp-block-quote {
   &.is-style-default, &.is-style-large {
-    border-left: 1.5rem solid $primary;
-    margin: 1.5rem auto;
-    padding-left: 1.5rem;
+    border-left: rem(25px) solid $primary;
+    margin: rem(25px) auto;
+    padding-left: rem(25px);
   }
 
   &.is-style-large {
     > p {
-      font-size: 2rem;
+      font-size: rem($h1-base-font-size);
     }
   }
 
   &.is-style-large {
     > cite {
-      font-size: 1rem;
+      font-size: rem(16px);
     }
   }
 
   > p {
-    font-size: 1.2rem;
+    font-size: rem(20px);
   }
 
   > cite {
-    font-size: 0.8rem;
+    font-size: rem(14px);
     opacity: 0.8;
   }
 }
 
 .wp-block-pullquote {
-  border-top: 0.5rem solid $primary;
-  border-bottom: 0.5rem solid $primary;
+  border-top: rem(8px) solid $primary;
+  border-bottom: rem(8px) solid $primary;
 }

@@ -16,15 +16,15 @@
 
   &.is-style-default {
     .wp-block-button__link {
-      padding: 0.375rem 1.75rem;
-      border-radius: 20px;
+      padding: rem(5px 25px);
+      border-radius: rem(20px);
     }
   }
 
   &.is-style-full-width {
     .wp-block-button__link {
       width: 100%;
-      padding: 0.8rem 1.75rem;
+      padding: rem(14px 25px);
       border-radius: 20px;
       font-weight: 600;
     }

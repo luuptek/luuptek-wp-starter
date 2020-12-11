@@ -25,19 +25,19 @@
 }
 
 .post-lift-item__text-content {
-  padding: 1rem;
+  padding: rem(15px);
   text-align: center;
 }
 
 .post-lift-item__title {
   font-family: $font-family--heading;
-  font-size: 1.8rem;
+  font-size: rem(28px);
   margin-top: 0;
-  margin-bottom: 1rem;
+  margin-bottom: rem(16px);
 }
 
 .post-lift-item__date {
-  font-size: 0.9rem;
+  font-size: rem(15px);
   opacity: 0.9;
 }
 

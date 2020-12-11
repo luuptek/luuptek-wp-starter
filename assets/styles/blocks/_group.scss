@@ -16,10 +16,10 @@
 
   &.alignfull, &.alignwide {
     .wp-block-group__inner-container {
-      padding: 1.5rem 15px;
+      padding: rem(25px 15px);
 
       @include media-breakpoint-up(md) {
-        padding: 1.5rem 0;
+        padding: rem(25px 0);
       }
     }
   }
@@ -41,7 +41,7 @@
   }
 
   .wp-block-group__inner-container {
-    padding: 1.5rem 15px;
+    padding: rem(25px 0);
     margin: 0 auto;
 
     @each $name, $width in $container-max-widths {

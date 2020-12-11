@@ -15,18 +15,18 @@
 
 .alignleft,
 .alignright {
-  margin-bottom: 2rem;
+  margin-bottom: rem(32px);
 }
 
 @include media-breakpoint-up(md) {
   // Only float if not on an extra small device
   .alignleft {
     float: left;
-    margin-right: 2rem;
+    margin-right: rem(32px);
   }
   .alignright {
     float: right;
-    margin-left: 2rem;
+    margin-left: rem(32px);
   }
 }
 

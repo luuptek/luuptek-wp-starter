@@ -1,7 +1,7 @@
 footer {
   background-color: $primary;
   color: #FFF;
-  padding: 3rem 0 2rem 0;
+  padding: rem(40px 0 30px 0);
 
   a {
     color: #FFF;
@@ -21,8 +21,8 @@ footer {
 }
 
 .footer-copyrights {
-  padding: 0.5rem 1rem;
-  font-size: 0.9rem;
+  padding: rem(8px 16px);
+  font-size: rem(15px);
   background-color: darken($primary, 7.5%);
   color: #FFF;
   text-align: center;

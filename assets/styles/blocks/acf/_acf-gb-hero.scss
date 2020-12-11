@@ -1,8 +1,8 @@
 @mixin hero-heights() {
-  min-height: 20rem;
+  min-height: rem(320px);
 
   @include media-breakpoint-up(md) {
-	min-height: 40rem;
+	min-height: rem(640px);
   }
 }
 
@@ -14,7 +14,7 @@
 
 .gb-hero-content-wrapper {
   @include hero-heights;
-  padding: 1rem 0;
+  padding: rem(16px 0);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -38,12 +38,12 @@
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
   color: #FFF;
   font-family: $font-family--heading;
-  @include make-heading(2rem, 0, 1rem);
+  @include make-heading(32px, 0, rem(16px));
 }
 
 .gb-hero__description {
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
   color: #FFF;
   font-family: $font-family--body;
-  @include make-heading(1rem, 0, 1rem);
+  @include make-heading(16px, 0, rem(16px));
 }

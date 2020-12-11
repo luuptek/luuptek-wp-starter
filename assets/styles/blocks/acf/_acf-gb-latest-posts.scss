@@ -6,6 +6,6 @@
   }
 
   &__title {
-	@include make-heading(1.3rem, 0, 2rem);
+	@include make-heading(21px, 0, rem(32px));
   }
 }
