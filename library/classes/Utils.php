@@ -160,14 +160,11 @@ class Utils {
 			$option = get_option( $field );
 
 			if ( ! empty( $option ) ) {
-				$faClass = 'fa-' . $social_media . '-square';
-				if ( 'instagram' === $social_media || 'linkedin' === $social_media ) {
-					$faClass = 'fa-' . $social_media;
-				}
 				?>
 				<li>
-					<a href="<?php echo esc_url( $option ); ?>" target="_blank"><em
-							class="fab <?php echo $faClass ?>" aria-hidden="true"></em></a>
+					<a href="<?php echo esc_url( $option ); ?>" target="_blank">
+						<?php Utils()->the_svg('icons/' . $social_media . '-square'); ?>
+					</a>
 				</li>
 				<?php
 			}

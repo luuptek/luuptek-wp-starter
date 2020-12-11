@@ -9,8 +9,12 @@ ul {
 
       > a {
         color: #FFF;
-        font-size: rem(24px);
         padding: rem(4px 8px);
+
+		svg {
+		  width: rem(24px);
+		  height: auto;
+		}
 
         &:hover, &:focus, &:active {
           text-decoration: none;
