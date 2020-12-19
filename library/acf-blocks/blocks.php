@@ -22,7 +22,7 @@ function register_luuptek_wp_base_acf_blocks() {
 		acf_register_block_type(
 			[
 				'name'            => 'hero', // don't need acf/block-name
-				'title'           => __( 'Hero', 'luuptek_wp_base' ),
+				'title'           => __( 'Hero / Kansi', 'luuptek_wp_base' ),
 				'render_template' => 'partials/gb-blocks/gb-acf-hero.php',
 				'category'        => 'formatting',
 				'icon'            => 'format-image',
@@ -35,7 +35,7 @@ function register_luuptek_wp_base_acf_blocks() {
 		acf_register_block_type(
 			[
 				'name'            => 'latest-posts', // don't need acf/block-name
-				'title'           => __( 'Latest posts', 'luuptek_wp_base' ),
+				'title'           => __( 'Viimeisimmät julkaisut', 'luuptek_wp_base' ),
 				'render_template' => 'partials/gb-blocks/gb-acf-latest-posts.php',
 				'category'        => 'formatting',
 				'icon'            => 'layout',

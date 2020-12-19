@@ -22,14 +22,14 @@ add_action(
 
 		register_sidebar(
 			[
-				'name' => __( 'Footer 1/2', 'luuptek_wp_base' ),
+				'name' => __( 'Alatunniste 1/2', 'luuptek_wp_base' ),
 				'id'   => 'footer-1',
 			] + $footer_widget_base
 		);
 
 		register_sidebar(
 			[
-				'name' => __( 'Footer 2/2', 'luuptek_wp_base' ),
+				'name' => __( 'Alatunniste 2/2', 'luuptek_wp_base' ),
 				'id'   => 'footer-2',
 			] + $footer_widget_base
 		);

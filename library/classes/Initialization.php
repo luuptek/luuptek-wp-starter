@@ -398,7 +398,7 @@ class Initialization {
 
 		// Add a page number if necessary:
 		if ( $paged >= 2 || $page >= 2 ) {
-			$title .= " $sep " . sprintf( __( 'Page %s', 'luuptek_wp_base' ), max( $paged, $page ) );
+			$title .= " $sep " . sprintf( __( 'Sivu %s', 'luuptek_wp_base' ), max( $paged, $page ) );
 		}
 
 		return $title;
@@ -437,7 +437,7 @@ class Initialization {
 		) {
 			if ( current_user_can( 'administrator' ) ) {
 				add_action( 'admin_notices', create_function( '',
-					"echo '<div class=\"error\"><p>" . sprintf( __( 'Please make sure your <a href="%s">.htaccess</a> file is writable ',
+					"echo '<div class=\"error\"><p>" . sprintf( __( 'Huomioithan että <a href="%s">.htaccess</a> on kirjoitettavissa ',
 						'luuptek_wp_base' ), admin_url( 'options-permalink.php' ) ) . "</p></div>';" ) );
 			}
 		}

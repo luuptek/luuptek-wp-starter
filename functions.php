@@ -118,22 +118,22 @@ if ( ! function_exists( 'luuptek_wp_base_setup' ) ) :
 				'editor-color-palette',
 				[
 					[
-						'name'  => __( 'Theme primary', 'luuptek_wp_base' ),
+						'name'  => __( 'Teeman pääväri', 'luuptek_wp_base' ),
 						'slug'  => 'theme-primary',
 						'color' => '#5b9279',
 					],
 					[
-						'name'  => __( 'Theme secondary', 'luuptek_wp_base' ),
+						'name'  => __( 'Teeman toissijainen väri', 'luuptek_wp_base' ),
 						'slug'  => 'theme-secondary',
 						'color' => '#2e3532',
 					],
 					[
-						'name'  => __( 'Solid black', 'luuptek_wp_base' ),
+						'name'  => __( 'Täysin musta', 'luuptek_wp_base' ),
 						'slug'  => 'solid-black',
 						'color' => '#000',
 					],
 					[
-						'name'  => __( 'Solid white', 'luuptek_wp_base' ),
+						'name'  => __( 'Täysin valkoinen', 'luuptek_wp_base' ),
 						'slug'  => 'solid-white',
 						'color' => '#FFF',
 					],
@@ -169,7 +169,7 @@ add_action(
 	'wp_dashboard_setup',
 	function () {
 		if ( defined( 'FEED_URI' ) ) {
-			add_meta_box( 'dashboard_custom_feed', __( 'Latest from WP-quide', 'luuptek_wp_base' ), 'luuptek_wp_base_feed', 'dashboard', 'side', 'low' );
+			add_meta_box( 'dashboard_custom_feed', __( 'Viimeisintä WP-oppasta', 'luuptek_wp_base' ), 'luuptek_wp_base_feed', 'dashboard', 'side', 'low' );
 		}
 
 		/**

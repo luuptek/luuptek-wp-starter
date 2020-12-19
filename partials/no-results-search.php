@@ -12,11 +12,11 @@
 <article>
 	<h1>
 		<?php /* translators: %s: search term */ ?>
-		<?php printf( esc_html__( 'No results found for %s', 'luuptek_wp_base' ), '<span>' . get_search_query() . '</span>' ); ?>
+		<?php printf( esc_html__( 'Ei tuloksia haulla %s', 'luuptek_wp_base' ), '<span>' . get_search_query() . '</span>' ); ?>
 	</h1>
 	<p>
 		<?php
-		esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'luuptek_wp_base' );
+		esc_html_e( 'Pahoittelut, mutta hakusi ei tuottanut tulosta. Voit yrittää jollain toisilla hakusanoilla.', 'luuptek_wp_base' );
 		?>
 	</p>
 	<?php get_search_form(); ?>

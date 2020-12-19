@@ -11,9 +11,9 @@
 
 <article>
 	<h1>
-		<?php esc_html_e( 'Nothing found', 'luuptek_wp_base' ); ?>
+		<?php esc_html_e( 'Mitään ei löytynyt', 'luuptek_wp_base' ); ?>
 	</h1>
 	<p>
-		<?php esc_html_e( 'It seems there\'s no content at this time. ', 'luuptek_wp_base' ); ?>
+		<?php esc_html_e( 'Näyttää siltä, että sisältöä ei ole vielä luotu. ', 'luuptek_wp_base' ); ?>
 	</p>
 </article>
