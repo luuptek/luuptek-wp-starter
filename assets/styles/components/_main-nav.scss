@@ -3,10 +3,10 @@
   padding: rem(15px 0);
 
   .nav-logo {
-    height: 30px;
+    height: rem(30px);
 
     @include media-breakpoint-up(lg) {
-      height: 40px;
+      height: rem(40px);
     }
   }
 

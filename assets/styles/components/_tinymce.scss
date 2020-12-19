@@ -2,6 +2,6 @@ html .mceContentBody,
 body#tinymce {
   min-height: 0 !important;
   height: auto !important;
-  margin: 12px !important;
+  margin: rem(12px) !important;
   background-color: #FFF;
 }

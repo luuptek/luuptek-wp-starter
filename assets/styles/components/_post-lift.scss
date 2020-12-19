@@ -4,7 +4,7 @@
 
 .post-lift-item {
   @include make-col-ready();
-  margin-bottom: 15px;
+  margin-bottom: rem(15px);
 
   @include media-breakpoint-up(md) {
     @include make-col(6);
