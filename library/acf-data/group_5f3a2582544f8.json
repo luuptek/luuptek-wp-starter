@@ -1,6 +1,6 @@
 {
     "key": "group_5f3a2582544f8",
-    "title": "Hero lohko",
+    "title": "Hero-osion asetukset",
     "fields": [
         {
             "key": "field_5f3a27395f470",
@@ -38,7 +38,7 @@
         {
             "key": "field_5f3a262b88c78",
             "label": "Otsikko",
-            "name": "title",
+            "name": "hero_title",
             "type": "text",
             "instructions": "Herokuvassa näkyvä otsikko. Sivun h1-otsikko. Vapaaehtoinen.",
             "required": 0,
@@ -57,7 +57,7 @@
         {
             "key": "field_5f3a265c88c79",
             "label": "Kuvaus",
-            "name": "description",
+            "name": "hero_description",
             "type": "textarea",
             "instructions": "Vapaaehtoinen kuvausteksti.",
             "required": 0,
@@ -76,7 +76,7 @@
         {
             "key": "field_5f3a268888c7a",
             "label": "Painike",
-            "name": "button",
+            "name": "hero_button",
             "type": "link",
             "instructions": "Vapaaehtoinen painike, jolla voi linkata haluttuun sivuun.",
             "required": 0,
@@ -107,7 +107,7 @@
         {
             "key": "field_5f3a26bb88c7c",
             "label": "Taustakuva",
-            "name": "bg_image",
+            "name": "hero_bg_image",
             "type": "image",
             "instructions": "",
             "required": 0,
@@ -132,9 +132,9 @@
     "location": [
         [
             {
-                "param": "block",
+                "param": "page_template",
                 "operator": "==",
-                "value": "acf\/hero"
+                "value": "default"
             }
         ]
     ],
@@ -146,5 +146,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1597646685
+    "modified": 1610703592
 }

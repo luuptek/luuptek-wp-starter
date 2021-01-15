@@ -33,6 +33,12 @@ function luuptek_wp_base_set_imagesizes() {
 			'height' => 200,
 			'crop'   => true,
 		],
+		[
+			'name'   => 'hero_slide',
+			'width'  => 1920,
+			'height' => 700,
+			'crop'   => true,
+		],
 	];
 }
 

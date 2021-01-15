@@ -6,13 +6,11 @@
   }
 }
 
-.gb-hero {
-  margin-right: -15px;
-  margin-left: -15px;
+.b-hero {
   @include hero-heights;
 }
 
-.gb-hero-content-wrapper {
+.b-hero-content-wrapper {
   @include hero-heights;
   padding: rem(16px 0);
   display: flex;
@@ -22,7 +20,7 @@
   background-size: cover;
 }
 
-.gb-hero__inner-container {
+.b-hero__inner-container {
   padding: rem(0 15px);
   margin: 0 auto;
   width: 100%;
@@ -34,14 +32,14 @@
   }
 }
 
-.gb-hero__title {
+.b-hero__title {
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
   color: #FFF;
   font-family: $font-family--heading;
   @include make-heading(32px, 0, rem(16px));
 }
 
-.gb-hero__description {
+.b-hero__description {
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
   color: #FFF;
   font-family: $font-family--body;
