@@ -39,6 +39,12 @@ function luuptek_wp_base_set_imagesizes() {
 			'height' => 700,
 			'crop'   => true,
 		],
+		[
+			'name'   => 'square',
+			'width'  => 500,
+			'height' => 500,
+			'crop'   => true,
+		],
 	];
 }
 

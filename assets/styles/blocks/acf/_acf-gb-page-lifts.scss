@@ -1,0 +1,19 @@
+.gb-page-lifts {
+  padding: rem(30px 0);
+
+  &.gb-page-lifts--no-top-padding {
+	padding: rem(0 0 30px 0);
+  }
+
+  &__row {
+	@include make-row();
+  }
+
+  &__title {
+	@include make-heading(21px, 0, rem(32px));
+
+	&.gb-page-lifts__title--h1 {
+	  @include make-heading($h1-base-font-size, 0, rem(32px));
+	}
+  }
+}

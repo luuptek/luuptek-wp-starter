@@ -1,0 +1,182 @@
+{
+    "key": "group_5ff86e052ec5d",
+    "title": "Sivunostot lohko",
+    "fields": [
+        {
+            "key": "field_5ff86e053b834",
+            "label": "Otsikko",
+            "name": "title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5ff97ce79842b",
+            "label": "Otsikon taso",
+            "name": "heading_level",
+            "type": "select",
+            "instructions": "Valitse joko h1 tai h2. Valitse h1, jos kyseessä on sivun ensimmäinen otsikko. Muutoin h2.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "h1": "h1",
+                "h2": "h2"
+            },
+            "default_value": "h1",
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_5ff86e053b867",
+            "label": "Mitä näytetään?",
+            "name": "what_to_show",
+            "type": "select",
+            "instructions": "Näytä helposti sivunostoja joko valitsemalla sivujen yläsivu tai valitsemalla käsin.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "post_parent": "Yläsivu",
+                "define": "Määritä"
+            },
+            "default_value": "post_parent",
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_5ff86e053b882",
+            "label": "Kuinka monta näytetään?",
+            "name": "post_count",
+            "type": "number",
+            "instructions": "Jätä tyhjäksi näyttääksesi kaikki (jos yläsivu valittuna).",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5ff86e053b867",
+                        "operator": "==",
+                        "value": "post_parent"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": "",
+            "max": "",
+            "step": ""
+        },
+        {
+            "key": "field_5ff97d7b4bec2",
+            "label": "Yläsivu",
+            "name": "post_parent",
+            "type": "post_object",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5ff86e053b867",
+                        "operator": "==",
+                        "value": "post_parent"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "page"
+            ],
+            "taxonomy": "",
+            "allow_null": 0,
+            "multiple": 0,
+            "return_format": "id",
+            "ui": 1
+        },
+        {
+            "key": "field_5ff86e053b89c",
+            "label": "Näytettävät julkaisut",
+            "name": "defined_posts",
+            "type": "post_object",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5ff86e053b867",
+                        "operator": "==",
+                        "value": "define"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "page"
+            ],
+            "taxonomy": "",
+            "allow_null": 0,
+            "multiple": 1,
+            "return_format": "id",
+            "ui": 1
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/page-lifts"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1610738584
+}

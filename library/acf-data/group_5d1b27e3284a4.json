@@ -233,7 +233,7 @@
             {
                 "param": "options_page",
                 "operator": "==",
-                "value": "acf-options-teema-asetukset"
+                "value": "acf-options-teeman-asetukset"
             }
         ]
     ],
@@ -245,5 +245,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1603434230
+    "modified": 1610738955
 }

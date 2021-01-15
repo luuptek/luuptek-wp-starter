@@ -32,5 +32,20 @@ function register_luuptek_wp_base_acf_blocks() {
 				'align'           => 'full',
 			]
 		);
+
+		acf_register_block_type(
+			[
+				'name'            => 'page-lifts', // don't need acf/block-name
+				'title'           => __( 'Sivunostot', 'luuptek_wp_base' ),
+				'render_template' => 'partials/gb-blocks/gb-acf-page-lifts.php',
+				'category'        => 'formatting',
+				'icon'            => 'layout',
+				'mode'            => 'edit',
+				'supports'        => [
+					'align' => [ 'full' ],
+				],
+				'align'           => 'full',
+			]
+		);
 	}
 }
