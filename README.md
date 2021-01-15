@@ -1,6 +1,28 @@
 # Luuptek WP-Base
 
-## Installation/Usage
+## Theme description
+
+Luuptek WP-base is a starter theme to be used with WordPress site.
+
+### Features
+
+- Gutenberg ready, possibility to add any core Gutenberg blocks into your default page template with three different width options (default, wide, full wide)
+- ACF blocks ready, one custom block (latest posts) added by default
+- Hero image element possiblity to add to top of your default page template
+  - Title, description (optional), button (optional) and background image to be defined
+- Theme options with default post image, head/footer scripts and contact channels ready to be inserted
+- Automatic JS / CSS building with Webpack
+  - SCSS and ES6 javascript implementation
+- Lots of backend stuff to filter out unnecessary default WordPress implementation
+- Lots of helper-functions available in Utils-class ==> example `Utils()->get_social_media_links()` would output social media icons with links
+- Translation strings to be used with Polylang if needed
+- Default WP-templates (header, footer, index etc) moved under `templates`-folder
+- Custom post type / taxonomy support
+- Custom page template support
+- PHP codesniffer linted code!
+
+
+## Installation/developing
 
 1. Clone the repo to WP `themes`-dir, rename the cloned dir, `cd` into and remove `.git`
 2. Run `yarn` to install front-end-depencies
@@ -32,14 +54,14 @@
 5. To build for production, run `yarn prod` which compresses the scripts & styles, disables sourcemaps, copies images from `assets/images` to `dist/images` and creates most common favicons automatically to `icons`-subfolder.
 
 
-#### Available npm-scripts:
+### Available npm-scripts:
 * `yarn start`: Start `webpack` to browsersync `localhost:3000`
 * `yarn run prod`: Build assets for production
 * `yarn test`: Test scripts
 * `yarn run config`: Run project-config (On a fresh clone of this repo)
 
 
-## Folder Structure
+### Folder Structure
 
 ```
 ├── 1. assets
