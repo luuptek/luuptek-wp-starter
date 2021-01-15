@@ -17,11 +17,12 @@
  * Gutenberg back end stuff
  * None here any more...
  */
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
 @import "../styles/common/functions";
 @import "../styles/common/variables";
-@import "../styles/common/variables";
 @import "../styles/common/mixins";
-@import "~bootstrap/scss/mixins";
 
 .editor-styles-wrapper {
   @each $name, $color in $page-theme-colors {
@@ -52,4 +53,5 @@
   @import "../styles/components/post-lift";
 
   @import "../styles/blocks/acf/acf-gb-blocks";
+  @import "../styles/blocks/blocks";
 }
