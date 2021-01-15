@@ -1,12 +1,15 @@
 @mixin sectionPaddings() {
-  padding: rem(32px 0);
+  padding-top: rem(32px);
+  padding-bottom: rem(32px);
 
   @include media-breakpoint-up(md) {
-	padding: rem(40px 0);
+	padding-top: rem(40px);
+	padding-bottom: rem(40px);
   }
 
   @include media-breakpoint-up(xl) {
-	padding: rem(60px 0);
+	padding-top: rem(60px);
+	padding-bottom: rem(60px);
   }
 }
 
