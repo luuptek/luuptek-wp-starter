@@ -10,8 +10,6 @@
  * Take whatc ya need
  * comment out or not, your decision...
  */
-//Bootstrap
-// Take whatsya need...
 //@import "~bootstrap/scss/bootstrap";
 @import "~bootstrap/scss/functions";
 @import "~bootstrap/scss/variables";
@@ -51,11 +49,6 @@
 //@import "~bootstrap/scss/utilities";
 //@import "~bootstrap/scss/print";
 
-// Leaflet & Slick available..
-//@import "~leaflet/dist/leaflet.css";
-//@import "~slick-carousel/slick/slick.scss";
-//@import "~slick-carousel/slick/slick-theme.scss";
-
 /**
  * If you are using slick, add these into variables
  * otherwise yarn prod will fail
@@ -64,6 +57,11 @@
 //$slick-font-path: "~slick-carousel/slick/fonts/";
 //$slick-loader-path: "~slick-carousel/slick/";
 
+// Leaflet & Slick available..
+//@import "~leaflet/dist/leaflet.css";
+//@import "~slick-carousel/slick/slick.scss";
+//@import "~slick-carousel/slick/slick-theme.scss";
+
 // Global
 @import "common/global";
 @import "common/mixins";
@@ -71,41 +69,11 @@
 @import "common/utils";
 
 // Components
-@import "components/wp-classes";
-@import "components/buttons";
-@import "components/burger";
-@import "components/comments";
-@import "components/forms";
-@import "components/tinymce";
-@import "components/pagination";
-@import "components/main-nav";
-@import "components/some-nav";
-@import "components/post-lift";
-@import "components/dropdown-menu";
+@import "components/all";
 
 // Layouts & pages
-@import "layouts/header";
-@import "layouts/sidebar";
-@import "layouts/footer";
-@import "layouts/section";
+@import "layouts/all";
 
 // WP blocks / Gutenberg
-@import "blocks/aligns";
-@import "blocks/blockquote";
-@import "blocks/button";
-@import "blocks/colors";
-//@import "blocks/columns";
-@import "blocks/cover";
-@import "blocks/embeds";
-@import "blocks/gallery";
-@import "blocks/group";
-@import "blocks/image";
-@import "blocks/media_and_text";
-//@import "blocks/paragraph";
-//@import "blocks/separator";
-@import "blocks/spacer";
-@import "blocks/table";
-//@import "blocks/text-aligns";
-@import "blocks/text-sizes";
-
+@import "blocks/wp-core/wp-core-blocks";
 @import "blocks/acf/acf-gb-blocks";
