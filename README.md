@@ -7,7 +7,7 @@ Luuptek WP-base is a starter theme to be used with WordPress site.
 ### Features
 
 - Gutenberg ready, possibility to add any core Gutenberg blocks into your default page template with three different width options (default, wide, full wide)
-- ACF blocks ready, one custom block (latest posts) added by default
+- ACF blocks ready, two custom blocks (latest posts, page lifts) added by default
 - Hero image element possiblity to add to top of your default page template
   - Title, description (optional), button (optional) and background image to be defined
 - Theme options with default post image, head/footer scripts and contact channels ready to be inserted
