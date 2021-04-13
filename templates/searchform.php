@@ -14,7 +14,7 @@
 		<input type="text" class="form-control" value="<?php echo get_search_query(); ?>" name="s" id="s"
 		       placeholder="<?php esc_html_e( 'Syötä hakusanat', 'luuptek_wp_base' ); ?>"/>
 	</div>
-	<button type="submit" class="btn btn-primary"><?php echo esc_attr_x( 'Hae', 'submit button' ); ?>
+	<button type="submit" class="btn btn-primary">
 		<?php _e( 'Hae', 'luuptek_wp_base' ); ?>
 	</button>
 </form>
