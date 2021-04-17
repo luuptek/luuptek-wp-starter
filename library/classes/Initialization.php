@@ -50,16 +50,15 @@ class Initialization {
 		add_filter( 'post_thumbnail_html', [ $this, 'remove_self_closing_tags' ] );
 		add_filter( 'get_bloginfo_rss', [ $this, 'remove_default_description' ] );
 		add_filter( 'request', [ $this, 'request_filter' ] );
-		add_filter( 'xmlrpc_methods', [ $this, 'filter_xmlrpc_method', 10, 1 ] );
 		add_filter( 'wp_headers', [ $this, 'filter_headers' ], 10, 1 );
 		add_filter( 'rewrite_rules_array', [ $this, 'filter_rewrites' ] );
-		add_action( 'xmlrpc_call', [ $this, 'kill_xmlrpc' ] );
 		add_action( 'template_redirect', [ $this, 'nice_search_redirect' ] );
 		add_filter( 'wp_title', [ $this, 'wp_title' ], 10, 2 );
 		add_filter( 'body_class', [ $this, 'add_body_classes' ] );
 		add_filter( 'wp_page_menu_args', [ $this, 'page_menu_args' ] );
 		add_action( 'admin_init', [ $this, 'is_htaccess_writable' ] );
 		add_action( 'generate_rewrite_rules', [ $this, 'add_h5bp_htaccess' ] );
+		add_filter( 'xmlrpc_enabled', '__return_false' );
 
 		// Remove WP-API link from head if any
 		if ( has_action( 'wp_head', 'json_output_link_wp_head' ) ) {
@@ -316,15 +315,6 @@ class Initialization {
 	}
 
 	/**
-	 * Disable pingback XMLRPC method
-	 */
-	function filter_xmlrpc_method( $methods ) {
-		unset( $methods['pingback.ping'] );
-
-		return $methods;
-	}
-
-	/**
 	 * Remove pingback header
 	 */
 	function filter_headers( $headers ) {
@@ -346,19 +336,6 @@ class Initialization {
 		}
 
 		return $rules;
-	}
-
-	/**
-	 * Disable XMLRPC call
-	 */
-	function kill_xmlrpc( $action ) {
-		if ( 'pingback.ping' === $action ) {
-			wp_die(
-				'Pingbacks are not supported',
-				'Not Allowed!',
-				[ 'response' => 403 ]
-			);
-		}
 	}
 
 	/**
