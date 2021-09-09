@@ -5,32 +5,11 @@
   > * {
     margin-right: auto;
     margin-left: auto;
-
-    @include media-breakpoint-up(md) {
-      max-width: map_get($container-max-widths, 'md') - 100px !important;
-    }
-
-    @include media-breakpoint-up(lg) {
-      max-width: map_get($container-max-widths, 'lg') - 150px !important;
-    }
-
-    @include media-breakpoint-up(xl) {
-      max-width: map_get($container-max-widths, 'xl') - 300px !important;
-    }
+	max-width: rem($align-normal-container-width);
   }
 
   > .alignwide {
-    @include media-breakpoint-up(md) {
-      max-width: map_get($container-max-widths, 'md') !important;
-    }
-
-    @include media-breakpoint-up(lg) {
-      max-width: map_get($container-max-widths, 'lg') !important;
-    }
-
-    @include media-breakpoint-up(xl) {
-      max-width: map_get($container-max-widths, 'xl') !important;
-    }
+	max-width: rem($align-wide-container-width) !important;
   }
 
   > figure.alignfull, > figure.alignwide {
