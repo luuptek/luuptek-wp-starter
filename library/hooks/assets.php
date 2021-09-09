@@ -70,12 +70,12 @@ add_action(
 		/**
 		 * Main style
 		 */
-//		wp_enqueue_style(
-//			'luuptek_style',
-//			asset_uri( 'styles/main.css' ),
-//			[],
-//			luuptek_wp_base_theme()->get( 'Version' )
-//		);
+		wp_enqueue_style(
+			'luuptek_style',
+			asset_uri( 'styles/main.css' ),
+			[],
+			luuptek_wp_base_theme()->get( 'Version' )
+		);
 
 		/**
 		 * Move jquery to footer
