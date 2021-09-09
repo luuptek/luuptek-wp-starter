@@ -42,7 +42,8 @@ $heading-xl-multiplier: 1.6;
 $main-menu-breakpoint: 'xl';
 
 // Container width
-$align-wide-container-width: 1300px; // main nav container + Gutenberg align wide
+$main-nav-container-width: 1300px;
+$align-wide-container-width: 1140px; // bootstrap container + Gutenberg align wide
 $align-normal-container-width: 840px; // Gutenberg basic wide
 
 
