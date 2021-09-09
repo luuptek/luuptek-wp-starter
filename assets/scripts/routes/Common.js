@@ -1,3 +1,4 @@
+import { toggleAria } from "../lib/toggleStates"
 export default {
   init() {
     // JavaScript to be fired on all pages
@@ -9,13 +10,12 @@ export default {
 	  /**
 	   * Mobile menu handler
 	   */
-	  $('.mobile-sub-menu-toggler').on('click', (e) => {
+	  $('.main-nav__sub-menu-toggler').on('click', (e) => {
 		  e.preventDefault();
 		  const target = $(e.target);
-
 		  const closestLi = target.closest('li.dropdown');
-
-		  closestLi.toggleClass('open');
+		  closestLi.toggleClass('main-nav-dropdown-open');
+		  toggleAria(target, 'aria-expanded');
 	  });
   },
   finalize() {

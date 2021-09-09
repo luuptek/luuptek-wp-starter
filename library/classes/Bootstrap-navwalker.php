@@ -52,10 +52,10 @@ if ( ! class_exists( 'WP_Bootstrap_Navwalker' ) ) :
 				$t = "\t";
 				$n = "\n";
 			}
-			$depth_level = $depth+1;
+			$depth_level = $depth + 1;
 			$indent = str_repeat( $t, $depth );
 			// Default class to add to the file.
-			$classes = array( 'dropdown-menu', 'dropdown-menu--level-' . $depth_level );
+			$classes = array( 'main-nav__dropdown', 'main-nav__dropdown-menu--level-' . $depth_level );
 			/**
 			 * Filters the CSS class(es) applied to a menu list element.
 			 *
@@ -219,9 +219,9 @@ if ( ! class_exists( 'WP_Bootstrap_Navwalker' ) ) :
 				$atts['href'] = ! empty( $item->url ) ? $item->url : '#';
 				// For items in dropdowns use .dropdown-item instead of .nav-link.
 				if ( $depth > 0 ) {
-					$atts['class'] = "dropdown-item dropdown-item--level-{$depth_level}";
+					$atts['class'] = "dropdown-item--level-{$depth_level}";
 				} else {
-					$atts['class'] = 'nav-link';
+					$atts['class'] = "nav-link nav-link--level-{$depth_level}";
 				}
 			}
 
@@ -271,7 +271,7 @@ if ( ! class_exists( 'WP_Bootstrap_Navwalker' ) ) :
 				$icon_html = '<i class="' . esc_attr( $icon_class_string ) . '" aria-hidden="true"></i> ';
 			}
 
-			$icon_html = ( $this->has_children && 0 === $depth ) ? '<span class="mobile-sub-menu-toggler">+</span>' : '';
+			$icon_html = ( $this->has_children && 0 === $depth ) ? '<button class="main-nav__sub-menu-toggler" aria-haspopup="menu" aria-expanded="false">+</button>' : '';
 
 			/** This filter is documented in wp-includes/post-template.php */
 			$title = apply_filters( 'the_title', $item->title, $item->ID );
