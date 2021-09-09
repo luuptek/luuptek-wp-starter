@@ -7,7 +7,7 @@
  */
 
 ?>
-
+</div> <!-- closing #content-start -->
 <footer>
 	<div class="container">
 		<div class="row">
