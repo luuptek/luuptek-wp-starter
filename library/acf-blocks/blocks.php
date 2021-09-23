@@ -27,7 +27,8 @@ function register_luuptek_wp_base_acf_blocks() {
 				'icon'            => 'layout',
 				'mode'            => 'edit',
 				'supports'        => [
-					'align' => [ 'full' ],
+					'align'  => [ 'full' ],
+					'anchor' => true,
 				],
 				'align'           => 'full',
 			]
