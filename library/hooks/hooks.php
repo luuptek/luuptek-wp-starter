@@ -272,7 +272,7 @@ function luuptek_wp_base_block_categories( $categories, $post ) {
 	);
 }
 
-add_filter( 'block_categories', 'luuptek_wp_base_block_categories', 10, 2 );
+add_filter( 'block_categories_all', 'luuptek_wp_base_block_categories', 10, 2 );
 
 /**
  * Remove jquery-migrate from front end
