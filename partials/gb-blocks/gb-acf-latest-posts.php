@@ -15,10 +15,10 @@ $post_count    = get_field( 'post_count' );
 $defined_posts = get_field( 'defined_posts' );
 
 $query_args = [
-	'post_type'     => 'post',
+	'post_type'      => 'post',
 	'posts_per_page' => ! empty( $post_count ) ? $post_count : 10,
-	'order'         => 'DESC',
-	'orderby'       => 'date',
+	'order'          => 'DESC',
+	'orderby'        => 'date',
 ];
 
 if ( 'define' === $what_to_show ) {
