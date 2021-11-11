@@ -157,3 +157,16 @@
     font-size: rem($font-size * $heading-xl-multiplier);
   }
 }
+
+@mixin luuptek-create-container($max-width: $align-wide-container-width, $h-padding: 15px) {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: $h-padding;
+  padding-right: $h-padding;
+  max-width: $max-width;
+}
+
+@mixin luuptek-create-breaking-word() {
+  word-break: break-word;
+  hyphens: auto;
+}
