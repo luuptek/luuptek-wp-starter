@@ -94,9 +94,10 @@ if ( ! function_exists( 'luuptek_wp_base_setup' ) ) :
 		require_files( dirname( __FILE__ ) . '/library/classes' );
 
 		/**
-		 * Require custom post types
+		 * Require custom post types and taxonomies
 		 */
 		require_files( dirname( __FILE__ ) . '/library/custom-posts' );
+		require_files( dirname( __FILE__ ) . '/library/taxonomies' );
 
 		/**
 		 * Require metaboxes

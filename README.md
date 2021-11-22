@@ -102,6 +102,7 @@ Luuptek WP-base is a starter theme to be used with WordPress site.
 │   │   ├── Initalization.php
 │   │   └── Utils.php
 │   ├── custom-posts
+│   ├── taxonomies
 │   ├── functions
 │   ├── hooks
 │   ├── lang
@@ -150,7 +151,8 @@ Place your images, styles & javascripts here (they get smushed and build to `ass
 **3. library**
 * `acf-blocks` / `acf-data` / `acf-options`: ACF block registering, using ACF JSON data and creating options
 * `classes`: Holds the helper & utility-classes and is autorequired in `functions.php`
-* `custom-posts`: Place your custom posts here. See example usage in `books.php.tpl`
+* `custom-posts`: Place your custom posts here. See example usage in `cpt.php`
+* `taxonomies`: Place your custom taxonomies here. See example usage in `custom-taxonomy-name.php`
 * `functions`: The place for misc. helper functions
 * `hooks`: The place for WP's `hooks`, `pre_get_posts` etc.
 * `lang`: i18n for the theme
