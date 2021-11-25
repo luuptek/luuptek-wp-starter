@@ -97,7 +97,7 @@ add_action(
 		wp_enqueue_script(
 			'luuptek_admin',
 			asset_uri( 'scripts/admin.min.js' ),
-			[ 'wp-i18n', 'wp-blocks', 'wp-dom-ready' ],
+			[ 'wp-i18n', 'wp-blocks', 'wp-dom-ready', 'wp-edit-post' ],
 			luuptek_wp_base_theme()->get( 'Version' )
 		);
 
