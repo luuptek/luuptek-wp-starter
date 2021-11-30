@@ -1,20 +1,5 @@
-@mixin sectionPaddings() {
-  padding-top: rem(32px);
-  padding-bottom: rem(32px);
-
-  @include media-breakpoint-up(md) {
-	padding-top: rem(40px);
-	padding-bottom: rem(40px);
-  }
-
-  @include media-breakpoint-up(xl) {
-	padding-top: rem(60px);
-	padding-bottom: rem(60px);
-  }
-}
-
 section {
-  @include sectionPaddings;
+  @include section-paddings;
 
   &.section--bg-primary {
 	background-color: $primary;
@@ -26,5 +11,5 @@ section {
 }
 
 .page-container {
-  @include sectionPaddings;
+  @include section-paddings;
 }

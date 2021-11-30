@@ -7,6 +7,21 @@
   }
 }
 
+@mixin section-paddings() {
+  padding-top: rem(32px);
+  padding-bottom: rem(32px);
+
+  @include media-breakpoint-up(md) {
+	padding-top: rem(40px);
+	padding-bottom: rem(40px);
+  }
+
+  @include media-breakpoint-up(xl) {
+	padding-top: rem(60px);
+	padding-bottom: rem(60px);
+  }
+}
+
 @mixin placeholder($color: $gray) {
   ::-webkit-input-placeholder {
     color: $color;
