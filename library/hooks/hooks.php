@@ -79,7 +79,7 @@ add_action(
 add_action(
 	'wp_head',
 	function () {
-		$options = get_option( 'options_luuptek_wp_base_scripts_head' );
+		$options = get_field( 'luuptek_wp_base_scripts_head', 'option' );
 
 		if ( ! empty( $options ) ) :
 			echo $options;
@@ -96,7 +96,7 @@ add_action(
 add_action(
 	'wp_footer',
 	function () {
-		$options = get_option( 'options_luuptek_wp_base_scripts_footer' );
+		$options = get_field( 'luuptek_wp_base_scripts_footer', 'option' );
 
 		if ( ! empty( $options ) ) :
 			echo $options;
@@ -113,7 +113,7 @@ add_action(
 add_action(
 	'luuptek_wp_base_after_body',
 	function () {
-		$options = get_option( 'options_luuptek_wp_base_scripts_after_body' );
+		$options = get_field( 'luuptek_wp_base_scripts_after_body', 'option' );
 
 		if ( ! empty( $options ) ) :
 			echo $options;
