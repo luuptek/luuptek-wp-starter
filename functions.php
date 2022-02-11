@@ -127,6 +127,12 @@ if ( ! function_exists( 'luuptek_wp_base_setup' ) ) :
 			add_theme_support( 'html5', [ 'caption', 'comment-form', 'comment-list', 'gallery', 'search-form' ] );
 			add_theme_support( 'post-thumbnails' );
 			add_theme_support( 'title-tag' );
+
+			add_theme_support(
+				'editor-font-sizes',
+				array()
+			);
+
 			add_theme_support(
 				'editor-color-palette',
 				[
@@ -158,6 +164,9 @@ if ( ! function_exists( 'luuptek_wp_base_setup' ) ) :
 			add_theme_support( 'disable-custom-colors' );
 			add_theme_support( 'disable-custom-gradients' );
 			add_theme_support( 'disable-custom-font-sizes' );
+			add_theme_support( 'custom-line-height' );
+			add_theme_support( 'custom-units', array() );
+			remove_theme_support( 'core-block-patterns' );
 		}
 
 		/**
