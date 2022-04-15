@@ -4,6 +4,9 @@
 
 Luuptek WP-base is a starter theme to be used with WordPress site.
 
+To have a full advantages of this these, some core/gutenberg functionality has been moved into own plugin:
+https://github.com/luuptek/luuptek-mu-plugins (private)
+
 ### Features
 
 - Gutenberg ready, possibility to add any core Gutenberg blocks into your default page template with three different width options (default, wide, full wide)
@@ -50,13 +53,13 @@ Luuptek WP-base is a starter theme to be used with WordPress site.
 }
 ```
 
-4. Run `yarn start` to start `Webpack` to watch & rebuild on asset changes
+4. Run `yarn start` to start `Webpack` to watch & rebuild on asset changes in `localhost:3000`
 5. To build for production, run `yarn prod` which compresses the scripts & styles, disables sourcemaps, copies images from `assets/images` to `dist/images` and creates most common favicons automatically to `icons`-subfolder.
 
 
 ### Available npm-scripts:
 * `yarn start`: Start `webpack` to browsersync `localhost:3000`
-* `yarn run prod`: Build assets for production
+* `yarn prod`: Build assets for production
 * `yarn test`: Test scripts
 * `yarn run config`: Run project-config (On a fresh clone of this repo)
 
