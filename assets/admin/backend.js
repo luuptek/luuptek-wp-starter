@@ -4,22 +4,6 @@ wp.domReady(() => {
 	 * Add full width style button
 	 */
 
-	wp.blocks.registerBlockStyle('core/spacer', {
-		name: 'responsive-large',
-		label: 'Large',
-	});
-
-	wp.blocks.registerBlockStyle('core/spacer', {
-		name: 'responsive-medium',
-		label: 'Medium',
-		isDefault: true
-	});
-
-	wp.blocks.registerBlockStyle('core/spacer', {
-		name: 'responsive-small',
-		label: 'Small',
-	});
-
 	/**
 	 * Get rid of all GB variations
 	 */

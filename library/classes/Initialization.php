@@ -36,33 +36,33 @@ class Initialization {
 	public function __construct() {
 
 		// Add actions
-		add_action( 'after_switch_theme', [ $this, 'set_defaults' ] );
-		add_action( 'init', [ $this, 'disable_emojis' ] );
-		add_filter( 'the_generator', '__return_false' );
-		add_action( 'init', [ $this, 'head_cleanup' ] );
-		add_filter( 'language_attributes', [ $this, 'language_attributes' ] );
+		//add_action( 'after_switch_theme', [ $this, 'set_defaults' ] );
+		//add_action( 'init', [ $this, 'disable_emojis' ] );
+		//add_filter( 'the_generator', '__return_false' );
+		//add_action( 'init', [ $this, 'head_cleanup' ] );
+		//add_filter( 'language_attributes', [ $this, 'language_attributes' ] );
 		//add_filter( 'style_loader_tag', [ $this, 'clean_style_tag' ] );
-		add_filter( 'body_class', [ $this, 'body_class' ] );
-		add_filter( 'embed_oembed_html', [ $this, 'embed_wrap' ], 10, 4 );
-		add_action( 'admin_init', [ $this, 'remove_dashboard_widgets' ] );
-		add_filter( 'get_avatar', [ $this, 'remove_self_closing_tags' ] );
-		add_filter( 'comment_id_fields', [ $this, 'remove_self_closing_tags' ] );
-		add_filter( 'post_thumbnail_html', [ $this, 'remove_self_closing_tags' ] );
-		add_filter( 'get_bloginfo_rss', [ $this, 'remove_default_description' ] );
-		add_filter( 'request', [ $this, 'request_filter' ] );
-		add_filter( 'wp_headers', [ $this, 'filter_headers' ], 10, 1 );
-		add_filter( 'rewrite_rules_array', [ $this, 'filter_rewrites' ] );
-		add_action( 'template_redirect', [ $this, 'nice_search_redirect' ] );
-		add_filter( 'wp_title', [ $this, 'wp_title' ], 10, 2 );
-		add_filter( 'body_class', [ $this, 'add_body_classes' ] );
-		add_filter( 'wp_page_menu_args', [ $this, 'page_menu_args' ] );
-		add_action( 'admin_init', [ $this, 'is_htaccess_writable' ] );
-		add_action( 'generate_rewrite_rules', [ $this, 'add_h5bp_htaccess' ] );
-		add_filter( 'xmlrpc_enabled', '__return_false' );
+		//add_filter( 'body_class', [ $this, 'body_class' ] );
+		//add_filter( 'embed_oembed_html', [ $this, 'embed_wrap' ], 10, 4 );
+		//add_action( 'admin_init', [ $this, 'remove_dashboard_widgets' ] );
+		//add_filter( 'get_avatar', [ $this, 'remove_self_closing_tags' ] );
+		//add_filter( 'comment_id_fields', [ $this, 'remove_self_closing_tags' ] );
+		//add_filter( 'post_thumbnail_html', [ $this, 'remove_self_closing_tags' ] );
+		//add_filter( 'get_bloginfo_rss', [ $this, 'remove_default_description' ] );
+		//add_filter( 'request', [ $this, 'request_filter' ] );
+		//add_filter( 'wp_headers', [ $this, 'filter_headers' ], 10, 1 );
+		//add_filter( 'rewrite_rules_array', [ $this, 'filter_rewrites' ] );
+		//add_action( 'template_redirect', [ $this, 'nice_search_redirect' ] );
+		//add_filter( 'wp_title', [ $this, 'wp_title' ], 10, 2 );
+		//add_filter( 'body_class', [ $this, 'add_body_classes' ] );
+		//add_filter( 'wp_page_menu_args', [ $this, 'page_menu_args' ] );
+		//add_action( 'admin_init', [ $this, 'is_htaccess_writable' ] );
+		//add_action( 'generate_rewrite_rules', [ $this, 'add_h5bp_htaccess' ] );
+		//add_filter( 'xmlrpc_enabled', '__return_false' );
 
 		// Remove WP-API link from head if any
 		if ( has_action( 'wp_head', 'json_output_link_wp_head' ) ) {
-			remove_action( 'wp_head', 'json_output_link_wp_head' );
+			//remove_action( 'wp_head', 'json_output_link_wp_head' );
 		}
 
 		// Enable root relative urls

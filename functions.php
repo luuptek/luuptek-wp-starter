@@ -49,11 +49,6 @@ function luuptek_wp_base_set_imagesizes() {
 }
 
 /**
- * If defined, the feed will be shown on admin dashboard
- */
-define( 'FEED_URI', 'https://www.luuptek.fi/feed/?post_type=guide' );
-
-/**
  * Set the content width based on the theme's design and stylesheet.
  */
 if ( ! isset( $content_width ) ) {
@@ -127,46 +122,8 @@ if ( ! function_exists( 'luuptek_wp_base_setup' ) ) :
 			add_theme_support( 'html5', [ 'caption', 'comment-form', 'comment-list', 'gallery', 'search-form' ] );
 			add_theme_support( 'post-thumbnails' );
 			add_theme_support( 'title-tag' );
-
-			add_theme_support(
-				'editor-font-sizes',
-				array()
-			);
-
-			add_theme_support(
-				'editor-color-palette',
-				[
-					[
-						'name'  => __( 'Teeman pääväri', 'luuptek_wp_base' ),
-						'slug'  => 'theme-primary',
-						'color' => '#5b9279',
-					],
-					[
-						'name'  => __( 'Teeman toissijainen väri', 'luuptek_wp_base' ),
-						'slug'  => 'theme-secondary',
-						'color' => '#2e3532',
-					],
-					[
-						'name'  => __( 'Täysin musta', 'luuptek_wp_base' ),
-						'slug'  => 'solid-black',
-						'color' => '#000',
-					],
-					[
-						'name'  => __( 'Täysin valkoinen', 'luuptek_wp_base' ),
-						'slug'  => 'solid-white',
-						'color' => '#FFF',
-					],
-				]
-			);
-
 			add_theme_support( 'align-wide' );
 			add_theme_support( 'responsive-embeds' );
-			add_theme_support( 'disable-custom-colors' );
-			add_theme_support( 'disable-custom-gradients' );
-			add_theme_support( 'disable-custom-font-sizes' );
-			add_theme_support( 'custom-line-height' );
-			add_theme_support( 'custom-units', array() );
-			remove_theme_support( 'core-block-patterns' );
 		}
 
 		/**
@@ -183,36 +140,6 @@ if ( ! function_exists( 'luuptek_wp_base_setup' ) ) :
 endif; // luuptek_wp_base_setup
 
 add_action( 'after_setup_theme', 'luuptek_wp_base_setup' );
-
-/**
- * Add feed (if defined) to dashboard
- */
-add_action(
-	'wp_dashboard_setup',
-	function () {
-		if ( defined( 'FEED_URI' ) ) {
-			add_meta_box( 'dashboard_custom_feed', __( 'Viimeisintä WP-oppasta', 'luuptek_wp_base' ), 'luuptek_wp_base_feed', 'dashboard', 'side', 'low' );
-		}
-
-		/**
-		 * Setup post guide feed into dashboard
-		 */
-		function luuptek_wp_base_feed() {
-			echo '<div class="rss-widget">';
-			wp_widget_rss_output(
-				FEED_URI,
-				[
-					'items'        => 5,
-					'show_title'   => 0,
-					'show_summary' => 1,
-					'show_author'  => 0,
-					'show_date'    => 1,
-				]
-			);
-			echo '</div>';
-		}
-	}
-);
 
 /**
  * Add text to theme footer
