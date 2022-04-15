@@ -4,7 +4,7 @@
 
 Luuptek WP-base is a starter theme to be used with WordPress site.
 
-To have a full advantages of this these, some core/gutenberg functionality has been moved into own plugin:
+To have a full advantages of this theme, some core/gutenberg functionality has been moved into own plugin:
 https://github.com/luuptek/luuptek-mu-plugins (private)
 
 ### Features
@@ -16,7 +16,6 @@ https://github.com/luuptek/luuptek-mu-plugins (private)
 - Theme options with default post image, head/footer scripts and contact channels ready to be inserted
 - Automatic JS / CSS building with Webpack
   - SCSS and ES6 javascript implementation
-- Lots of backend stuff to filter out unnecessary default WordPress implementation
 - Lots of helper-functions available in Utils-class ==> example `Utils()->get_social_media_links()` would output social media icons with links
 - Translation strings to be used with Polylang if needed
 - Default WP-templates (header, footer, index etc) moved under `templates`-folder
