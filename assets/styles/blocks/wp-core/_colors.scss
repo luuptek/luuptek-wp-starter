@@ -14,9 +14,15 @@
     }
   }
 
-  .has-background, .wp-block-cover {
+  .has-background {
     &.has-#{$name}-background-color {
       background-color: $color;
     }
+  }
+
+  .wp-block-cover {
+	.has-#{$name}-background-color {
+	  background-color: $color;
+	}
   }
 }
