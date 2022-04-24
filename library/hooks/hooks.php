@@ -289,3 +289,22 @@ function dequeue_jquery_migrate( $scripts ) {
 }
 
 add_action( 'wp_default_scripts', 'dequeue_jquery_migrate' );
+
+/**
+ * Add extra body classes
+ */
+add_filter(
+	'body_class',
+	function ( $classes ) {
+		global $post;
+		if ( is_page() ) {
+			$padding_options = get_post_meta( $post->ID, 'page_content_padding', true );
+
+			if ( ! empty( $padding_options ) ) {
+				$classes[] = "page-container-has-padding--{$padding_options}";
+			}
+		}
+
+		return $classes;
+	}
+);

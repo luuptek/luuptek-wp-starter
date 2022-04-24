@@ -1,0 +1,52 @@
+{
+    "key": "group_61446518b4d16",
+    "title": "Sivun padding-asetukset",
+    "fields": [
+        {
+            "key": "field_61496958a1ea1",
+            "label": "Valitse miten sivulla asettuu tyhjä tila sisällön alkuun ja loppuun",
+            "name": "page_content_padding",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "top-and-bottom": "Ylhäälle ja alhaalle",
+                "only-top": "Vain ylhäälle",
+                "only-bottom": "Vain alhaalle",
+                "none": "Ei tyhjää väliä"
+            },
+            "default_value": "top-and-bottom",
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "default"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1650711988
+}
