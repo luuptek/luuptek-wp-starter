@@ -45,7 +45,7 @@ function register_luuptek_wp_base_acf_blocks() {
 				'supports'        => [
 					'align'  => [ 'full' ],
 					'anchor' => true,
- 				],
+				],
 				'align'           => 'full',
 			]
 		);
