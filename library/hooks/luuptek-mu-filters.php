@@ -47,3 +47,16 @@ add_filter(
 		return 'asiakas@mail.com';
 	}
 );
+
+/**
+ * Gutenberg js settings
+ */
+add_filter(
+	'luuptek_gutenberg_js_settings',
+	function () {
+		return [
+			'disableButtonStyles' => true,
+			'disableTextColor'    => false,
+		];
+	}
+);
