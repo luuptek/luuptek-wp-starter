@@ -6,10 +6,14 @@ ul {
 
     > li {
       display: inline-block;
+	  padding: rem(4px 8px);
+
+	  &:first-child {
+		padding: rem(4px 8px 4px 0);
+	  }
 
       > a {
         color: #FFF;
-        padding: rem(4px 8px);
 
 		svg {
 		  width: rem(24px);

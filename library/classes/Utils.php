@@ -162,8 +162,9 @@ class Utils {
 			if ( ! empty( $option ) ) {
 				?>
 				<li>
-					<a href="<?php echo esc_url( $option ); ?>" target="_blank">
-						<?php Utils()->the_svg('icons/' . $social_media . '-square'); ?>
+					<a href="<?php echo esc_url( $option ); ?>" target="_blank"
+					   aria-label="<?php esc_attr( $social_media ); ?>">
+						<?php Utils()->the_svg( 'icons/' . $social_media . '-square' ); ?>
 					</a>
 				</li>
 				<?php
