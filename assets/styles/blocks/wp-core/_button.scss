@@ -6,6 +6,9 @@
   .wp-block-button__link {
     @extend .btn;
     @include button-variant($primary, $primary);
+	font-weight: 600;
+	padding: rem(10px 30px);
+	font-size: rem(18px);
   }
 
   &.is-style-squared {
@@ -14,19 +17,11 @@
     }
   }
 
-  &.is-style-default {
-    .wp-block-button__link {
-      padding: rem(5px 25px);
-      border-radius: rem(20px);
-    }
-  }
-
   &.is-style-full-width {
     .wp-block-button__link {
       width: 100%;
-      padding: rem(14px 25px);
-      border-radius: 20px;
-      font-weight: 600;
+      padding: rem(15px 25px);
+      border-radius: rem(20px);
     }
   }
 
