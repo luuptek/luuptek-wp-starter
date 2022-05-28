@@ -55,8 +55,10 @@ add_filter(
 	'luuptek_gutenberg_js_settings',
 	function () {
 		return [
-			'disableButtonStyles' => true,
-			'disableTextColor'    => false,
+			'disableButtonStyles'    => false,
+			'disableTextColor'       => false,
+			'disableQuoteStyles'     => true,
+			'disablePullQuoteStyles' => true,
 		];
 	}
 );
