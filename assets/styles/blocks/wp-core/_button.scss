@@ -4,17 +4,7 @@
 
 .wp-block-button {
   .wp-block-button__link {
-    @extend .btn;
-    @include button-variant($primary, $primary);
-	font-weight: 600;
-	padding: rem(10px 30px);
-	font-size: rem(18px);
-  }
-
-  &.is-style-squared {
-    .wp-block-button__link {
-      border-radius: 0;
-    }
+    @include create-button($primary);
   }
 
   &.is-style-full-width {
@@ -27,9 +17,13 @@
 
   &.is-style-outline {
     .wp-block-button__link {
-      @extend .btn;
-      @include button-outline-variant($primary);
-      border-radius: 20px;
+      color: $primary;
+	  background-color: transparent;
+
+	  &:hover, &:focus {
+		color: color-yiq($primary);
+		background-color: $primary;
+	  }
     }
   }
 }

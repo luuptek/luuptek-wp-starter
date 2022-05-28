@@ -17,11 +17,13 @@
  * Gutenberg back end stuff
  * None here any more...
  */
+@import "../styles/common/functions";
+@import "../styles/common/variables";
+
 @import "~bootstrap/scss/functions";
 @import "~bootstrap/scss/variables";
 @import "~bootstrap/scss/mixins";
-@import "../styles/common/functions";
-@import "../styles/common/variables";
+
 @import "../styles/common/mixins";
 
 .editor-styles-wrapper {
@@ -48,7 +50,9 @@
     }
   }
 
+  @import "../styles/blocks/wp-core/button";
   @import "../styles/blocks/wp-core/spacer";
+  @import "../styles/blocks/wp-core/blockquote";
 
   @import "../styles/components/post-lift";
 
