@@ -63,27 +63,23 @@
 
 }
 
-.menu-item {
+.nav-item {
   position: relative;
   width: 100%;
-
-  @include media-breakpoint-up($main-menu-breakpoint) {
-	width: auto;
-  }
 
   &.open {
 	.dropdown-menu {
 	  display: block;
 	}
   }
-}
 
-.nav-item {
   .dropdown-menu {
 	top: 95%;
   }
 
-  @include media-breakpoint-up(xl) {
+  @include media-breakpoint-up($main-menu-breakpoint) {
+	width: auto;
+
 	@include hover-focus{
 	  .main-nav__dropdown {
 		display: block;
@@ -101,6 +97,10 @@
 	  }
 	}
   }
+}
+
+.nav-link {
+  display: block;
 }
 
 .nav-link--level-1 {
@@ -132,13 +132,14 @@
   background-color: #FFF;
   list-style-type: none;
   margin: 0;
-  max-width: rem(400px);
 
   @include media-breakpoint-up($main-menu-breakpoint) {
 	position: absolute;
 	top: 95%;
 	left: 0;
 	min-width: rem(250px);
+	z-index: 10;
+	max-width: rem(400px);
   }
 }
 
