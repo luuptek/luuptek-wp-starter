@@ -1,15 +1,22 @@
 <nav class="main-nav">
 	<div class="main-nav__container">
 		<a class="main-nav__brand-link" href="<?php echo esc_url( home_url( '/' ) ); ?>">
-			<img src="<?php echo esc_url( UTILS()->get_image_uri() . '/logo.svg' ); ?>" class="main-nav__nav-logo" alt="Logo"/>
+			<img src="<?php echo esc_url( UTILS()->get_image_uri() . '/logo.svg' ); ?>" class="main-nav__nav-logo"
+			     alt="Logo"/>
 		</a>
-		<button class="main-nav__mobile-menu-toggler hamburger hamburger--elastic" type="button" data-toggle="collapse" data-target="#mainNav"
-		        aria-label="<?php esc_html_e( 'Valikko', 'luuptek_wp_base' ); ?>" aria-controls="navigation"
-		        aria-expanded="false">
+		<div class="main-nav__actions">
+			<button class="main-nav__search open-main-search" type="button" aria-label="<?php esc_html_e( 'Avaa haku', 'luuptek_wp_base' ); ?>">
+				<?php Utils()->the_svg( 'icons/search' ); ?>
+			</button>
+			<button class="main-nav__mobile-menu-toggler hamburger hamburger--elastic" type="button" data-toggle="collapse"
+			        data-target="#mainNav"
+			        aria-label="<?php esc_html_e( 'Valikko', 'luuptek_wp_base' ); ?>" aria-controls="mainNav"
+			        aria-expanded="false">
             <span class="hamburger-box">
               <span class="hamburger-inner"></span>
             </span>
-		</button>
+			</button>
+		</div>
 
 		<div class="main-nav__main-menu-wrapper collapse" id="mainNav">
 			<ul class="main-nav__main-menu">

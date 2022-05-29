@@ -45,6 +45,36 @@
 	}
   }
 
+  &__actions {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+
+	@include media-breakpoint-up($main-menu-breakpoint) {
+	  order: 3;
+	}
+  }
+
+  &__search {
+	border: none;
+	background-color: transparent;
+	margin-right: rem(20px);
+
+	@include media-breakpoint-up($main-menu-breakpoint) {
+	  margin-right: 0;
+	  margin-left: rem(20px);
+	}
+
+	> svg {
+	  height: rem(30px);
+	  width: auto;
+
+	  path {
+		fill: color-yiq($secondary);
+	  }
+	}
+  }
+
   &__main-menu {
 	display: flex;
 	align-items: flex-start;
