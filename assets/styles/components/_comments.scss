@@ -1,5 +1,7 @@
 .comment-list {
-  @extend .list-unstyled;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 .comment-list ol {
@@ -7,16 +9,16 @@
 }
 
 .comment-form p {
-  @extend .form-group;
+  @extend .luuptek-form-field-group;
 }
 
 .comment-form input[type="text"],
 .comment-form input[type="email"],
 .comment-form input[type="url"],
 .comment-form textarea {
-  @extend .form-control;
+  @extend .luuptek-form-control;
 }
 
 .comment-form input[type="submit"] {
-  @include button-variant($primary, $primary);
+  @include create-button($primary);
 }
