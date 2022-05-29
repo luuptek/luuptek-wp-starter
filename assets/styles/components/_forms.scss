@@ -13,6 +13,5 @@
 }
 
 .search-form .search-submit {
-  @extend .btn;
-  @include button-variant($primary, $primary);
+  @include create-button($primary);
 }
