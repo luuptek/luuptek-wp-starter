@@ -1,13 +1,13 @@
 footer {
   background-color: $primary;
-  color: #FFF;
+  color: color-yiq($primary);
   padding: rem(40px 0 30px 0);
 
   a {
-    color: #FFF;
+	color: color-yiq($primary);
 
     &:hover, &:focus, &:active {
-      color: #FFF;
+	  color: color-yiq($primary);
     }
   }
 }
@@ -24,7 +24,7 @@ footer {
   padding: rem(8px 16px);
   font-size: rem(15px);
   background-color: darken($primary, 7.5%);
-  color: #FFF;
+  color: color-yiq(darken($primary, 7.5%));
   text-align: center;
 
   .footer-copyright-img {
@@ -33,15 +33,15 @@ footer {
     display: inline;
 
     .fillpath {
-      fill: #FFFFFF;
+      fill: color-yiq($primary);
     }
   }
 
   a {
-    color: #FFF;
+    color: color-yiq($primary);
 
-    &:hover {
-      color: #FFF;
+    @include hover-focus {
+	  color: color-yiq($primary);
     }
   }
 }
