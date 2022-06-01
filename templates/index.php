@@ -14,7 +14,7 @@ get_header();
 
 <section>
 	<div class="container">
-		<h1><?php echo esc_html( get_the_archive_title() ); ?></h1>
+		<h1><?php echo esc_html( get_the_title( get_option( 'page_for_posts' ) ) ); ?></h1>
 		<?php
 		if ( have_posts() ) :
 			echo '<div class="post-lifts-row">';
