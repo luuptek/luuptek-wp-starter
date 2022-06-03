@@ -20,6 +20,12 @@ function theme_strings() {
 	return [
 		// Minimum settings [ 'String to translate' ],
 		// All settings     [ 'String to translate', 'Group', 'Description to show after name', false ],
+		[ 'Lue lisää:', 'Teema' ],
+		[ 'Hakutulokset haulla: %s', 'Teema' ],
+		[ 'Hyppää sisältöön', 'Teema' ],
+		[ 'Hyppää sisältöön', 'Teema' ],
+		[ 'Ei tuloksia haulla %s', 'Teema' ],
+		[ 'Avaa tai sulje alavalikko', 'Teema' ],
 	];
 }
 

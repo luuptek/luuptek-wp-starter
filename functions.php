@@ -10,6 +10,7 @@
  * Require helpers
  */
 require dirname( __FILE__ ) . '/library/functions/helpers.php';
+require dirname( __FILE__ ) . '/library/functions/polylang-fallbacks.php';
 
 /**
  * Set theme name which will be referenced from style & script registrations

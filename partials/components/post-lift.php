@@ -6,7 +6,7 @@ $post_lift_date      = $args['date'];
 $post_lift_url       = $args['url'];
 $post_lift_image_url = get_the_post_thumbnail_url( get_the_ID(), 'article_lift' );
 $image_alt           = get_the_post_thumbnail_caption();
-$aria_label          = esc_html__( 'Lue lisää: ', 'luuptek_wp_base' ) . $post_lift_title;
+$aria_label          = pll_esc_html__( 'Lue lisää:' ) . ' ' . $post_lift_title;
 ?>
 <div class="post-lift-item">
 	<div class="post-lift-item__content">

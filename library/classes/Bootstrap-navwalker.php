@@ -271,7 +271,7 @@ if ( ! class_exists( 'WP_Bootstrap_Navwalker' ) ) :
 				$icon_html = '<i class="' . esc_attr( $icon_class_string ) . '" aria-hidden="true"></i> ';
 			}
 
-			$icon_html = ( $this->has_children && 0 === $depth ) ? '<button class="main-nav__sub-menu-toggler" aria-haspopup="menu" aria-label="' . esc_html__('Avaa tai sulje alavalikko') . '" aria-expanded="false">+</button>' : '';
+			$icon_html = ( $this->has_children && 0 === $depth ) ? '<button class="main-nav__sub-menu-toggler" aria-haspopup="menu" aria-label="' . pll_esc_html__('Avaa tai sulje alavalikko') . '" aria-expanded="false">+</button>' : '';
 
 			/** This filter is documented in wp-includes/post-template.php */
 			$title = apply_filters( 'the_title', $item->title, $item->ID );

@@ -17,7 +17,7 @@ get_header();
 		<?php if ( have_posts() ) : ?>
 			<h1>
 				<?php /* translators: %s: search term */ ?>
-				<?php printf( esc_html( __( 'Hakutulokset haulla: %s', 'luuptek_wp_base' ) ), '<span>' . get_search_query() . '</span>' ); ?>
+				<?php printf( esc_html( pll__( 'Hakutulokset haulla: %s' ) ), '<span>' . get_search_query() . '</span>' ); ?>
 			</h1>
 			<div class="b-page-lifts-row">
 				<?php while ( have_posts() ) : the_post(); ?>

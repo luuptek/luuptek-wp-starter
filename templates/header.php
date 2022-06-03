@@ -25,7 +25,7 @@
 
 <body <?php body_class(); ?>>
 <a href="#content-start" class="skip-to-content" tabindex="1">
-	<?php echo esc_html__( 'Hyppää sisältöön', 'luuptek_wp_base' ); ?>
+	<?php echo pll_esc_html__( 'Hyppää sisältöön' ); ?>
 </a>
 <?php do_action( 'luuptek_wp_base_after_body' ); ?>
 <?php get_template_part( 'partials/components/main-nav' ); ?>
