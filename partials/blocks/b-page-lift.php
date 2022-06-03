@@ -8,7 +8,7 @@ $lift_url      = $args['url'];
 $lift_title    = $args['title'];
 $lift_image_id = ! empty( $args['image_id'] ) ? $args['image_id'] : get_field( 'luuptek_wp_base_default_image_id', 'option' );
 
-$link_label = __( 'Tutustu lisää: ', 'luuptek_wp_base' );
+$link_label = __( 'Tutustu lisää: ', 'luuptek_wp_base' ) . $lift_title;
 ?>
 
 <div class="b-page-lift">

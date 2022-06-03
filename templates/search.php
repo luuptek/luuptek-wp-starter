@@ -19,10 +19,12 @@ get_header();
 				<?php /* translators: %s: search term */ ?>
 				<?php printf( esc_html( __( 'Hakutulokset haulla: %s', 'luuptek_wp_base' ) ), '<span>' . get_search_query() . '</span>' ); ?>
 			</h1>
-			<?php while ( have_posts() ) : the_post(); ?>
-				<?php get_template_part( 'partials/content', 'search' ); ?>
-			<?php endwhile; ?>
-
+			<div class="b-page-lifts-row">
+				<?php while ( have_posts() ) : the_post(); ?>
+					<?php get_template_part( 'partials/content', 'search' ); ?>
+				<?php endwhile; ?>
+			</div>
+			<?php get_template_part( 'partials/pagination' ); ?>
 		<?php else : ?>
 			<?php get_template_part( 'partials/no-results', 'search' ); ?>
 		<?php endif; ?>

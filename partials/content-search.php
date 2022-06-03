@@ -7,11 +7,10 @@
  *
  */
 
-?>
+$block_args = [
+	'url' => get_the_permalink(),
+	'title' => get_the_title(),
+	'image_id' => get_post_thumbnail_id(),
+];
 
-<article>
-	<h3><?php the_title(); ?></h3>
-	<a href="<?php the_permalink(); ?>">
-		<?php the_excerpt(); ?>
-	</a>
-</article>
+get_template_part('partials/blocks/b-page-lift', '', $block_args);

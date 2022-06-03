@@ -27,7 +27,7 @@
   left: 0;
   padding: rem(10px 15px);
   background-color: $secondary;
-  color: #FFF;
+  color: color-yiq($secondary);
   width: 100%;
   font-family: $font-family--heading;
   font-weight: 400;
