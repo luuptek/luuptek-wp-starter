@@ -16,7 +16,7 @@ add_action(
 			'luuptek_admin',
 			asset_uri( 'scripts/admin.min.js' ),
 			[ 'jquery', 'wp-i18n', 'wp-blocks', 'wp-dom-ready' ],
-			luuptek_wp_base_theme()->get( 'Version' )
+			filemtime( get_theme_file_path( 'assets/dist/scripts/admin.min.js' ) )
 		);
 
 		/**
@@ -26,7 +26,7 @@ add_action(
 			'luuptek_admin_style',
 			asset_uri( 'styles/admin.css' ),
 			[],
-			luuptek_wp_base_theme()->get( 'Version' )
+			filemtime( get_theme_file_path( 'assets/dist/styles/admin.css' ) )
 		);
 	}
 );
@@ -44,7 +44,7 @@ add_action(
 			'luuptek_admin_style',
 			asset_uri( 'styles/admin.css' ),
 			[],
-			luuptek_wp_base_theme()->get( 'Version' )
+			filemtime( get_theme_file_path( 'assets/dist/styles/admin.css' ) )
 		);
 	}
 );
@@ -63,7 +63,7 @@ add_action(
 			'luuptek_theme',
 			asset_uri( 'scripts/main.min.js' ),
 			[ 'jquery' ],
-			luuptek_wp_base_theme()->get( 'Version' ),
+			filemtime( get_theme_file_path( 'assets/dist/scripts/main.min.js' ) ),
 			true
 		);
 
@@ -74,7 +74,7 @@ add_action(
 			'luuptek_style',
 			asset_uri( 'styles/main.css' ),
 			[],
-			luuptek_wp_base_theme()->get( 'Version' )
+			filemtime( get_theme_file_path( 'assets/dist/styles/main.css' ) )
 		);
 
 		/**
@@ -98,7 +98,7 @@ add_action(
 			'luuptek_admin',
 			asset_uri( 'scripts/admin.min.js' ),
 			[ 'wp-i18n', 'wp-blocks', 'wp-dom-ready', 'wp-edit-post' ],
-			luuptek_wp_base_theme()->get( 'Version' )
+			filemtime( get_theme_file_path( 'assets/dist/scripts/admin.min.js' ) )
 		);
 
 	},
