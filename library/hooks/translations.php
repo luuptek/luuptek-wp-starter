@@ -26,6 +26,8 @@ function theme_strings() {
 		[ 'Hyppää sisältöön', 'Teema' ],
 		[ 'Ei tuloksia haulla %s', 'Teema' ],
 		[ 'Avaa tai sulje alavalikko', 'Teema' ],
+		[ 'Etusivulle', 'Teema' ],
+		[ 'Mobiilivalikon avaaja ja sulkija', 'Teema' ],
 	];
 }
 
