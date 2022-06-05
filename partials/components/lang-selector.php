@@ -1,6 +1,6 @@
 <?php
 
-if ( ! function_exists( 'pll_current_language' ) ) {
+if ( ! is_plugin_active( 'polylang-pro/polylang.php' ) && ! is_plugin_active( 'polylang/polylang.php' ) ) {
 	return;
 }
 
