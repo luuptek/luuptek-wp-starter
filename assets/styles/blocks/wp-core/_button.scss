@@ -19,6 +19,7 @@
     .wp-block-button__link {
       color: $primary;
 	  background-color: transparent;
+	  border: rem(2px) $primary solid;
 
 	  &:hover, &:focus {
 		color: color-yiq($primary);

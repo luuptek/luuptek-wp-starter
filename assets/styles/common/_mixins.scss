@@ -192,7 +192,6 @@
   font-weight: $btn-font-weight;
   color: color-yiq($button-color);
   background-color: $button-color;
-  border: rem(2px) $button-color solid;
   text-align: center;
   text-decoration: if($link-decoration == none, null, none);
   white-space: $btn-white-space;
