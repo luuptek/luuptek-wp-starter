@@ -8,7 +8,7 @@
 
 ?>
 </div> <!-- closing #content-start -->
-<footer>
+<footer class="site-footer">
 	<div class="container">
 		<div class="row">
 			<?php

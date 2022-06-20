@@ -122,6 +122,10 @@ $danger:        $red !default;
 $light:         $gray-100 !default;
 $dark:          $gray-800 !default;
 
+$main-nav-bg-color: $secondary;
+$footer-bg-color: $primary;
+$main-nav-dropdown-theme-color: $primary;
+
 $theme-colors: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
 $theme-colors: map-merge(

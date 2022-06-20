@@ -1,5 +1,5 @@
 .main-nav {
-  background-color: $secondary;
+  background-color: $main-nav-bg-color;
 
   &__nav-logo {
     height: rem(30px);
@@ -70,7 +70,7 @@
 	  width: auto;
 
 	  path {
-		fill: color-yiq($secondary);
+		fill: color-yiq($main-nav-bg-color);
 	  }
 	}
   }
@@ -135,7 +135,7 @@
 
 .nav-link--level-1 {
   position: relative;
-  color: color-yiq($secondary);
+  color: color-yiq($main-nav-bg-color);
   font-size: rem(18px);
   padding: rem(16px 0);
   @include transition(all 0.2s ease);
@@ -145,8 +145,8 @@
   }
 
   &:hover {
-	background-color: lighten($secondary, 7.5%);
-	color: color-yiq(lighten($secondary, 7.5%));
+	background-color: lighten($main-nav-bg-color, 7.5%);
+	color: color-yiq(lighten($main-nav-bg-color, 7.5%));
 	text-decoration: none;
   }
 }
@@ -159,7 +159,7 @@
   display: none;
   position: static;
   padding: rem(15px 0);
-  border: rem(1px) solid $primary;
+  border: rem(1px) solid $main-nav-dropdown-theme-color;
   background-color: #FFF;
   list-style-type: none;
   margin: 0;
@@ -187,11 +187,11 @@
 .dropdown-item--level-2 {
   display: block;
   padding: rem(5px 15px);
-  color: $primary;
+  color: $main-nav-dropdown-theme-color;
 
   &:hover, &:hover {
-	color: color-yiq($primary);
-	background-color: $primary;
+	color: color-yiq($main-nav-dropdown-theme-color);
+	background-color: $main-nav-dropdown-theme-color;
 	text-decoration: none;
   }
 }
@@ -202,7 +202,7 @@
   background-color: transparent;
   padding: rem(5px 10px);
   z-index: 10;
-  color: color-yiq($secondary);
+  color: color-yiq($main-nav-bg-color);
   font-size: rem(30px);
   top: 0;
   bottom: 0;
