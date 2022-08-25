@@ -106,11 +106,6 @@ if ( ! function_exists( 'luuptek_wp_base_setup' ) ) :
 		require_files( dirname( __FILE__ ) . '/library/widgets' );
 
 		/**
-		 * Functions and helpers
-		 */
-		require_files( dirname( __FILE__ ) . '/library/functions' );
-
-		/**
 		 * Hooks
 		 */
 		require_files( dirname( __FILE__ ) . '/library/hooks' );

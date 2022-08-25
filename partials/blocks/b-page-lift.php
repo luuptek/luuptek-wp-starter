@@ -7,7 +7,7 @@ if ( ! is_array( $args ) ) {
 $lift_url      = $args['url'];
 $lift_title    = $args['title'];
 $lift_image_id = ! empty( $args['image_id'] ) ? $args['image_id'] : get_field( 'luuptek_wp_base_default_image_id', 'option' );
-$link_label    = pll_esc_html__( 'Lue lisää:' ) . ' ' . $lift_title;
+$link_label    = is_admin() ? 'Lue lisää' : pll_esc_html__( 'Lue lisää:' ) . ' ' . $lift_title;
 ?>
 
 <div class="b-page-lift">
