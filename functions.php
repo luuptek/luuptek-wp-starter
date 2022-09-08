@@ -115,7 +115,7 @@ if ( ! function_exists( 'luuptek_wp_base_setup' ) ) :
 		 */
 		if ( function_exists( 'add_theme_support' ) ) {
 			add_theme_support( 'automatic-feed-links' );
-			add_theme_support( 'html5', [ 'caption', 'comment-form', 'comment-list', 'gallery', 'search-form' ] );
+			add_theme_support( 'html5', [ 'caption', 'comment-form', 'comment-list', 'gallery', 'search-form', 'script', 'style' ] );
 			add_theme_support( 'post-thumbnails' );
 			add_theme_support( 'title-tag' );
 			add_theme_support( 'align-wide' );
