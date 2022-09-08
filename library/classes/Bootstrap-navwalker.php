@@ -299,7 +299,7 @@ if ( ! class_exists( 'WP_Bootstrap_Navwalker' ) ) :
 			}
 
 			// Put the item contents into $output.
-			$item_output .= isset( $args->link_before ) ? $args->link_before . $icon_html . $title . $args->link_after : '';
+			$item_output .= isset( $args->link_before ) ? $args->link_before . $title . $args->link_after : '';
 
 			/*
 			 * This is the end of the internal nav item. We need to close the
@@ -312,6 +312,8 @@ if ( ! class_exists( 'WP_Bootstrap_Navwalker' ) ) :
 				// With no link mod type set this must be a standard <a> tag.
 				$item_output .= '</a>';
 			}
+
+			$item_output .= ! empty( $icon_html ) ? $icon_html : '';
 
 			$item_output .= isset( $args->after ) ? $args->after : '';
 
