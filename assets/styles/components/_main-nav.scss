@@ -54,10 +54,6 @@
 	margin-left: rem(20px);
 	order: 3;
 
-	@include media-breakpoint-up($main-menu-breakpoint) {
-	  order: 3;
-	}
-
 	> svg {
 	  height: rem(30px);
 	  width: auto;
