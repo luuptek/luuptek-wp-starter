@@ -14,6 +14,8 @@
   }
 
   &__mobile-menu-toggler {
+	margin-left: auto;
+
 	@include media-breakpoint-up($main-menu-breakpoint) {
 	  display: none;
 	}
@@ -35,6 +37,7 @@
   }
 
   &__main-menu-wrapper {
+	order: 4;
 	flex-basis: 100%;
 	padding-top: rem(15px);
 
@@ -45,24 +48,14 @@
 	}
   }
 
-  &__actions {
-	display: flex;
-	align-items: center;
-	justify-content: flex-end;
-
-	@include media-breakpoint-up($main-menu-breakpoint) {
-	  order: 3;
-	}
-  }
-
   &__search {
 	border: none;
 	background-color: transparent;
-	margin-right: rem(20px);
+	margin-left: rem(20px);
+	order: 3;
 
 	@include media-breakpoint-up($main-menu-breakpoint) {
-	  margin-right: 0;
-	  margin-left: rem(20px);
+	  order: 3;
 	}
 
 	> svg {
