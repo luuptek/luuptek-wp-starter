@@ -1,26 +1,17 @@
-import { toggleAria } from "../lib/toggleStates"
-import { mainSearchTogglers } from "../lib/mainSearch"
+import { mainSearchTogglers } from "../lib/mainSearch";
+import { themeAccessibility } from "../lib/accessiblity";
+import { themeNavigation } from "../lib/navigation";
+
 export default {
   init() {
-
 	  // Main search
 	  mainSearchTogglers();
 
+	  // Accessibility
+	  themeAccessibility();
 
-      $('#mainNav').on('show.bs.collapse hide.bs.collapse', () => {
-          $('button.hamburger').toggleClass('is-active');
-      });
-
-	  /**
-	   * Mobile menu handler
-	   */
-	  $('.main-nav__sub-menu-toggler').on('click', (e) => {
-		  e.preventDefault();
-		  const target = $(e.target);
-		  const closestLi = target.closest('li.dropdown');
-		  closestLi.toggleClass('main-nav-dropdown-open');
-		  toggleAria(target, 'aria-expanded');
-	  });
+	  //Navigation
+	  themeNavigation();
   },
   finalize() {
     // JavaScript to be fired on all pages, after page specific JS is fired
