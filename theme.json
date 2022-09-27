@@ -1,0 +1,36 @@
+{
+	"$schema": "https://raw.githubusercontent.com/WordPress/gutenberg/trunk/schemas/json/theme.json",
+	"version": 2,
+	"settings": {
+		"color": {
+			"custom": false,
+			"customGradient": false,
+			"palette": [
+				{
+					"slug": "theme-primary",
+					"color": "#5b9279",
+					"name": "Teeman pääväri"
+				},
+				{
+					"slug": "theme-secondary",
+					"color": "#2e3532",
+					"name": "Teeman toissijainen väri"
+				},
+				{
+					"slug": "solid-white",
+					"color": "#ffffff",
+					"name": "Täysin valkoinen"
+				},
+				{
+					"slug": "solid-black",
+					"color": "#000000",
+					"name": "Täysin musta"
+				}
+			]
+		},
+		"layout": {
+			"contentSize": "650px",
+			"wideSize": "1000px"
+		}
+	}
+}
