@@ -308,3 +308,20 @@ add_filter(
 		return $classes;
 	}
 );
+
+/**
+ * Custom image sizes to gutenberg image size selection into here
+ */
+add_filter(
+	'image_size_names_choose',
+	function ( $sizes ) {
+		return array_merge(
+			$sizes,
+			[
+				'article_lift' => __( 'Artikkelinosto', 'luuptek_wp_base' ),
+				'hero_slide'   => __( 'Hero slide', 'luuptek_wp_base' ),
+				'square'       => __( 'Neliö', 'luuptek_wp_base' ),
+			]
+		);
+	}
+);
