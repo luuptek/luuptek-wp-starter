@@ -325,3 +325,31 @@ add_filter(
 		);
 	}
 );
+
+/**
+ * Redirect non-logged in users, just uncomment hook to make the effect
+ */
+function luuptek_redirect_non_logged_in() {
+	if ( ! is_user_logged_in() ) {
+		wp_redirect( wp_login_url() );
+		exit;
+	}
+}
+
+// add_action( 'template_redirect', 'luuptek_redirect_non_logged_in' );
+
+/**
+ * Allow editors to access menus&widgets by default
+ *
+ * @return void
+ */
+function luuptek_add_appearance_cap_to_editori() {
+	// Gets the simple_role role object.
+	$role = get_role( 'editor' );
+
+	// Add a new capability.
+	$role->add_cap( 'edit_theme_options', true );
+}
+
+// Adding capabilities, priority must be after the initial role definition.
+add_action( 'init', 'luuptek_add_appearance_cap_to_editori', 11 );
