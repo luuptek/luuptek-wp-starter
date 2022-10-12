@@ -163,7 +163,7 @@ class Utils {
 				?>
 				<li>
 					<a href="<?php echo esc_url( $option ); ?>" target="_blank"
-					   aria-label="<?php esc_attr( $social_media ); ?>">
+					   aria-label="<?php echo esc_attr( $social_media ); ?>">
 						<?php Utils()->the_svg( 'icons/' . $social_media . '-square' ); ?>
 					</a>
 				</li>
