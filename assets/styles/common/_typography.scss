@@ -21,3 +21,20 @@ h5 {
 h6 {
   @include make-heading($h6-base-font-size, rem(10px), rem(20px));
 }
+
+.gutenberg {
+  > h2 {
+	margin-top: rem(35px);
+	margin-bottom: rem(16px);
+  }
+
+  > h3 {
+	margin-top: rem(30px);
+	margin-bottom: rem(16px);
+  }
+
+  > h4, > h5, > h6 {
+	margin-top: rem(25px);
+	margin-bottom: rem(16px);
+  }
+}
