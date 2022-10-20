@@ -9,7 +9,7 @@
 
 ?>
 
-<section>
+<div class="section">
 	<div class="container">
 		<article>
 			<h1>
@@ -20,4 +20,4 @@
 			</p>
 		</article>
 	</div>
-</section>
+</div>

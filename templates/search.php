@@ -12,7 +12,7 @@ get_header();
 
 <?php do_action( 'luuptek_wp_base_before_page' ); ?>
 
-<section>
+<div class="section">
 	<div class="container">
 		<?php if ( have_posts() ) : ?>
 			<h1>
@@ -29,7 +29,7 @@ get_header();
 			<?php get_template_part( 'partials/no-results', 'search' ); ?>
 		<?php endif; ?>
 	</div>
-</section>
+</div>
 
 <?php do_action( 'luuptek_wp_base_after_page' ); ?>
 

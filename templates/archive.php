@@ -12,7 +12,7 @@ get_header();
 
 <?php do_action( 'luuptek_wp_base_before_page' ); ?>
 
-<section>
+<div class="section">
 	<div class="container">
 		<h1><?php echo get_the_archive_title(); ?></h1>
 		<?php
@@ -27,7 +27,7 @@ get_header();
 		endif;
 		?>
 	</div>
-</section>
+</div>
 
 <?php do_action( 'luuptek_wp_base_after_page' ); ?>
 
