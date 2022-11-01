@@ -1,4 +1,4 @@
-# Luuptek WP-Base
+# Luuptek WP-Starter
 
 ## Theme description
 
