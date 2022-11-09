@@ -9,7 +9,7 @@
 		<button class="main-nav__mobile-menu-toggler hamburger hamburger--elastic" type="button"
 		        data-toggle="collapse"
 		        data-target="#mainNav"
-		        aria-label="<?php esc_attr( pll__( 'Mobiilivalikon avaaja ja sulkija' ) ); ?>"
+		        aria-label="<?php echo esc_attr( pll__( 'Mobiilivalikon avaaja ja sulkija' ) ); ?>"
 		        aria-controls="mainNav"
 		        aria-expanded="false">
             <span class="hamburger-box">
