@@ -18,6 +18,10 @@
   @include media-breakpoint-up(md) {
     @include make-col(6);
   }
+
+  .widget__title {
+	margin-top: 0;
+  }
 }
 
 .footer-copyrights {
