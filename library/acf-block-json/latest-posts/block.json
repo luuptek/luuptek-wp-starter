@@ -1,0 +1,26 @@
+{
+	"name": "acf/latest-posts",
+	"title": "Viimeisimmät julkaisut",
+	"description": "Nosta viimeisiä artikkeleja helposti tällä lohkolla.",
+	"$schema": "https://gist.githubusercontent.com/saulirajala/359775273c62fa19ea232ced18c10712/raw/1cb3436e0dea14b7545c8ce1bc91a8aeea678cc6/acf-block-schema.json",
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "library/acf-block-json/latest-posts/gb-acf-latest-posts.php"
+	},
+	"category": "formatting",
+	"textdomain": "luuptek_wp_base",
+	"icon": "layout",
+	"keywords": [
+		"artikkeli",
+		"nosto"
+	],
+	"supports": {
+		"align": ["full"],
+		"anchor": true,
+		"color": {
+			"text": false,
+			"background": true,
+			"link": false
+		}
+	}
+}

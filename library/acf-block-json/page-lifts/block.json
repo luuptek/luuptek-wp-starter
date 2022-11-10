@@ -1,0 +1,26 @@
+{
+	"name": "acf/page-lifts",
+	"title": "Sivunostot",
+	"description": "Tee automaattisia sivunostoja tällä lohkolla.",
+	"$schema": "https://gist.githubusercontent.com/saulirajala/359775273c62fa19ea232ced18c10712/raw/1cb3436e0dea14b7545c8ce1bc91a8aeea678cc6/acf-block-schema.json",
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "library/acf-block-json/page-lifts/gb-acf-page-lifts.php"
+	},
+	"category": "formatting",
+	"textdomain": "luuptek_wp_base",
+	"icon": "layout",
+	"keywords": [
+		"sivu",
+		"nosto"
+	],
+	"supports": {
+		"align": ["full"],
+		"anchor": true,
+		"color": {
+			"text": true,
+			"background": true,
+			"link": false
+		}
+	}
+}

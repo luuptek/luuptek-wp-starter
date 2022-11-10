@@ -36,12 +36,12 @@
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
   color: #FFF;
   font-family: $font-family--heading;
-  @include make-heading(32px, 0, rem(16px));
+  @include make-heading(32px, 0, 16px);
 }
 
 .b-hero__description {
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
   color: #FFF;
   font-family: $font-family--body;
-  @include make-heading(16px, 0, rem(16px));
+  @include make-heading(16px, 0, 16px);
 }

@@ -6,7 +6,7 @@
  * @param array $block The block settings and attributes.
  * @param string $content The block inner HTML (empty).
  * @param bool $is_preview True during AJAX preview.
- * @param   (int|string) $post_id The post ID this block is saved to.
+ * @param (int|string) $post_id The post ID this block is saved to.
  */
 
 $block_title   = get_field( 'title' );
@@ -40,6 +40,8 @@ $class_names = [
 	'gb-latest-posts-' . $block['id'],
 ];
 
+$title_class_names = [ 'gb-latest-posts__title' ];
+
 if ( ! empty( $block['className'] ) ) {
 	$class_names[] = $block['className'];
 }
@@ -48,11 +50,16 @@ if ( ! empty( $block['align'] ) ) {
 	$class_names[] = 'align' . $block['align'];
 }
 
+if ( ! empty( $block['backgroundColor'] ) ) {
+	$class_names[] = 'has-background';
+	$class_names[] = 'has-' . $block['backgroundColor'] . '-background-color';
+}
+
 ?>
 
 <div id="<?php echo esc_attr( $block_id ); ?>" class="<?php echo esc_attr( implode( ' ', $class_names ) ); ?>">
-	<div class="container">
-		<h2 class="gb-latest-posts__title">
+	<div class="gb-latest-posts__container">
+		<h2 class="<?php echo esc_attr( implode( ' ', $title_class_names ) ); ?>">
 			<?php echo esc_html( $block_title ); ?>
 		</h2>
 		<div class="gb-latest-posts__row">

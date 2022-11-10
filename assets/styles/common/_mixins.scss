@@ -156,8 +156,8 @@
 
 @mixin make-heading($font-size: $h1-base-font-size, $margin-top: 0, $margin-bottom: 0) {
   font-size: rem($font-size);
-  margin-top: $margin-top;
-  margin-bottom: $margin-bottom;
+  margin-top: rem($margin-top);
+  margin-bottom: rem($margin-bottom);
   word-break: break-word;
 
   @include media-breakpoint-up(md) {

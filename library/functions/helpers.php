@@ -43,6 +43,19 @@ function require_files( $dir, $suffix = 'php' ) {
 }
 
 /**
+ * Returns folders inside given folder as array
+ *
+ * Array will not include '.' or '..' folder names
+ *
+ * @param string $dir Directory
+ *
+ * @return array|false Array of folder names inside a folder ot false if not folder found
+ */
+function get_directories_array( $dir ) {
+	return array_diff( scandir( $dir ), [ '.', '..' ] );
+}
+
+/**
  * Utils-class as function-wrapper
  */
 if ( ! function_exists( 'UTILS' ) ) :

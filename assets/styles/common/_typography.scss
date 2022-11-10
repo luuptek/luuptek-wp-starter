@@ -1,21 +1,21 @@
 h1 {
-  @include make-heading($h1-base-font-size, rem(10px), rem(26px));
+  @include make-heading($h1-base-font-size, 10px, 26px);
 }
 
 h2 {
-  @include make-heading($h2-base-font-size, rem(10px), rem(26px));
+  @include make-heading($h2-base-font-size, 10px, 26px);
 }
 
 h3 {
-  @include make-heading($h3-base-font-size, rem(10px), rem(26px));
+  @include make-heading($h3-base-font-size, 10px, 26px);
 }
 
 h4 {
-  @include make-heading($h4-base-font-size, rem(10px), rem(20px));
+  @include make-heading($h4-base-font-size, 10px, 20px);
 }
 
 h5 {
-  @include make-heading($h5-base-font-size, rem(10px), rem(20px));
+  @include make-heading($h5-base-font-size, 10px, 20px);
 }
 
 h6 {

@@ -1,6 +1,15 @@
 .gb-page-lifts {
   padding: rem(30px 0);
 
+  &.alignfull {
+	margin-left: rem(-15px);
+	margin-right: rem(-15px);
+  }
+
+  &__container {
+	@include luuptek-create-container($align-wide-container-width, 15px);
+  }
+
   &.gb-page-lifts--no-top-padding {
 	padding: rem(0 0 30px 0);
   }
@@ -10,10 +19,10 @@
   }
 
   &__title {
-	@include make-heading(21px, 0, rem(32px));
+	@include make-heading(21px, 0, 32px);
 
 	&.gb-page-lifts__title--h1 {
-	  @include make-heading($h1-base-font-size, 0, rem(32px));
+	  @include make-heading($h1-base-font-size, 0, 32px);
 	}
   }
 }
