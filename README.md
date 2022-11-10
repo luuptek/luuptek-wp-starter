@@ -97,6 +97,8 @@ There is basic theme.json available, but it's recommended to use sass styling in
 │   ├── template.tpl.php
 |
 ├── 3. library
+│   ├── acf-block-json
+│   │   ├── blocks-here
 │   ├── acf-blocks
 │   │   ├── blocks.php
 │   ├── acf-data
@@ -155,7 +157,7 @@ Place your images, styles & javascripts here (they get smushed and build to `ass
 * Place your WordPress [custom-templates](https://developer.wordpress.org/themes/template-files-section/page-template-files/) here.
 
 **3. library**
-* `acf-blocks` / `acf-data` / `acf-options`: ACF block registering, using ACF JSON data and creating options
+* `acf-block-json` / `acf-blocks` / `acf-data` / `acf-options`: ACF block registering, using ACF JSON data and creating options
 * `classes`: Holds the helper & utility-classes and is autorequired in `functions.php`
 * `custom-posts`: Place your custom posts here. See example usage in `cpt.php`
 * `taxonomies`: Place your custom taxonomies here. See example usage in `custom-taxonomy-name.php`
