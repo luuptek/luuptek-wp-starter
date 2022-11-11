@@ -19,7 +19,7 @@ h5 {
 }
 
 h6 {
-  @include make-heading($h6-base-font-size, rem(10px), rem(20px));
+  @include make-heading($h6-base-font-size, 10px, 20px);
 }
 
 .gutenberg {
