@@ -53,3 +53,14 @@ img {
     border: 0;
   }
 }
+
+#content-start {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: calc(100% - 62px);
+
+  @include media-breakpoint-up($main-menu-breakpoint) {
+	min-height: calc(100% - 89px);
+  }
+}

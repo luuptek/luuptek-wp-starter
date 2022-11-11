@@ -1,7 +1,6 @@
 .site-footer {
   background-color: $footer-bg-color;
   color: color-yiq($footer-bg-color);
-  padding: rem(40px 0 30px 0);
 
   a {
 	color: color-yiq($footer-bg-color);
@@ -9,6 +8,10 @@
     &:hover, &:focus, &:active {
 	  color: color-yiq($footer-bg-color);
     }
+  }
+
+  &__content {
+	padding: rem(40px 0 30px 0);
   }
 }
 
