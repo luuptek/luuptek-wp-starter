@@ -28,6 +28,7 @@ function theme_strings() {
 		[ 'Avaa tai sulje alavalikko', 'Teema' ],
 		[ 'Etusivulle', 'Teema' ],
 		[ 'Mobiilivalikon avaaja ja sulkija', 'Teema' ],
+		[ 'Sivuston koodasi', 'Teema' ],
 	];
 }
 

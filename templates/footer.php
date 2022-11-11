@@ -50,7 +50,9 @@
 			</g>
 		</g>
 	</svg> <?php echo esc_html( get_bloginfo() ) . ' ' . date( 'Y' ); ?>
-	| <?php esc_html_e( 'Code by', 'luuptek_wp_base' ); ?> <a href="https://www.luuptek.fi" target="_blank">Luuptek</a>
+	<?php if ( is_front_page() ) : ?>
+		| <?php pll_esc_html_e( 'Sivuston koodasi:' ); ?> <a href="https://www.luuptek.fi" target="_blank">Luuptek</a>
+	<?php endif; ?>
 </div>
 <?php get_template_part( 'partials/components/main-search' ); ?>
 
