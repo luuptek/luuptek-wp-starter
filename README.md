@@ -116,7 +116,10 @@ There is basic theme.json available, but it's recommended to use sass styling in
 │   ├── lang
 │   └── widgets
 |
-├── 4. partials
+├── 4. parts
+│   └── footer.html
+|
+├── 5. partials
 │   ├── blocks
 │   │   └── example-block.php
 │   ├── components
@@ -129,7 +132,7 @@ There is basic theme.json available, but it's recommended to use sass styling in
 │   ├── no-results-search.php
 │   └── no-results.php
 |
-├── 5. templates
+├── 6. templates
 ├── .editorconfig
 ├── .eslintrc
 ├── .gitignore
@@ -166,8 +169,11 @@ Place your images, styles & javascripts here (they get smushed and build to `ass
 * `lang`: i18n for the theme
 * `widgets`: WP-nav menus & widgets
 
-**4. partials**
+**4. parts**
+When using block_template_part()-function ==> Add all relevant files into this directory.
+
+**5. partials**
 Partial files used by wrappers. Place additional partial components to `components`-folder
 
-**5. templates**
+**6. templates**
 WordPress required template-files
