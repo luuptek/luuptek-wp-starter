@@ -13,16 +13,8 @@
   &__content {
 	padding: rem(40px 0 30px 0);
   }
-}
 
-.footer-column {
-  @include make-col-ready();
-
-  @include media-breakpoint-up(md) {
-    @include make-col(6);
-  }
-
-  .widget__title {
+  h3 {
 	margin-top: 0;
   }
 }

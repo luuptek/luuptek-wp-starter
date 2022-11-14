@@ -11,20 +11,7 @@
 <footer class="site-footer">
 	<div class="site-footer__content">
 		<div class="container">
-			<div class="row">
-				<?php
-
-				$footer_widgets = [ 'footer-1', 'footer-2' ];
-
-				foreach ( $footer_widgets as $footer_widget ) {
-					if ( is_active_sidebar( $footer_widget ) ) {
-						dynamic_sidebar( $footer_widget );
-					}
-				}
-				?>
-			</div>
-		</div>
-		<div class="container">
+			<?php block_template_part( 'footer' ); ?>
 			<ul class="some-nav">
 				<?php
 				// Just render these anywhere you want to..
@@ -35,7 +22,8 @@
 	</div>
 	<div class="footer-copyrights">
 		Copyright
-		<svg class="footer-copyright-img" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24"
+		<svg class="footer-copyright-img" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24"
+		     height="24"
 		     viewBox="0 0 24 24"
 		     width="24">
 			<g>
@@ -51,7 +39,8 @@
 			</g>
 		</svg> <?php echo esc_html( get_bloginfo() ) . ' ' . date( 'Y' ); ?>
 		<?php if ( is_front_page() ) : ?>
-			| <?php pll_esc_html_e( 'Sivuston koodasi:' ); ?> <a href="https://www.luuptek.fi" target="_blank">Luuptek</a>
+			| <?php pll_esc_html_e( 'Sivuston koodasi:' ); ?> <a href="https://www.luuptek.fi"
+			                                                     target="_blank">Luuptek</a>
 		<?php endif; ?>
 	</div>
 </footer>
