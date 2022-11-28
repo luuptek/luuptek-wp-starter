@@ -1,4 +1,13 @@
 @import "~sass-rem/rem";
+@import "../styles/common/fonts";
+@import "../styles/utils/functions";
+@import "../styles/common/variables";
+@import "../styles/mixins/mixins";
+
+// In case backend need to be modified, adding these:
+//@import "../utils/root";
+//@import "../styles/utils/reboot";
+//@import "../styles/utils/typography";
 
 /**
  * Login logo
@@ -17,14 +26,6 @@
  * Gutenberg back end stuff
  * None here any more...
  */
-@import "../styles/common/functions";
-@import "../styles/common/variables";
-
-@import "~bootstrap/scss/functions";
-@import "~bootstrap/scss/variables";
-@import "~bootstrap/scss/mixins";
-
-@import "../styles/common/mixins";
 
 .editor-styles-wrapper {
   @each $name, $color in $page-theme-colors {

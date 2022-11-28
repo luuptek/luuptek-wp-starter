@@ -1,17 +1,20 @@
 .gb-latest-posts {
   padding: rem(32px 0);
 
-  &.alignfull {
-	margin-left: rem(-15px);
-	margin-right: rem(-15px);
-  }
-
   &__container {
-	@include luuptek-create-container($align-wide-container-width, 15px);
+	@include luuptek-create-container($align-wide-container-width, 0);
   }
 
   &__row {
 	@include make-row();
+
+	@include media-breakpoint-up(md) {
+	  grid-template-columns: repeat(2, 1fr);
+	}
+
+	@include media-breakpoint-up(lg) {
+	  grid-template-columns: repeat(3, 1fr);
+	}
   }
 
   &__title {

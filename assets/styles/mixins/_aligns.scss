@@ -1,0 +1,27 @@
+@mixin add-block-aligns() {
+  .has-text-align-center {
+	text-align: center;
+  }
+
+  .has-text-align-right {
+	text-align: right;
+  }
+
+  .has-text-align-left {
+	text-align: left;
+  }
+}
+
+@mixin add-block-vertical-aligns() {
+  .is-vertically-aligned-center, .are-vertically-aligned-center {
+	align-items: center;
+  }
+
+  .is-vertically-aligned-top, .are-vertically-aligned-top {
+	align-items: flex-start;
+  }
+
+  .is-vertically-aligned-bottom, .are-vertically-aligned-bottom {
+	align-items: flex-end;
+  }
+}

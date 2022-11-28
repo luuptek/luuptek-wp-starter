@@ -1,18 +1,18 @@
 .post-lifts-row {
   @include make-row();
+
+  @include media-breakpoint-up(md) {
+	grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include media-breakpoint-up(lg) {
+	grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .post-lift-item {
   @include make-col-ready();
   margin-bottom: rem(15px);
-
-  @include media-breakpoint-up(md) {
-    @include make-col(6);
-  }
-
-  @include media-breakpoint-up(xl) {
-    @include make-col(4);
-  }
 }
 
 .post-lift-item__content {

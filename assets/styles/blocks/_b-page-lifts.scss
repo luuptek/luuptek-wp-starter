@@ -1,19 +1,19 @@
 .b-page-lifts-row {
   @include make-row();
+
+  @include media-breakpoint-up(md) {
+	grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include media-breakpoint-up(lg) {
+	grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .b-page-lift {
   @include make-col-ready();
   text-align: center;
   margin-bottom: rem(15px);
-
-  @include media-breakpoint-up(md) {
-	@include make-col(6);
-  }
-
-  @include media-breakpoint-up(lg) {
-	@include make-col(4);
-  }
 }
 
 .b-page-lift__figure {
