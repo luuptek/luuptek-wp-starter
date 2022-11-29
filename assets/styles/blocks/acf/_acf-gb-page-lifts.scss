@@ -1,5 +1,9 @@
 .gb-page-lifts {
-  padding: rem(30px 0);
+  margin: rem(32px auto);
+
+  &.has-background {
+	padding: rem(30px 15px);
+  }
 
   &__container {
 	@include luuptek-create-container($align-wide-container-width, 0);
