@@ -30,8 +30,8 @@ function luuptek_wp_base_set_imagesizes() {
 	return [
 		[
 			'name'   => 'article_lift',
-			'width'  => 360,
-			'height' => 200,
+			'width'  => 500,
+			'height' => 277,
 			'crop'   => true,
 		],
 		[
