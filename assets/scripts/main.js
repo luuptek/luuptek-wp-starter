@@ -1,6 +1,6 @@
 // import external dependencies
 import 'jquery';
-import 'bootstrap';
+//import 'bootstrap';
 import 'fastclick';
 
 // Slick available..
