@@ -8,11 +8,8 @@ const WebpackCleanupPlugin = require('webpack-cleanup-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const ImageminPlugin = require('imagemin-webpack-plugin').default;
-const imageminMozjpeg = require('imagemin-mozjpeg');
-const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const OptimizeCssAssetsPlugin = require('css-minimizer-webpack-plugin');
 // const DashboardPlugin = require('webpack-dashboard/plugin');
-
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 const pkg = require('../../package.json');
 
@@ -23,28 +20,22 @@ const isProduction = !!((argv.env && argv.env.production) || argv.p);
  * @type {*[]}
  */
 const commonPlugins = [
-  new CopyWebpackPlugin([
-    {
-      from: path.resolve(__dirname, '../images/**/*'),
-      to: 'images/',
-		context: "./assets/images/"
-    }
-  ], {
-
-  }),
+	new CopyWebpackPlugin({
+		patterns: [
+			{
+				from: path.resolve(__dirname, '../images/**/*'),
+				to: 'images/',
+				context: "./assets/images/"
+			}
+		],
+		options: {
+			concurrency: 100,
+		},
+	}),
   new webpack.LoaderOptionsPlugin({
     minimize: isProduction,
     debug: !isProduction,
     stats: { colors: true },
-    postcss: [
-      autoprefixer({
-        browsers: [
-          'last 2 versions',
-          'android 4',
-          'opera 12',
-        ],
-      }),
-    ],
     eslint: {
       failOnWarning: false,
       failOnError: true,
@@ -70,10 +61,7 @@ const commonPlugins = [
       speed: 4,
     },
     svgo: null,
-    jpegtran: null,
-    plugins: [imageminMozjpeg({
-      quality: 75,
-    })]
+    jpegtran: null
   }),
     new MiniCssExtractPlugin({
         // Options similar to the same options in webpackOptions.output
@@ -113,9 +101,7 @@ const developPlugins = [
   },
   {
     reload: false
-  }),
-  new webpack.optimize.OccurrenceOrderPlugin(),
-  new webpack.NoEmitOnErrorsPlugin()
+  })
 ];
 
 /**
@@ -123,25 +109,7 @@ const developPlugins = [
  * @type {Array.<*>}
  */
 const productionPLugins = [
-  new WebpackCleanupPlugin(),
-  new webpack.optimize.OccurrenceOrderPlugin(),
-    new UglifyJsPlugin({
-        uglifyOptions: {
-            ecma: 5,
-			warnings: true,
-            compress: {
-                drop_console: true
-            },
-        },
-    }),
-  new OptimizeCssAssetsPlugin({
-    cssProcessorOptions: {
-      discardComments: {
-        removeAll: true
-      },
-      safe: true,
-    }
-  })
+  new WebpackCleanupPlugin()
 ];
 
 module.exports = {

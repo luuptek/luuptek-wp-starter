@@ -28,12 +28,17 @@ module.exports = {
     },
   },
   devServer: {
+	  allowedHosts: 'all',
+	  bonjour: false,
+	  client: {
+		  logging: 'info',
+		  overlay: true,
+		  progress: true,
+		  reconnect: 10
+	  },
+	  compress: true,
     host: 'localhost',
-    overlay: {
-      errors: true,
-      warnings: true,
-    },
-    hotOnly: true,
+    hot: true,
     proxy: {
       '/': {
         target: config.proxyUrl,
@@ -42,7 +47,9 @@ module.exports = {
         autoRewrite: true,
       },
     },
-    publicPath: `http://localhost:8080${publicPath}`,
+	  static: {
+		  publicPath: `http://localhost:8080${publicPath}`,
+	  }
   },
   externals: {
 	  jquery: 'jQuery'
@@ -61,7 +68,6 @@ module.exports = {
         test: /\.js$/,
         exclude: [/(node_modules)(?![/|\\](bootstrap|foundation-sites))/],
         use: [
-          { loader: 'cache-loader' },
           {
             loader: 'babel-loader',
             options: {
@@ -77,7 +83,6 @@ module.exports = {
           use: [
               'css-hot-loader',
               isProduction ? MiniCssExtractPlugin.loader : 'style-loader',
-              'cache-loader',
               {
                   loader: 'css-loader',
                   options: {
