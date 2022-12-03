@@ -3,7 +3,6 @@ const path = require('path');
 const argv = require('minimist')(process.argv.slice(2));
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const WebpackCleanupPlugin = require('webpack-cleanup-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 const ESLintPlugin = require('eslint-webpack-plugin');
@@ -95,9 +94,7 @@ const developPlugins = [
  * Production plugins
  * @type {Array.<*>}
  */
-const productionPLugins = [
-	new WebpackCleanupPlugin()
-];
+const productionPLugins = [];
 
 module.exports = {
 	develop: commonPlugins.concat(developPlugins),
