@@ -16,7 +16,7 @@ add_action(
 			'luuptek_admin',
 			asset_uri( 'scripts/admin.min.js' ),
 			[ 'jquery', 'wp-i18n', 'wp-blocks', 'wp-dom-ready' ],
-			filemtime( get_theme_file_path( 'assets/dist/scripts/admin.min.js' ) )
+			filemtime( get_theme_file_path( 'dist/scripts/admin.min.js' ) )
 		);
 
 		/**
@@ -26,7 +26,7 @@ add_action(
 			'luuptek_admin_style',
 			asset_uri( 'styles/admin.css' ),
 			[],
-			filemtime( get_theme_file_path( 'assets/dist/styles/admin.css' ) )
+			filemtime( get_theme_file_path( 'dist/styles/admin.css' ) )
 		);
 	}
 );
@@ -44,7 +44,7 @@ add_action(
 			'luuptek_admin_style',
 			asset_uri( 'styles/admin.css' ),
 			[],
-			filemtime( get_theme_file_path( 'assets/dist/styles/admin.css' ) )
+			filemtime( get_theme_file_path( 'dist/styles/admin.css' ) )
 		);
 	}
 );
@@ -59,13 +59,14 @@ add_action(
 		/**
 		 * Main scripts file
 		 */
-		wp_enqueue_script(
-			'luuptek_theme',
-			asset_uri( 'scripts/main.min.js' ),
-			[ 'jquery' ],
-			filemtime( get_theme_file_path( 'assets/dist/scripts/main.min.js' ) ),
-			true
-		);
+		AssetHelpers\enqueue_webpack_entry( 'main', [ 'deps' => [ 'jquery' ] ] );
+
+		if ( ASSET_DEV ) {
+			global $sakke_config;
+			$host = $sakke_config->livereload->host;
+			$port = $sakke_config->livereload->port;
+			wp_enqueue_script( 'livereload', "http://$host:$port/livereload.js?snipver=1", [], null, true );
+		}
 
 		/**
 		 * Main style
@@ -74,7 +75,7 @@ add_action(
 			'luuptek_style',
 			asset_uri( 'styles/main.css' ),
 			[],
-			filemtime( get_theme_file_path( 'assets/dist/styles/main.css' ) )
+			filemtime( get_theme_file_path( 'dist/styles/main.css' ) )
 		);
 
 		/**
@@ -98,7 +99,7 @@ add_action(
 			'luuptek_admin',
 			asset_uri( 'scripts/admin.min.js' ),
 			[ 'wp-i18n', 'wp-blocks', 'wp-dom-ready', 'wp-edit-post' ],
-			filemtime( get_theme_file_path( 'assets/dist/scripts/admin.min.js' ) )
+			filemtime( get_theme_file_path( 'dist/scripts/admin.min.js' ) )
 		);
 
 	},

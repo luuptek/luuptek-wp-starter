@@ -1,0 +1,17 @@
+{
+	"git": {
+		"production": null
+	},
+	"webpack": {
+		"port": 8080,
+		"host": "localhost"
+	},
+	"livereload": {
+		"port": 35729,
+		"host": "localhost"
+	},
+	"plugins": [],
+	"legacyFeatures": {
+		"escWysiwygLegacy": false
+	}
+}
