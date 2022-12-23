@@ -27,21 +27,16 @@ add_action( 'wp_head', __NAMESPACE__ . '\\inject_polyfill_loader', -100 );
 add_action(
 	'admin_enqueue_scripts',
 	function () {
-		wp_enqueue_script(
-			'luuptek_admin',
-			asset_uri( 'scripts/admin.min.js' ),
-			[ 'jquery', 'wp-i18n', 'wp-blocks', 'wp-dom-ready' ],
-			filemtime( get_theme_file_path( 'dist/scripts/admin.min.js' ) )
-		);
+		AssetHelpers\enqueue_webpack_entry( 'main-admin', [ 'deps' => [ 'jquery', 'wp-i18n', 'wp-blocks', 'wp-dom-ready' ] ] );
 
 		/**
 		 * Main admin style
 		 */
 		wp_enqueue_style(
 			'luuptek_admin_style',
-			asset_uri( 'styles/admin.css' ),
+			asset_uri( 'styles/main-admin.css' ),
 			[],
-			filemtime( get_theme_file_path( 'dist/styles/admin.css' ) )
+			filemtime( get_theme_file_path( 'dist/styles/main-admin.css' ) )
 		);
 	}
 );
@@ -57,9 +52,9 @@ add_action(
 		 */
 		wp_enqueue_style(
 			'luuptek_admin_style',
-			asset_uri( 'styles/admin.css' ),
+			asset_uri( 'styles/main-admin.css' ),
 			[],
-			filemtime( get_theme_file_path( 'dist/styles/admin.css' ) )
+			filemtime( get_theme_file_path( 'dist/styles/main-admin.css' ) )
 		);
 	}
 );
@@ -109,14 +104,7 @@ add_action(
 add_action(
 	'enqueue_block_editor_assets',
 	function () {
-
-		wp_enqueue_script(
-			'luuptek_admin',
-			asset_uri( 'scripts/admin.min.js' ),
-			[ 'wp-i18n', 'wp-blocks', 'wp-dom-ready', 'wp-edit-post' ],
-			filemtime( get_theme_file_path( 'dist/scripts/admin.min.js' ) )
-		);
-
+		AssetHelpers\enqueue_webpack_entry( 'main-admin', [ 'deps' => [ 'wp-i18n', 'wp-blocks', 'wp-dom-ready', 'wp-edit-post' ] ] );
 	},
 	10
 );
