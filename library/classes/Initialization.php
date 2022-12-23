@@ -66,4 +66,4 @@ class Initialization {
 /**
  * Construct Initialization-Class
  */
-new Initialization;
+//new Initialization;

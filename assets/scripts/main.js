@@ -1,5 +1,5 @@
 // import external dependencies
-//import 'jquery';
+import $ from "jquery";
 //import 'bootstrap';
 //import 'fastclick';
 

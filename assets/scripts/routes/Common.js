@@ -4,6 +4,7 @@ import { themeNavigation } from "../lib/navigation";
 
 export default {
   init() {
+
 	  // Main search
 	  mainSearchTogglers();
 

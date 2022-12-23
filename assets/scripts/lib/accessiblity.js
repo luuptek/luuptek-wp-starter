@@ -1,6 +1,7 @@
 /**
  * All accessibility related functions
  */
+import $ from "jquery";
 
 const body = $('body');
 

@@ -39,7 +39,7 @@ function get_webpack_entry_uri( $entry ) {
 		global $sakke_config;
 		$host = $sakke_config->webpack->host;
 		$port = $sakke_config->webpack->port;
-		return "http://$host:$port/wp-content/themes/" . get_template() . '/dist/scripts/' . $filename;
+		return "https://$host:$port/wp-content/themes/" . get_template() . '/dist/scripts/' . $filename;
 	}
 
 	$dist_path = get_template_directory_uri() . '/dist/scripts/';

@@ -1,3 +1,5 @@
+import $ from "jquery";
+
 export const mainSearchTogglers = () => {
 	const openBtn = $('.open-main-search');
 	const closeBtn = $('.close-main-search');

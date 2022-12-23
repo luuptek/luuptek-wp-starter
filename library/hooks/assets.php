@@ -7,6 +7,21 @@
  */
 
 /**
+ * Inject polyfill loader to the top of the head.
+ *
+ * The load-polyfill.js loads the 'polyfills' entry if it detects need for it.
+ */
+function inject_polyfill_loader() {
+	$polyfills_uri = AssetHelpers\get_webpack_entry_uri( 'polyfills' );
+
+	echo "\n<script id='polyfills' data-polyfill='" . esc_url($polyfills_uri) . "'>";
+	readfile( get_template_directory() . '/dist/scripts/load-polyfills.js' );
+	echo "</script>\n";
+
+}
+add_action( 'wp_head', __NAMESPACE__ . '\\inject_polyfill_loader', -100 );
+
+/**
  * Admin stuff
  */
 add_action(
