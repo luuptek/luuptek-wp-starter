@@ -3,12 +3,12 @@
  */
 
 .gutenberg {
-  .wp-block-media-text {
-    &.alignfull {
-      margin-left: -15px;
-      margin-right: -15px;
+    .wp-block-media-text {
+        &.alignfull {
+            margin-left: -15px;
+            margin-right: -15px;
+        }
     }
-  }
 }
 
 /**
@@ -16,12 +16,11 @@
  */
 
 .wp-block-media-text {
+    .wp-block-media-text__content {
+        padding: rem(20px 15px);
 
-  .wp-block-media-text__content {
-	padding: rem(20px 15px);
-
-	@include media-breakpoint-up(md) {
-	  padding: rem(20px 30px);
-	}
-  }
+        @include media-breakpoint-up(md) {
+            padding: rem(20px 30px);
+        }
+    }
 }

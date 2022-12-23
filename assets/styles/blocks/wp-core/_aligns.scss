@@ -1,24 +1,25 @@
 .gutenberg {
-  padding-right: 15px;
-  padding-left: 15px;
+    padding-right: 15px;
+    padding-left: 15px;
 
-  > * {
-    margin-right: auto;
-    margin-left: auto;
-	max-width: rem($align-normal-container-width);
-  }
-
-  > .alignwide {
-	max-width: rem($align-wide-container-width) !important;
-  }
-
-  > figure.alignfull, > figure.alignwide {
-    img {
-      min-width: 100%;
+    > * {
+        margin-right: auto;
+        margin-left: auto;
+        max-width: rem($align-normal-container-width);
     }
-  }
 
-  > .alignfull {
-    max-width: none !important;
-  }
+    > .alignwide {
+        max-width: rem($align-wide-container-width) !important;
+    }
+
+    > figure.alignfull,
+    > figure.alignwide {
+        img {
+            min-width: 100%;
+        }
+    }
+
+    > .alignfull {
+        max-width: none !important;
+    }
 }

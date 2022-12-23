@@ -1,16 +1,16 @@
 .main-search-box {
-  display: none;
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  width: 100%;
-  color: color-yiq($secondary);
-  background-color: $secondary;
-  padding: rem(20px 0);
-  z-index: 100;
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    color: color-yiq($secondary);
+    background-color: $secondary;
+    padding: rem(20px 0);
+    z-index: 100;
 
-  .main-search-opened & {
-	display: initial;
-  }
+    .main-search-opened & {
+        display: initial;
+    }
 }

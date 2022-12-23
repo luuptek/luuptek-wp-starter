@@ -3,19 +3,19 @@
  */
 
 .gutenberg {
-  .wp-block-image {
-    &.alignfull {
-      margin-left: -15px;
-      margin-right: -15px;
+    .wp-block-image {
+        &.alignfull {
+            margin-left: -15px;
+            margin-right: -15px;
+        }
     }
-  }
 }
 
 .wp-block-image {
-  margin-left: auto;
-  margin-right: auto;
-  figcaption {
-    text-align: center;
-    opacity: 0.5;
-  }
+    margin-left: auto;
+    margin-right: auto;
+    figcaption {
+        text-align: center;
+        opacity: 0.5;
+    }
 }

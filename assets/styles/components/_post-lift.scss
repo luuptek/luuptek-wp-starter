@@ -1,50 +1,50 @@
 .post-lifts-row {
-  @include make-row();
+    @include make-row();
 
-  @include media-breakpoint-up(md) {
-	grid-template-columns: repeat(2, 1fr);
-  }
+    @include media-breakpoint-up(md) {
+        grid-template-columns: repeat(2, 1fr);
+    }
 
-  @include media-breakpoint-up(lg) {
-	grid-template-columns: repeat(3, 1fr);
-  }
+    @include media-breakpoint-up(lg) {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 .post-lift-item {
-  @include make-col-ready();
-  margin-bottom: rem(15px);
+    @include make-col-ready();
+    margin-bottom: rem(15px);
 }
 
 .post-lift-item__content {
-  position: relative;
-  background-color: #FFF;
-  height: 100%;
-  -webkit-box-shadow: 0 0 20px 0 transparentize(#CCC, 0.25);
-  -moz-box-shadow: 0 0 20px 0 transparentize(#CCC, 0.25);
-  box-shadow: 0 0 20px 0 transparentize(#CCC, 0.25);
+    position: relative;
+    background-color: #fff;
+    height: 100%;
+    -webkit-box-shadow: 0 0 20px 0 transparentize(#ccc, 0.25);
+    -moz-box-shadow: 0 0 20px 0 transparentize(#ccc, 0.25);
+    box-shadow: 0 0 20px 0 transparentize(#ccc, 0.25);
 }
 
 .post-lift-item__text-content {
-  padding: rem(15px);
-  text-align: center;
+    padding: rem(15px);
+    text-align: center;
 }
 
 .post-lift-item__title {
-  font-family: $font-family--heading;
-  font-size: rem(28px);
-  margin-top: 0;
-  margin-bottom: rem(16px);
+    font-family: $font-family--heading;
+    font-size: rem(28px);
+    margin-top: 0;
+    margin-bottom: rem(16px);
 }
 
 .post-lift-item__date {
-  font-size: rem(15px);
-  opacity: 0.9;
+    font-size: rem(15px);
+    opacity: 0.9;
 }
 
 .post-lift-item__link {
-  color: inherit;
+    color: inherit;
 
-  &:hover {
-    text-decoration: none;
-  }
+    &:hover {
+        text-decoration: none;
+    }
 }

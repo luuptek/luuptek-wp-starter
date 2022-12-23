@@ -15,12 +15,12 @@
  */
 
 .login h1 a {
-  background: url(../images/logo.svg) center center no-repeat;
-  -webkit-background-size: 100% auto;
-  -moz-background-size: 100% auto;
-  background-size: 100% auto;
-  width: 300px;
-  height: 60px;
+    background: url(../images/logo.svg) center center no-repeat;
+    -webkit-background-size: 100% auto;
+    -moz-background-size: 100% auto;
+    background-size: 100% auto;
+    width: 300px;
+    height: 60px;
 }
 
 /**
@@ -29,35 +29,38 @@
  */
 
 .editor-styles-wrapper {
-  @each $name, $color in $page-theme-colors {
+    @each $name, $color in $page-theme-colors {
+        .has-text-color,
+        .has-inline-color {
+            &.has-#{$name}-color {
+                color: $color;
 
-    .has-text-color, .has-inline-color {
-      &.has-#{$name}-color {
-        color: $color;
+                a {
+                    color: $color;
 
-        a {
-          color: $color;
-
-          &:hover, &:focus, &:active {
-            color: $color;
-          }
+                    &:hover,
+                    &:focus,
+                    &:active {
+                        color: $color;
+                    }
+                }
+            }
         }
-      }
+
+        .has-background,
+        .wp-block-cover {
+            &.has-#{$name}-background-color {
+                background-color: $color;
+            }
+        }
     }
 
-    .has-background, .wp-block-cover {
-      &.has-#{$name}-background-color {
-        background-color: $color;
-      }
-    }
-  }
+    @import "../styles/blocks/wp-core/button";
+    @import "../styles/blocks/wp-core/spacer";
+    @import "../styles/blocks/wp-core/blockquote";
 
-  @import "../styles/blocks/wp-core/button";
-  @import "../styles/blocks/wp-core/spacer";
-  @import "../styles/blocks/wp-core/blockquote";
+    @import "../styles/components/post-lift";
 
-  @import "../styles/components/post-lift";
-
-  @import "../styles/blocks/acf/acf-gb-blocks";
-  @import "../styles/blocks/blocks";
+    @import "../styles/blocks/acf/acf-gb-blocks";
+    @import "../styles/blocks/blocks";
 }

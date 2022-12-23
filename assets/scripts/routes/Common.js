@@ -3,18 +3,17 @@ import { themeAccessibility } from "../lib/accessiblity";
 import { themeNavigation } from "../lib/navigation";
 
 export default {
-  init() {
+    init() {
+        // Main search
+        mainSearchTogglers();
 
-	  // Main search
-	  mainSearchTogglers();
+        // Accessibility
+        themeAccessibility();
 
-	  // Accessibility
-	  themeAccessibility();
-
-	  //Navigation
-	  themeNavigation();
-  },
-  finalize() {
-    // JavaScript to be fired on all pages, after page specific JS is fired
-  },
+        //Navigation
+        themeNavigation();
+    },
+    finalize() {
+        // JavaScript to be fired on all pages, after page specific JS is fired
+    },
 };

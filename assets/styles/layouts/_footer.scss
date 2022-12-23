@@ -1,46 +1,48 @@
 .site-footer {
-  background-color: $footer-bg-color;
-  color: color-yiq($footer-bg-color);
+    background-color: $footer-bg-color;
+    color: color-yiq($footer-bg-color);
 
-  a {
-	color: color-yiq($footer-bg-color);
+    a {
+        color: color-yiq($footer-bg-color);
 
-    &:hover, &:focus, &:active {
-	  color: color-yiq($footer-bg-color);
+        &:hover,
+        &:focus,
+        &:active {
+            color: color-yiq($footer-bg-color);
+        }
     }
-  }
 
-  &__content {
-	padding: rem(40px 0 30px 0);
-  }
+    &__content {
+        padding: rem(40px 0 30px 0);
+    }
 
-  h3 {
-	margin-top: 0;
-  }
+    h3 {
+        margin-top: 0;
+    }
 }
 
 .footer-copyrights {
-  padding: rem(8px 16px);
-  font-size: rem(15px);
-  background-color: darken($footer-bg-color, 7.5%);
-  color: color-yiq(darken($footer-bg-color, 7.5%));
-  text-align: center;
+    padding: rem(8px 16px);
+    font-size: rem(15px);
+    background-color: darken($footer-bg-color, 7.5%);
+    color: color-yiq(darken($footer-bg-color, 7.5%));
+    text-align: center;
 
-  .footer-copyright-img {
-    width: 1.2rem;
-    height: 1.2rem;
-    display: inline;
+    .footer-copyright-img {
+        width: 1.2rem;
+        height: 1.2rem;
+        display: inline;
 
-    .fillpath {
-      fill: color-yiq($footer-bg-color);
+        .fillpath {
+            fill: color-yiq($footer-bg-color);
+        }
     }
-  }
 
-  a {
-    color: color-yiq($footer-bg-color);
+    a {
+        color: color-yiq($footer-bg-color);
 
-    @include hover-focus {
-	  color: color-yiq($footer-bg-color);
+        @include hover-focus {
+            color: color-yiq($footer-bg-color);
+        }
     }
-  }
 }

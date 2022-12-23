@@ -3,28 +3,29 @@
  */
 
 .wp-block-button {
-  .wp-block-button__link {
-    @include create-button($primary);
-  }
-
-  &.is-style-full-width {
     .wp-block-button__link {
-      width: 100%;
-      padding: rem(15px 25px);
-      border-radius: rem(20px);
+        @include create-button($primary);
     }
-  }
 
-  &.is-style-outline {
-    .wp-block-button__link {
-      color: $primary;
-	  background-color: transparent;
-	  border: rem(2px) $primary solid;
-
-	  &:hover, &:focus {
-		color: color-yiq($primary);
-		background-color: $primary;
-	  }
+    &.is-style-full-width {
+        .wp-block-button__link {
+            width: 100%;
+            padding: rem(15px 25px);
+            border-radius: rem(20px);
+        }
     }
-  }
+
+    &.is-style-outline {
+        .wp-block-button__link {
+            color: $primary;
+            background-color: transparent;
+            border: rem(2px) $primary solid;
+
+            &:hover,
+            &:focus {
+                color: color-yiq($primary);
+                background-color: $primary;
+            }
+        }
+    }
 }

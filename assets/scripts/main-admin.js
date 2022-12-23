@@ -1,2 +1,1 @@
-wp.domReady(() => {
-});
+wp.domReady(() => {});

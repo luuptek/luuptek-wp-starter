@@ -5,15 +5,15 @@
  * https://www.smashingmagazine.com/2015/06/responsive-typography-with-sass-maps/
  */
 @mixin font-size($fs-map) {
-  @each $fs-breakpoint, $fs-font-size in $fs-map {
-	@if $fs-breakpoint == null {
-	  font-size: $fs-font-size;
-	} @else {
-	  @include media-breakpoint-up($fs-breakpoint) {
-		font-size: $fs-font-size;
-	  }
-	}
-  }
+    @each $fs-breakpoint, $fs-font-size in $fs-map {
+        @if $fs-breakpoint == null {
+            font-size: $fs-font-size;
+        } @else {
+            @include media-breakpoint-up($fs-breakpoint) {
+                font-size: $fs-font-size;
+            }
+        }
+    }
 }
 
 @import "aligns";

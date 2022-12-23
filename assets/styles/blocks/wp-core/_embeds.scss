@@ -3,43 +3,44 @@
  */
 
 .gutenberg {
-  .wp-block-embed {
-    &.alignfull {
-      margin-left: -15px;
-      margin-right: -15px;
+    .wp-block-embed {
+        &.alignfull {
+            margin-left: -15px;
+            margin-right: -15px;
+        }
     }
-  }
 }
 
 .wp-block-embed {
-  &.is-type-video {
-    .framecontainer, .wp-block-embed__wrapper {
-      position: relative;
-      display: block;
-      height: 0;
-      padding-bottom: 56.25%;
-      overflow: hidden;
+    &.is-type-video {
+        .framecontainer,
+        .wp-block-embed__wrapper {
+            position: relative;
+            display: block;
+            height: 0;
+            padding-bottom: 56.25%;
+            overflow: hidden;
 
-      &:before {
-        display: none !important; //fix issue with default styles
-      }
+            &:before {
+                display: none !important; //fix issue with default styles
+            }
 
-      iframe {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        border: 0;
-      }
+            iframe {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border: 0;
+            }
+        }
     }
-  }
 }
 
 .wp-block-embed {
-  figcaption {
-    text-align: center;
-    opacity: 0.5;
-  }
+    figcaption {
+        text-align: center;
+        opacity: 0.5;
+    }
 }

@@ -3,50 +3,50 @@
 
 // Media alignment
 .alignnone {
-  margin-left: 0;
-  margin-right: 0;
-  max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 100%;
 }
 
 .aligncenter {
-  display: block;
-  text-align: center;
+    display: block;
+    text-align: center;
 }
 
 .alignleft,
 .alignright {
-  margin-bottom: rem(32px);
+    margin-bottom: rem(32px);
 }
 
 @include media-breakpoint-up(md) {
-  // Only float if not on an extra small device
-  .alignleft {
-    float: left;
-    margin-right: rem(32px);
-  }
-  .alignright {
-    float: right;
-    margin-left: rem(32px);
-  }
+    // Only float if not on an extra small device
+    .alignleft {
+        float: left;
+        margin-right: rem(32px);
+    }
+    .alignright {
+        float: right;
+        margin-left: rem(32px);
+    }
 }
 
 // Captions
 .wp-caption {
-  @extend .img-thumbnail;
+    @extend .img-thumbnail;
 }
 
 //Avoiding overflow
 img,
 figure {
-  max-width: 100%;
+    max-width: 100%;
 }
 
 .wp-caption-text {
-  padding: rem(5px 10px);
+    padding: rem(5px 10px);
 }
 
 // Text meant only for screen readers
 .sr-only {
-  @include sr-only();
-  @include sr-only-focusable();
+    @include sr-only();
+    @include sr-only-focusable();
 }

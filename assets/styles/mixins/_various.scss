@@ -1,51 +1,51 @@
 @mixin section-paddings() {
-  padding-top: rem(32px);
-  padding-bottom: rem(32px);
+    padding-top: rem(32px);
+    padding-bottom: rem(32px);
 
-  @include media-breakpoint-up(md) {
-	padding-top: rem(40px);
-	padding-bottom: rem(40px);
-  }
+    @include media-breakpoint-up(md) {
+        padding-top: rem(40px);
+        padding-bottom: rem(40px);
+    }
 
-  @include media-breakpoint-up(xl) {
-	padding-top: rem(60px);
-	padding-bottom: rem(60px);
-  }
+    @include media-breakpoint-up(xl) {
+        padding-top: rem(60px);
+        padding-bottom: rem(60px);
+    }
 }
 
 @mixin placeholder($color: $gray) {
-  ::-webkit-input-placeholder {
-	color: $color;
-	font-weight: 300;
-  }
-  ::-moz-placeholder {
-	color: $color;
-	font-weight: 300;
-  }
-  :-ms-input-placeholder {
-	color: $color;
-	font-weight: 300;
-  }
+    ::-webkit-input-placeholder {
+        color: $color;
+        font-weight: 300;
+    }
+    ::-moz-placeholder {
+        color: $color;
+        font-weight: 300;
+    }
+    :-ms-input-placeholder {
+        color: $color;
+        font-weight: 300;
+    }
 }
 
 @mixin image-replace() {
-  text-indent: 100%;
-  white-space: nowrap;
-  overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 @mixin transition($args) {
-  -webkit-transition: $args;
-  -moz-transition: $args;
-  -ms-transition: $args;
-  -o-transition: $args;
-  transition: $args;
+    -webkit-transition: $args;
+    -moz-transition: $args;
+    -ms-transition: $args;
+    -o-transition: $args;
+    transition: $args;
 }
 
 @mixin rotate($degrees) {
-  -webkit-transform: rotate($degrees);
-  -moz-transform: rotate($degrees);
-  -ms-transform: rotate($degrees);
-  -o-transform: rotate($degrees);
-  transform: rotate($degrees);
+    -webkit-transform: rotate($degrees);
+    -moz-transform: rotate($degrees);
+    -ms-transform: rotate($degrees);
+    -o-transform: rotate($degrees);
+    transform: rotate($degrees);
 }
