@@ -7,8 +7,6 @@
 		</a>
 
 		<button class="main-nav__mobile-menu-toggler hamburger hamburger--elastic" type="button"
-		        data-toggle="collapse"
-		        data-target="#mainNav"
 		        aria-label="<?php echo esc_attr( pll__( 'Mobiilivalikon avaaja ja sulkija' ) ); ?>"
 		        aria-controls="mainNav"
 		        aria-expanded="false">
@@ -17,7 +15,7 @@
             </span>
 		</button>
 
-		<div class="main-nav__main-menu-wrapper collapse" id="mainNav">
+		<div class="main-nav__main-menu-wrapper" id="mainNav">
 			<ul class="main-nav__main-menu">
 				<?php luuptek_wp_base_main_menu(); ?>
 				<?php get_template_part( 'partials/components/lang-selector' ); ?>

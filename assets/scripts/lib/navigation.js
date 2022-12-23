@@ -6,9 +6,15 @@ import {toggleAria} from "./toggleStates";
  * Navigation related functions
  */
 
+const mainNav = $('#mainNav');
+
 const toggleBurger = () => {
-	$('#mainNav').on('show.bs.collapse hide.bs.collapse', () => {
+	$('.main-nav__mobile-menu-toggler').on('click', (e) => {
+		e.preventDefault();
+		const target = $(e.currentTarget);
+		toggleAria(target, 'aria-expanded');
 		$('button.hamburger').toggleClass('is-active');
+		mainNav.toggle();
 	});
 };
 
