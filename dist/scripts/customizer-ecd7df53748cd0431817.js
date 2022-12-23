@@ -1,0 +1,1 @@
+(()=>{"use strict";var e={n:r=>{var t=r&&r.__esModule?()=>r.default:()=>r;return e.d(t,{a:t}),t},d:(r,t)=>{for(var n in t)e.o(t,n)&&!e.o(r,n)&&Object.defineProperty(r,n,{enumerable:!0,get:t[n]})},o:(e,r)=>Object.prototype.hasOwnProperty.call(e,r)};const r=jQuery;var t=e.n(r);wp.customize("blogname",(function(e){e.bind((function(e){return t()(".brand").text(e)}))}))})();
