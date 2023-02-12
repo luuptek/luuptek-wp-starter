@@ -14,7 +14,7 @@ const toggleBurger = () => {
         const target = $(e.currentTarget);
         toggleAria(target, "aria-expanded");
         $("button.hamburger").toggleClass("is-active");
-        mainNav.toggle();
+        mainNav.toggleClass("main-nav__main-menu-wrapper--show");
     });
 };
 
