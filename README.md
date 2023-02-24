@@ -21,6 +21,7 @@ There is basic theme.json available, but it's recommended to use sass styling in
 - Automatic JS / CSS building with Webpack (using Valu Digial's Sakke build tools)
   - SCSS and ES6 javascript implementation
   - prettier styled sass/js code
+  - you can style with prettier with `sakke gulp prettier`
 - Lots of helper-functions available in Utils-class ==> example `Utils()->get_social_media_links()` would output social media icons with links
 - Translation strings to be used with Polylang if needed
 - Default WP-templates (header, footer, index etc) moved under `templates`-folder
