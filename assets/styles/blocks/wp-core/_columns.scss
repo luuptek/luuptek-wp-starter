@@ -3,30 +3,30 @@
  */
 
 .wp-block-columns {
-  display: flex;
-  flex-wrap: wrap;
+    display: flex;
+    flex-wrap: wrap;
 
-  @include media-breakpoint-up(md) {
-    flex-wrap: nowrap;
-  }
+    @include media-breakpoint-up(md) {
+        flex-wrap: nowrap;
+    }
 }
 
 .wp-block-column {
-  flex-basis: 100%;
-  flex-grow: 1;
-  min-width: 0;
-  word-break: break-word;
-  overflow-wrap: break-word;
+    flex-basis: 100%;
+    flex-grow: 1;
+    min-width: 0;
+    word-break: break-word;
+    overflow-wrap: break-word;
 
-  @include media-breakpoint-down(md) {
-    flex-basis: 100% !important;
-  }
-
-  @include media-breakpoint-up(md) {
-    flex-grow: 0;
-
-    &:not(:first-child) {
-      margin-left: 30px;
+    @include media-breakpoint-down(md) {
+        flex-basis: 100% !important;
     }
-  }
+
+    @include media-breakpoint-up(md) {
+        flex-grow: 0;
+
+        &:not(:first-child) {
+            margin-left: 30px;
+        }
+    }
 }

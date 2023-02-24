@@ -1,24 +1,24 @@
 .comment-list {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
 .comment-list ol {
-  list-style: none;
+    list-style: none;
 }
 
 .comment-form p {
-  @extend .luuptek-form-field-group;
+    @extend .luuptek-form-field-group;
 }
 
 .comment-form input[type="text"],
 .comment-form input[type="email"],
 .comment-form input[type="url"],
 .comment-form textarea {
-  @extend .luuptek-form-control;
+    @extend .luuptek-form-control;
 }
 
 .comment-form input[type="submit"] {
-  @include create-button($primary);
+    @include create-button($primary);
 }

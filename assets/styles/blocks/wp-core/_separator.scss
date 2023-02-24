@@ -1,22 +1,22 @@
 .wp-block-separator {
-  margin-top: rem(35px);
-  margin-bottom: rem(35px);
-  display: block;
-  clear: both;
-  border-left: 0;
-  border-right: 0;
-  border-top: 0;
-  border-bottom: 2px solid #EEE;
+    margin-top: rem(35px);
+    margin-bottom: rem(35px);
+    display: block;
+    clear: both;
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+    border-bottom: 2px solid #eee;
 
-  @include media-breakpoint-up(lg) {
-    width: 25%;
-  }
+    @include media-breakpoint-up(lg) {
+        width: 25%;
+    }
 
-  &.is-style-wide {
-    width: 100%;
-  }
+    &.is-style-wide {
+        width: 100%;
+    }
 
-  &.is-style-dots {
-    border-bottom: 5px dotted #EEE;
-  }
+    &.is-style-dots {
+        border-bottom: 5px dotted #eee;
+    }
 }

@@ -1,26 +1,34 @@
-import {toggleAria} from "./toggleStates";
+import $ from "jquery";
+
+import { toggleAria } from "./toggleStates";
 
 /**
  * Navigation related functions
  */
 
+const mainNav = $("#mainNav");
+
 const toggleBurger = () => {
-	$('#mainNav').on('show.bs.collapse hide.bs.collapse', () => {
-		$('button.hamburger').toggleClass('is-active');
-	});
+    $(".main-nav__mobile-menu-toggler").on("click", e => {
+        e.preventDefault();
+        const target = $(e.currentTarget);
+        toggleAria(target, "aria-expanded");
+        $("button.hamburger").toggleClass("is-active");
+        mainNav.toggleClass("main-nav__main-menu-wrapper--show");
+    });
 };
 
 const toggleMainNavSubMenus = () => {
-	$('.main-nav__sub-menu-toggler').on('click', (e) => {
-		e.preventDefault();
-		const target = $(e.target);
-		const closestLi = target.closest('li.dropdown');
-		closestLi.toggleClass('main-nav-dropdown-open');
-		toggleAria(target, 'aria-expanded');
-	});
+    $(".main-nav__sub-menu-toggler").on("click", e => {
+        e.preventDefault();
+        const target = $(e.target);
+        const closestLi = target.closest("li.dropdown");
+        closestLi.toggleClass("main-nav-dropdown-open");
+        toggleAria(target, "aria-expanded");
+    });
 };
 
 export const themeNavigation = () => {
-	toggleBurger();
-	toggleMainNavSubMenus();
+    toggleBurger();
+    toggleMainNavSubMenus();
 };

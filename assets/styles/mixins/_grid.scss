@@ -1,16 +1,19 @@
-@mixin luuptek-create-container($max-width: $align-wide-container-width, $h-padding: 15px) {
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: rem($h-padding);
-  padding-right: rem($h-padding);
-  max-width: rem($max-width);
+@mixin luuptek-create-container(
+    $max-width: $align-wide-container-width,
+    $h-padding: 15px
+) {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: rem($h-padding);
+    padding-right: rem($h-padding);
+    max-width: rem($max-width);
 }
 
 @mixin make-row($gap: 30px) {
-  display: grid;
-  gap: $gap;
+    display: grid;
+    gap: $gap;
 }
 
 @mixin make-col-ready() {
-  position: relative;
+    position: relative;
 }

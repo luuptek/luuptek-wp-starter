@@ -1,90 +1,93 @@
 @mixin luuptek-create-breaking-word() {
-  word-break: break-word;
-  hyphens: auto;
+    word-break: break-word;
+    hyphens: auto;
 }
 
-@mixin make-heading($font-size: $h1-base-font-size, $margin-top: 0, $margin-bottom: 0) {
-  font-size: rem($font-size);
-  margin-top: rem($margin-top);
-  margin-bottom: rem($margin-bottom);
-  word-break: break-word;
+@mixin make-heading(
+    $font-size: $h1-base-font-size,
+    $margin-top: 0,
+    $margin-bottom: 0
+) {
+    font-size: rem($font-size);
+    margin-top: rem($margin-top);
+    margin-bottom: rem($margin-bottom);
+    word-break: break-word;
 
-  @include media-breakpoint-up(md) {
-	font-size: rem($font-size * $heading-md-multiplier);
-  }
+    @include media-breakpoint-up(md) {
+        font-size: rem($font-size * $heading-md-multiplier);
+    }
 
-  @include media-breakpoint-up(lg) {
-	font-size: rem($font-size * $heading-md-multiplier);
-  }
+    @include media-breakpoint-up(lg) {
+        font-size: rem($font-size * $heading-md-multiplier);
+    }
 
-  @include media-breakpoint-up(xl) {
-	font-size: rem($font-size * $heading-xl-multiplier);
-  }
+    @include media-breakpoint-up(xl) {
+        font-size: rem($font-size * $heading-xl-multiplier);
+    }
 }
 
 @mixin add-block-text-sizes() {
+    .has-small-font-size {
+        font-size: rem(14px);
 
-  .has-small-font-size {
-	font-size: rem(14px);
+        &.has-drop-cap {
+            &:first-letter {
+                color: $primary;
+                font-size: rem(22px);
+                padding: rem(8px);
+            }
+        }
+    }
 
-	&.has-drop-cap {
-	  &:first-letter {
-		color: $primary;
-		font-size: rem(22px);
-		padding: rem(8px);
-	  }
-	}
-  }
+    .has-normal-font-size {
+        font-size: rem(16px);
 
-  .has-normal-font-size {
-	font-size: rem(16px);
+        &.has-drop-cap {
+            &:first-letter {
+                color: $primary;
+                font-size: rem(32px);
+                padding: rem(8px);
+            }
+        }
+    }
 
-	&.has-drop-cap {
-	  &:first-letter {
-		color: $primary;
-		font-size: rem(32px);
-		padding: rem(8px);
-	  }
-	}
-  }
+    .has-medium-font-size {
+        font-size: rem(22px);
 
-  .has-medium-font-size {
-	font-size: rem(22px);
+        &.has-drop-cap {
+            &:first-letter {
+                color: $primary;
+                font-size: rem(50px);
+                padding: rem(8px);
+            }
+        }
+    }
 
-	&.has-drop-cap {
-	  &:first-letter {
-		color: $primary;
-		font-size: rem(50px);
-		padding: rem(8px);
-	  }
-	}
-  }
+    .has-large-font-size {
+        font-size: rem(32px);
 
-  .has-large-font-size {
-	font-size: rem(32px);
+        &.has-drop-cap {
+            &:first-letter {
+                color: $primary;
+                font-size: rem(60px);
+                padding: rem(8px);
+            }
+        }
+    }
 
-	&.has-drop-cap {
-	  &:first-letter {
-		color: $primary;
-		font-size: rem(60px);
-		padding: rem(8px);
-	  }
-	}
-  }
+    .has-huge-font-size {
+        font-size: rem(40px);
 
-  .has-huge-font-size {
-	font-size: rem(40px);
+        &.has-drop-cap {
+            &:first-letter {
+                color: $primary;
+                font-size: rem(80px);
+                padding: rem(8px);
+            }
+        }
 
-	&.has-drop-cap {
-	  &:first-letter {
-		color: $primary;
-		font-size: rem(80px);
-		padding: rem(8px);
-	  }
-	}
-
-	@include media-breakpoint-up(lg) {
-	  font-size: rem(50px);
-	}
-  }
+        @include media-breakpoint-up(lg) {
+            font-size: rem(50px);
+        }
+    }
 }
