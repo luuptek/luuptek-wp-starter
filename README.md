@@ -5,7 +5,7 @@
 Luuptek WP-base is a starter theme to be used with WordPress site.
 
 To have a full advantages of this theme, some core/gutenberg functionality has been moved into own plugin:
-https://github.com/luuptek/luuptek-mu-plugins (private)
+https://github.com/luuptek/luuptek-starter-plugins (public)
 
 ### Theme json
 
