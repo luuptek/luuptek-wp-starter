@@ -6,11 +6,6 @@
  * @package Luuptek WP-Base
  */
 
-$sakke_config = json_decode( file_get_contents( __DIR__ . '/sakke.json' ) );
-
-// True when gulp watch is running. See sakke-lib/gulpfile.js
-define( 'ASSET_DEV', file_exists( __DIR__ . '/.asset-dev' ) );
-
 /**
  * Require helpers
  */

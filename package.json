@@ -1,78 +1,112 @@
 {
-		"name": "luuptek-wp-starter",
-		"version": "0.1",
-		"description": "Luuptek WP-starter theme",
-		"author": "Timo <timo@luuptek.fi>",
-		"private": true,
-		"licenses": [
-				{
-						"type": "MIT",
-						"url": "http://opensource.org/licenses/MIT"
-				}
-		],
-		"homepage": "https://github.com/luuptek/luuptek-wp-starter#readme",
-		"repository": {
-				"type": "git",
-				"url": "git+https://github.com/luuptek/luuptek-wp-starter.git"
-		},
-		"bugs": {
-				"url": "https://github.com/luuptek/luuptek-wp-starter/issues"
-		},
-		"scripts": {
-				"build": "sakke build",
-				"deploy-production": "sakke deploy-production",
-				"deploy-staging": "sakke deploy-staging",
-				"start": "sakke dev",
-				"dev": "sakke dev",
-				"postinstall": "sakke gulp configure-repository && npm run build",
-				"deploy": "sakke deploy-production",
-				"prettier": "prettier --write 'assets/**/*.{js,jsx,ts,tsx,css,scss}' 'sakke-plugins/**/*.{js,jsx,ts,tsx,css,scss}'",
-				"reset-dist": "git clean -fdx dist/ && git checkout $(git ls-files dist)",
-				"sakke": "sakke",
-				"config": "node ./.bin/config"
-		},
-		"engines": {
-				"node": "= 16.13.0"
-		},
-		"dependencies": {
-				"@duetds/date-picker": "^1.4.0",
-				"@fancyapps/fancybox": "^3.5.6",
-				"@valu/create-async-hook": "^0.0.7",
-				"babel-gql": "^0.1.5",
-				"bootstrap": "^4.6.0",
-				"chalk": "2.1.0",
-				"core-js": "^3.19.1",
-				"fastclick": "^1.0.6",
-				"hamburgers": "^1.1.3",
-				"headroom.js": "^0.10.4",
-				"immer": "^9.0.14",
-				"leaflet": "^1.3.1",
-				"lodash-es": "^4.17.21",
-				"moment": "^2.29.3",
-				"no-scroll": "^2.1.1",
-				"prompt": "^1.3.0",
-				"prop-types": "^15.8.1",
-				"react": "^18.1.0",
-				"react-bemed": "^1.0.5",
-				"react-dom": "^18.1.0",
-				"react-inlinesvg": "^3.0.0",
-				"react-router-dom": "^6.3.0",
-				"react-select": "^5.3.2",
-				"react-svg-spinner": "^1.0.4",
-				"replace-in-file": "^6.3.5",
-				"unfetch": "^4.1.0",
-				"what-input": "^5.2.6"
-		},
-		"devDependencies": {
-				"babel-eslint": "^10.0.3",
-				"eslint": "^6.8.0",
-				"eslint-config-prettier": "^6.9.0",
-				"eslint-plugin-import": "^2.20.0",
-				"eslint-plugin-react": "^7.18.0",
-				"eslint-plugin-react-hooks": "^2.3.0",
-				"eslint-plugin-simple-import-sort": "^5.0.0",
-				"prettier": "^1.19.1",
-				"sakke": "^4.0.0",
-				"sass-rem": "^3.0.0"
-		}
+    "name": "luuptek-wp-starter",
+    "version": "0.1",
+    "description": "Luuptek WP-starter theme",
+    "author": "Timo <timo@luuptek.fi>",
+    "private": true,
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "http://opensource.org/licenses/MIT"
+        }
+    ],
+    "homepage": "https://github.com/luuptek/luuptek-wp-starter#readme",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/luuptek/luuptek-wp-starter.git"
+    },
+    "bugs": {
+        "url": "https://github.com/luuptek/luuptek-wp-starter/issues"
+    },
+    "config": {
+        "port": 3000,
+        "proxyUrl": "http://playground.test",
+        "entries": {
+            "main": [
+                "./assets/scripts/main.js",
+                "./assets/styles/main.scss"
+            ],
+            "customizer": [
+                "./assets/scripts/customizer.js"
+            ],
+            "admin": [
+                "./assets/admin/backend.js",
+                "./assets/admin/backend.scss"
+            ]
+        }
+    },
+    "scripts": {
+        "start": "webpack-dev-server --mode development --config assets/webpack/development.js --colors --progress --hot --inline",
+        "prod": "webpack --mode production --config assets/webpack/production.js --progress",
+        "config": "node ./.bin/config",
+        "test": "eslint assets/scripts"
+    },
+    "engines": {
+        "node": "= 12.18.0"
+    },
+    "dependencies": {
+        "@fancyapps/fancybox": "^3.5.6",
+        "bootstrap": "^4.5.3",
+        "fastclick": "^1.0.6",
+        "hamburgers": "^1.1.3",
+        "jquery": ">=3.4.0",
+        "jquery-lazy": "^1.7.9",
+        "leaflet": "^1.3.1",
+        "mini-css-extract-plugin": "^0.5.0",
+        "popper.js": "^1.16.1",
+        "sass-rem": "^2.0.1",
+        "slick-carousel": "^1.8.1"
+    },
+    "devDependencies": {
+        "autoprefixer": "^6.5.1",
+        "babel-core": "^6.25.0",
+        "babel-eslint": "^7.1.0",
+        "babel-loader": "^7.1.5",
+        "babel-plugin-transform-runtime": "^6.15.0",
+        "babel-preset-es2015": "^6.18.0",
+        "babel-preset-stage-2": "^6.18.0",
+        "browser-sync": "^2.26.13",
+        "browser-sync-webpack-plugin": "^2.2.2",
+        "cache-loader": "^1.0.3",
+        "chalk": "^2.1.0",
+        "commander": "^2.11.0",
+        "copy-webpack-plugin": "^4.5.2",
+        "css-hot-loader": "^1.3.1",
+        "css-loader": "^1",
+        "eslint": "^3.9.1",
+        "eslint-friendly-formatter": "^2.0.6",
+        "eslint-loader": "^2",
+        "eslint-plugin-html": "^1.5.5",
+        "eslint-plugin-import": "^2.1.0",
+        "eslint-plugin-jsx-a11y": "^2.2.3",
+        "eslint-plugin-react": "^6.7.1",
+        "exports-loader": "^0.6.3",
+        "favicons-webpack-plugin": "0.0.7",
+        "file-loader": "^1.1.11",
+        "html-webpack-plugin": "^3.2.0",
+        "imagemin-mozjpeg": "^6.0.0",
+        "imagemin-webpack-plugin": "^1.2.1",
+        "imports-loader": "^0.7.1",
+        "install": "^0.8.2",
+        "lodash": "^4.17.4",
+        "minimist": "^1.2.0",
+        "node-sass": "^4.14.1",
+        "optimize-css-assets-webpack-plugin": "^1.3.0",
+        "postcss-loader": "^1.1.0",
+        "prompt": "^1.0.0",
+        "qs": "^6.3.0",
+        "replace-in-file": "^2.5.3",
+        "require-dir": "^0.3.1",
+        "resolve-url-loader": "^2.3.0",
+        "sass-loader": "^6.0.6",
+        "source-map-loader": "^0.1.5",
+        "style-loader": "^0.13.1",
+        "uglifyjs-webpack-plugin": "^2.1.1",
+        "url-loader": "^0.5.7",
+        "webpack": "^4",
+        "webpack-cleanup-plugin": "^0.4.1",
+        "webpack-cli": "^3.2.3",
+        "webpack-dev-server": "^3",
+        "webpack-merge": "^0.15.0"
+    }
 }

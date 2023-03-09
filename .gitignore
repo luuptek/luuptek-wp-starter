@@ -16,6 +16,3 @@ bower_components
 
 # log-files
 *.log
-
-# Asset dev file (this file appears on `sakke watch`)
-.asset-dev
