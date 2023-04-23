@@ -1,37 +1,6 @@
 <?php
 
 /**
- * Filter video oembeds and wrap with Foundations flex-video
- *
- * @param $html
- * @param $url
- * @param $attr
- * @param $post_id
- *
- * @return string
- */
-add_filter(
-	'embed_oembed_html',
-	function ( $html, $url, $attr, $post_id ) {
-		$matches = [
-			'youtube.com',
-			'vimeo.com',
-			'youtu.be',
-		];
-
-		foreach ( $matches as $match ) {
-			if ( false !== stripos( $url, $match ) ) {
-				return '<div class="framecontainer">' . $html . '</div>';
-			}
-		}
-
-		return $html;
-	},
-	99,
-	4
-);
-
-/**
  * Customise tags in tinyMCE
  */
 add_filter(
