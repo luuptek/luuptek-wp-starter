@@ -16,10 +16,29 @@
 		</button>
 
 		<div class="main-nav__main-menu-wrapper" id="mainNav">
-			<ul class="main-nav__main-menu">
-				<?php luuptek_wp_base_main_menu(); ?>
-				<?php get_template_part( 'partials/components/lang-selector' ); ?>
-			</ul>
+			<?php
+			if ( has_nav_menu( 'top_nav' ) ) :
+				?>
+				<ul class="primary-menu-lvl-1"
+				    aria-label="<?php pll_esc_html_e( 'Päävalikko' ); ?>"
+				    role="menu">
+					<?php
+					wp_nav_menu(
+						[
+							'theme_location' => 'top_nav',
+							'menu_class'     => 'primary-menu',
+							'items_wrap'     => '%3$s',
+							'container'      => false,
+							'depth'          => 3,
+							'walker'         => new BEM_Nav_Walker( 'primary-menu' ),
+						]
+					);
+					?>
+					<?php get_template_part( 'partials/components/lang-selector' ); ?>
+				</ul>
+			<?php
+			endif;
+			?>
 		</div>
 		<button class="main-nav__search open-main-search" type="button"
 		        aria-label="<?php esc_html_e( 'Avaa haku', 'luuptek_wp_base' ); ?>">

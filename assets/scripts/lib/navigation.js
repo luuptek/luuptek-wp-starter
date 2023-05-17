@@ -18,17 +18,57 @@ const toggleBurger = () => {
     });
 };
 
-const toggleMainNavSubMenus = () => {
-    $(".main-nav__sub-menu-toggler").on("click", e => {
+const subMenuToggler = () => {
+    const button = $('button[data-primary-menu-toggle="sub-menu"]');
+
+    button.on("click", (e) => {
         e.preventDefault();
-        const target = $(e.target);
-        const closestLi = target.closest("li.dropdown");
-        closestLi.toggleClass("main-nav-dropdown-open");
-        toggleAria(target, "aria-expanded");
+        const target = $(e.currentTarget);
+        toggleAria(target, 'aria-expanded');
+        const closestLi = target.closest(
+            "li.primary-menu__item--has-children"
+        );
+        closestLi.toggleClass("sub-menu-opened");
     });
+};
+
+const escCloser = () => {
+    const mainNav = $(".primary-menu-lvl-1");
+    const mainNavItem = $(
+        ".primary-menu-lvl-1__item.primary-menu__item--has-children"
+    );
+    $(document).keyup((e) => {
+        if (e.keyCode === 27) {
+            // escape key maps to keycode `27`
+            mainNav.find(".sub-menu-opened").removeClass("sub-menu-opened");
+        }
+    });
+
+    /**
+     * Close submenu if click esc when hovering
+     */
+    mainNavItem.hover(
+        (e) => {
+            const target = $(e.target);
+            $(document).keyup((e) => {
+                if (e.keyCode === 27) {
+                    // escape key maps to keycode `27`
+                    target
+                        .find(".primary-menu-lvl-2")
+                        .addClass("primary-menu-lvl-2--hidden");
+                }
+            });
+        },
+        () => {
+            mainNavItem
+                .find(".primary-menu-lvl-2")
+                .removeClass("primary-menu-lvl-2--hidden");
+        }
+    );
 };
 
 export const themeNavigation = () => {
     toggleBurger();
-    toggleMainNavSubMenus();
+    subMenuToggler();
+    escCloser();
 };
