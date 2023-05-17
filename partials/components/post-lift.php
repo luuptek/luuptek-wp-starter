@@ -14,10 +14,7 @@ $aria_label          = esc_html__( 'Lue lisää:', 'luuptek_wp_base' ) . ' ' . $
 		   aria-label="<?php echo esc_attr( $aria_label ); ?>">
 			<?php
 			if ( ! empty( $post_lift_image_id ) ) {
-				?>
-				<img src="<?php echo esc_url( $post_lift_image_url ); ?>" alt="<?php echo esc_attr( $image_alt ); ?>"
-				     class="post-lift-item__image"/>
-				<?php
+				echo wp_get_attachment_image( $post_lift_image_id, 'article_lift', false, [ 'class' => 'post-lift-item__image' ] );
 			}
 			?>
 			<div class="post-lift-item__text-content ">
