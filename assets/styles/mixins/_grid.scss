@@ -7,6 +7,7 @@
     padding-left: rem($h-padding);
     padding-right: rem($h-padding);
     max-width: rem($max-width);
+    width: 100%;
 }
 
 @mixin make-row($gap: 30px) {
