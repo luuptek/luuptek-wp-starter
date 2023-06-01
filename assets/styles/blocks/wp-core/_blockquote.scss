@@ -1,21 +1,8 @@
 .wp-block-quote {
-    &.is-style-default,
-    &.is-style-large {
+    &.is-style-default {
         border-left: rem(25px) solid $primary;
         margin: rem(25px) auto;
         padding-left: rem(25px);
-    }
-
-    &.is-style-large {
-        > p {
-            font-size: rem($h1-base-font-size);
-        }
-    }
-
-    &.is-style-large {
-        > cite {
-            font-size: rem(16px);
-        }
     }
 
     > p {
