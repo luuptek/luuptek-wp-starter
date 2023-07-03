@@ -296,16 +296,21 @@ add_filter(
 );
 
 /**
- * Redirect non-logged in users, just uncomment hook to make the effect
+ * Redirect non-logged in users, just uncomment hook to have normal functionality
  */
 function luuptek_redirect_non_logged_in() {
+	// No need for this is local/development envs
+	if ( wp_get_environment_type() === 'local' || wp_get_environment_type() === 'development' ) {
+		return;
+	}
+
 	if ( ! is_user_logged_in() ) {
 		wp_redirect( wp_login_url() );
 		exit;
 	}
 }
 
-// add_action( 'template_redirect', 'luuptek_redirect_non_logged_in' );
+add_action( 'template_redirect', 'luuptek_redirect_non_logged_in' );
 
 /**
  * Allow editors to access menus&widgets by default
