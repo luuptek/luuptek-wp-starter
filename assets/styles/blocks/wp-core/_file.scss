@@ -1,0 +1,14 @@
+.wp-block-file {
+    &__button {
+        background-color: $primary;
+        color: #fff;
+        text-decoration: none;
+        border-radius: rem(5px);
+
+        @include hover-focus {
+            background-color: darken($primary, 7.5%);
+            color: #fff;
+            text-decoration: none;
+        }
+    }
+}
