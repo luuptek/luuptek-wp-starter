@@ -156,8 +156,8 @@ class Utils {
 		$social_medias = [ 'facebook', 'twitter', 'instagram', 'youtube', 'linkedin', 'github' ];
 
 		foreach ( $social_medias as $social_media ) {
-			$field  = 'options_luuptek_wp_base_contact_details_' . $social_media . '_url';
-			$option = get_option( $field );
+			$field  = 'luuptek_wp_base_contact_details_' . $social_media . '_url';
+			$option = get_field( $field, 'option' );
 
 			if ( ! empty( $option ) ) {
 				?>

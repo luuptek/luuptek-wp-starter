@@ -1,90 +1,90 @@
 {
-  "name": "luuptek-wp-starter",
-  "version": "0.1",
-  "description": "Luuptek WP-starter theme",
-  "author": "Timo <timo@luuptek.fi>",
-  "private": true,
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "http://opensource.org/licenses/MIT"
+    "name": "luuptek-wp-starter",
+    "version": "0.1",
+    "description": "Luuptek WP-starter theme",
+    "author": "Timo <timo@luuptek.fi>",
+    "private": true,
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "http://opensource.org/licenses/MIT"
+        }
+    ],
+    "homepage": "https://github.com/luuptek/luuptek-wp-starter#readme",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/luuptek/luuptek-wp-starter.git"
+    },
+    "bugs": {
+        "url": "https://github.com/luuptek/luuptek-wp-starter/issues"
+    },
+    "browserslist": [
+        "last 2 versions",
+        "android 4",
+        "opera 12"
+    ],
+    "config": {
+        "port": 3000,
+        "proxyUrl": "http://playground.test",
+        "entries": {
+            "main": [
+                "./assets/scripts/main.js",
+                "./assets/styles/main.scss"
+            ],
+            "customizer": [
+                "./assets/scripts/customizer.js"
+            ],
+            "admin": [
+                "./assets/admin/backend.js",
+                "./assets/admin/backend.scss"
+            ]
+        }
+    },
+    "scripts": {
+        "start": "webpack-dev-server --mode development --config assets/webpack/development.js --progress --hot",
+        "prod": "webpack --mode production --config assets/webpack/production.js --progress",
+        "config": "node ./.bin/config",
+        "test": "eslint assets/scripts"
+    },
+    "engines": {
+        "node": "= 16.13.0"
+    },
+    "dependencies": {
+        "@fancyapps/fancybox": "^3.5.6",
+        "bootstrap": "^4.5.3",
+        "fastclick": "^1.0.6",
+        "hamburgers": "^1.1.3",
+        "jquery": ">=3.4.0",
+        "jquery-lazy": "^1.7.9",
+        "leaflet": "^1.3.1",
+        "mini-css-extract-plugin": "^2.7.1",
+        "sass-rem": "^2.0.1",
+        "slick-carousel": "^1.8.1"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.20.5",
+        "@babel/preset-env": "^7.20.2",
+        "babel-loader": "^9.1.0",
+        "browser-sync": "^2.27.10",
+        "browser-sync-webpack-plugin": "^2.2.2",
+        "copy-webpack-plugin": "^11.0.0",
+        "css-hot-loader": "^1.4.4",
+        "css-loader": "^3.5.3",
+        "eslint": "^8.29.0",
+        "eslint-plugin-import": "^2.26.0",
+        "eslint-webpack-plugin": "^3.2.0",
+        "file-loader": "^6.2.0",
+        "mini-css-extract-plugin": "^2.7.1",
+        "node-sass": "^8.0.0",
+        "sass-loader": "^13.2.0",
+        "style-loader": "^3.3.1",
+        "svgo": "^3.0.2",
+        "terser-webpack-plugin": "^5.3.6",
+        "url": "^0.11.0",
+        "webpack": "^5.75.0",
+        "webpack-cleanup-plugin": "^0.5.1",
+        "webpack-cli": "^5.0.0",
+        "webpack-dev-server": "^4.11.1",
+        "webpack-merge": "^5.8.0"
     }
-  ],
-  "homepage": "https://github.com/luuptek/luuptek-wp-starter#readme",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/luuptek/luuptek-wp-starter.git"
-  },
-  "bugs": {
-    "url": "https://github.com/luuptek/luuptek-wp-starter/issues"
-  },
-  "browserslist": [
-    "last 2 versions",
-    "android 4",
-    "opera 12"
-  ],
-  "config": {
-    "port": 3000,
-    "proxyUrl": "http://playground.test",
-    "entries": {
-      "main": [
-        "./assets/scripts/main.js",
-        "./assets/styles/main.scss"
-      ],
-      "customizer": [
-        "./assets/scripts/customizer.js"
-      ],
-      "admin": [
-        "./assets/admin/backend.js",
-        "./assets/admin/backend.scss"
-      ]
-    }
-  },
-  "scripts": {
-    "start": "webpack-dev-server --mode development --config assets/webpack/development.js --progress --hot",
-    "prod": "webpack --mode production --config assets/webpack/production.js --progress",
-    "config": "node ./.bin/config",
-    "test": "eslint assets/scripts"
-  },
-  "engines": {
-    "node": "= 16.13.0"
-  },
-  "dependencies": {
-    "@fancyapps/fancybox": "^3.5.6",
-    "bootstrap": "^4.5.3",
-    "fastclick": "^1.0.6",
-    "hamburgers": "^1.1.3",
-    "jquery": ">=3.4.0",
-    "jquery-lazy": "^1.7.9",
-    "leaflet": "^1.3.1",
-    "mini-css-extract-plugin": "^2.7.1",
-    "sass-rem": "^2.0.1",
-    "slick-carousel": "^1.8.1"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.20.5",
-    "@babel/preset-env": "^7.20.2",
-    "babel-loader": "^9.1.0",
-    "browser-sync": "^2.27.10",
-    "browser-sync-webpack-plugin": "^2.2.2",
-    "copy-webpack-plugin": "^11.0.0",
-    "css-hot-loader": "^1.4.4",
-    "css-loader": "^3.5.3",
-    "eslint": "^8.29.0",
-    "eslint-plugin-import": "^2.26.0",
-    "eslint-webpack-plugin": "^3.2.0",
-    "file-loader": "^6.2.0",
-    "mini-css-extract-plugin": "^2.7.1",
-    "node-sass": "^8.0.0",
-    "sass-loader": "^13.2.0",
-    "style-loader": "^3.3.1",
-    "svgo": "^3.0.2",
-    "terser-webpack-plugin": "^5.3.6",
-    "url": "^0.11.0",
-    "webpack": "^5.75.0",
-    "webpack-cleanup-plugin": "^0.5.1",
-    "webpack-cli": "^5.0.0",
-    "webpack-dev-server": "^4.11.1",
-    "webpack-merge": "^5.8.0"
-  }
 }

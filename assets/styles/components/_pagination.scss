@@ -1,70 +1,28 @@
-.pagination__list {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-.pagination--item {
-  display: inline-block;
-
-  &.current {
-    > a {
-      background-color: #FFF;
-      color: #000;
-      &:hover, &:focus, &:active {
-        background-color: #FFF;
-        color: #000;
-        text-decoration: none;
-      }
-    }
-  }
-
-  > a {
-    color: #FFF;
-    padding: rem(8px 16px);
-    background-color: $primary;
-    text-decoration: none;
-
-    &:hover, &:focus, &:active {
-      background-color: darken($primary, 10%);
-      color: #FFF;
-      text-decoration: none;
-    }
-
-    &.current {
-      background-color: #FFF;
-      color: #000;
-      &:hover, &:focus, &:active {
-        background-color: #FFF;
-        color: #000;
-        text-decoration: none;
-      }
-    }
-  }
-}
-
 .pagination {
-  a {
-    &.page-numbers {
-      padding: rem(8px 16px);
-      background-color: $primary;
-      color: #FFF;
-      text-decoration: none;
-      font-size: rem(16px);
+    margin-top: rem(30px);
 
-      &:hover, &:focus, &:active {
-        background-color: lighten($primary, 15%);
-      }
+    a {
+        &.page-numbers {
+            padding: rem(8px 16px);
+            background-color: $primary;
+            color: #fff;
+            text-decoration: none;
+            font-size: rem(16px);
 
-      &.current {
-        color: #000;
-        background-color: transparent;
-      }
+            &:hover,
+            &:focus,
+            &:active {
+                background-color: lighten($primary, 15%);
+            }
 
+            &.current {
+                color: #000;
+                background-color: transparent;
+            }
+        }
     }
-  }
 
-  .page-numbers {
-    padding: rem(8px 16px);
-  }
+    .page-numbers {
+        padding: rem(8px 16px);
+    }
 }

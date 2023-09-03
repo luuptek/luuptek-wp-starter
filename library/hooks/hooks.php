@@ -1,37 +1,6 @@
 <?php
 
 /**
- * Filter video oembeds and wrap with Foundations flex-video
- *
- * @param $html
- * @param $url
- * @param $attr
- * @param $post_id
- *
- * @return string
- */
-add_filter(
-	'embed_oembed_html',
-	function ( $html, $url, $attr, $post_id ) {
-		$matches = [
-			'youtube.com',
-			'vimeo.com',
-			'youtu.be',
-		];
-
-		foreach ( $matches as $match ) {
-			if ( false !== stripos( $url, $match ) ) {
-				return '<div class="framecontainer">' . $html . '</div>';
-			}
-		}
-
-		return $html;
-	},
-	99,
-	4
-);
-
-/**
  * Customise tags in tinyMCE
  */
 add_filter(
@@ -327,16 +296,21 @@ add_filter(
 );
 
 /**
- * Redirect non-logged in users, just uncomment hook to make the effect
+ * Redirect non-logged in users, just uncomment hook to have normal functionality
  */
 function luuptek_redirect_non_logged_in() {
+	// No need for this is local/development envs
+	if ( wp_get_environment_type() === 'local' || wp_get_environment_type() === 'development' ) {
+		return;
+	}
+
 	if ( ! is_user_logged_in() ) {
 		wp_redirect( wp_login_url() );
 		exit;
 	}
 }
 
-// add_action( 'template_redirect', 'luuptek_redirect_non_logged_in' );
+add_action( 'template_redirect', 'luuptek_redirect_non_logged_in' );
 
 /**
  * Allow editors to access menus&widgets by default
