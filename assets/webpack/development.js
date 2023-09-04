@@ -4,6 +4,17 @@ const fs = require('fs');
 const webpackBase = require('./webpack.base.js');
 const plugins = require('./plugins');
 
+const deleteDevOngoingFile = () => {
+    if (fs.existsSync('.DEV-ONGOING')) {
+        fs.unlinkSync('.DEV-ONGOING');
+        console.log('.DEV-ONGOING file has been deleted.');
+    }
+};
+
+// Listen for interrupt and termination signals
+process.on('SIGINT', deleteDevOngoingFile);
+process.on('SIGTERM', deleteDevOngoingFile);
+
 module.exports = merge(webpackBase, {
     devtool: 'eval',
     plugins: [
@@ -21,4 +32,3 @@ module.exports = merge(webpackBase, {
         }
     ]
 });
-

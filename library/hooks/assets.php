@@ -70,12 +70,15 @@ add_action(
 		/**
 		 * Main style
 		 */
-		wp_enqueue_style(
-			'luuptek_style',
-			asset_uri( 'styles/main.css' ),
-			[],
-			filemtime( get_theme_file_path( 'assets/dist/styles/main.css' ) )
-		);
+		// Check if the .DEV-ONGOING file exists in the theme root folder.
+		if ( ! file_exists( get_theme_file_path( '.DEV-ONGOING' ) ) ) {
+			wp_enqueue_style(
+				'luuptek_style',
+				asset_uri( 'styles/main.css' ),
+				[],
+				filemtime( get_theme_file_path( 'assets/dist/styles/main.css' ) )
+			);
+		}
 
 		/**
 		 * Move jquery to footer
