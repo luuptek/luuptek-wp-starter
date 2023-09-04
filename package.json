@@ -47,12 +47,13 @@
         "test": "eslint assets/scripts"
     },
     "engines": {
-        "node": "= 16.13.0"
+        "node": "= 19.9.0"
     },
     "dependencies": {
         "@fancyapps/fancybox": "^3.5.6",
         "bootstrap": "^4.5.3",
         "fastclick": "^1.0.6",
+        "fs": "^0.0.1-security",
         "hamburgers": "^1.2.1",
         "jquery": ">=3.4.0",
         "jquery-lazy": "^1.7.9",
