@@ -94,47 +94,39 @@ module.exports = {
 					}
 				]
 			},
-			{
-				test: /\.svg$/,
-				oneOf: [
-					{
-						exclude: path.resolve(__dirname, '../images'),
-						use: {
-							loader: 'file-loader',
-							options: {
-								name: 'vendor/[name].[ext]',
-							}
-						},
-					},
-					{
-						include: path.resolve(__dirname, '../images'),
-						use: {
-							loader: 'file-loader',
-							options: {
-								name: 'images/[name].[ext]',
-							}
-						},
-					},
-				],
-			},
-			{
-				test: /\.(png|jpe?g|gif)$/,
-				use: {
-					loader: 'file-loader',
-					options: {
-						name: 'images/[name].[ext]',
-					}
-				},
-			},
-			{
-				test: /\.(woff2?|ttf|eot|xml|json)(\?v=[a-z0-9]\.[a-z0-9]\.[a-z0-9])?$/,
-				use: {
-					loader: 'file-loader',
-					options: {
-						name: 'vendor/[name].[ext]',
-					}
-				},
-			},
+            {
+                test: /\.svg$/,
+                oneOf: [
+                    {
+                        exclude: path.resolve(__dirname, '../images'),
+                        type: 'asset/resource',
+                        generator: {
+                            filename: 'vendor/[name][ext]'
+                        }
+                    },
+                    {
+                        include: path.resolve(__dirname, '../images'),
+                        type: 'asset/resource',
+                        generator: {
+                            filename: 'images/[name][ext]'
+                        }
+                    },
+                ],
+            },
+            {
+                test: /\.(png|jpe?g|gif)$/,
+                type: 'asset/resource',
+                generator: {
+                    filename: 'images/[name][ext]'
+                }
+            },
+            {
+                test: /\.(woff2?|ttf|eot|xml|json)(\?v=[a-z0-9]\.[a-z0-9]\.[a-z0-9])?$/,
+                type: 'asset/resource',
+                generator: {
+                    filename: 'vendor/[name][ext]'
+                }
+            },
 		]
 	}
 };
