@@ -44,7 +44,8 @@
         "start": "webpack-dev-server --mode development --config assets/webpack/development.js --progress --hot",
         "prod": "webpack --mode production --config assets/webpack/production.js --progress",
         "config": "node ./.bin/config",
-        "test": "eslint assets/scripts"
+        "test": "eslint assets/scripts",
+        "prettier-check": "prettier --check 'assets/**/*.js' 'assets/**/*.scss'"
     },
     "engines": {
         "node": "= 19.9.0"
@@ -76,6 +77,7 @@
         "eslint-plugin-import": "^2.26.0",
         "eslint-webpack-plugin": "^3.2.0",
         "mini-css-extract-plugin": "^2.7.1",
+        "prettier": "^3.0.3",
         "sass-loader": "^13.2.0",
         "style-loader": "^3.3.1",
         "svgo": "^3.0.2",
