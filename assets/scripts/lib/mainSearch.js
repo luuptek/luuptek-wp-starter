@@ -7,13 +7,13 @@ export const mainSearchTogglers = () => {
     const mainSearchInput = $("#s");
     const mainNavLogo = $(".main-nav__nav-logo");
 
-    openBtn.on("click", e => {
+    openBtn.on("click", (e) => {
         e.preventDefault();
         body.addClass("main-search-opened");
         mainSearchInput.focus();
     });
 
-    closeBtn.on("click", e => {
+    closeBtn.on("click", (e) => {
         e.preventDefault();
         body.removeClass("main-search-opened");
         mainNavLogo.focus();

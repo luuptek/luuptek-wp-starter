@@ -1,7 +1,7 @@
 // import external dependencies
 
-import 'jquery';
-import 'fastclick';
+import "jquery";
+import "fastclick";
 
 // Slick available..
 //import 'slick-carousel';

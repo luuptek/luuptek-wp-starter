@@ -1,46 +1,46 @@
 .b-page-lifts-row {
-    @include make-row();
+  @include make-row();
 
-    @include media-breakpoint-up(md) {
-        grid-template-columns: repeat(2, 1fr);
-    }
+  @include media-breakpoint-up(md) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
-    @include media-breakpoint-up(lg) {
-        grid-template-columns: repeat(3, 1fr);
-    }
+  @include media-breakpoint-up(lg) {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .b-page-lift {
-    @include make-col-ready();
-    text-align: center;
-    margin-bottom: rem(15px);
+  @include make-col-ready();
+  text-align: center;
+  margin-bottom: rem(15px);
 }
 
 .b-page-lift__figure {
-    position: relative;
+  position: relative;
 }
 
 .b-page-lift__figcaption {
-    position: absolute;
-    text-align: center;
-    bottom: 0;
-    left: 0;
-    padding: rem(10px 15px);
-    background-color: $secondary;
-    color: color-yiq($secondary);
-    width: 100%;
-    font-family: $font-family--heading;
-    font-weight: 400;
-    font-size: rem(18px);
-    @include transition(background-color 0.2s ease);
+  position: absolute;
+  text-align: center;
+  bottom: 0;
+  left: 0;
+  padding: rem(10px 15px);
+  background-color: $secondary;
+  color: color-yiq($secondary);
+  width: 100%;
+  font-family: $font-family--heading;
+  font-weight: 400;
+  font-size: rem(18px);
+  @include transition(background-color 0.2s ease);
 }
 
 .b-page-lift__link {
-    &:hover,
-    &:focus,
-    &:active {
-        .b-page-lift__figcaption {
-            background-color: lighten($secondary, 7.5%);
-        }
+  &:hover,
+  &:focus,
+  &:active {
+    .b-page-lift__figcaption {
+      background-color: lighten($secondary, 7.5%);
     }
+  }
 }

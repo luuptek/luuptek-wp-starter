@@ -28,22 +28,21 @@
  */
 
 .editor-styles-wrapper {
+  @import "../styles/common/boot-up";
 
-    @import "../styles/common/boot-up";
+  // Components
+  @import "../styles/components/all";
 
-    // Components
-    @import "../styles/components/all";
+  // Layouts & pages
+  @import "../styles/layouts/all";
 
-    // Layouts & pages
-    @import "../styles/layouts/all";
-
-    // WP blocks / Gutenberg
-    @import "../styles/blocks/wp-core/wp-core-blocks";
-    @import "../styles/blocks/acf/acf-gb-blocks";
-    @import "../styles/blocks/blocks";
+  // WP blocks / Gutenberg
+  @import "../styles/blocks/wp-core/wp-core-blocks";
+  @import "../styles/blocks/acf/acf-gb-blocks";
+  @import "../styles/blocks/blocks";
 }
 
 // Disable links in ACF block when in preview mode
 .acf-block-preview a {
-    pointer-events: none !important;
+  pointer-events: none !important;
 }

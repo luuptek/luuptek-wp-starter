@@ -3,40 +3,40 @@
  */
 
 .gutenberg {
-    .wp-block-table {
-        &.alignfull {
-            margin-left: -15px;
-            margin-right: -15px;
-        }
+  .wp-block-table {
+    &.alignfull {
+      margin-left: -15px;
+      margin-right: -15px;
     }
+  }
 }
 
 .wp-block-table {
-    th,
-    td {
-        padding: rem(8px);
+  th,
+  td {
+    padding: rem(8px);
+  }
+
+  td {
+    border: 1px solid $primary;
+  }
+
+  tfoot {
+    opacity: 0.5;
+  }
+
+  &.is-style-stripes {
+    > table {
+      //Same as table-striped in bootstrap
+      tbody tr:nth-of-type(odd) {
+        background-color: $table-accent-bg;
+      }
+
+      border: none;
+
+      td {
+        border: none;
+      }
     }
-
-    td {
-        border: 1px solid $primary;
-    }
-
-    tfoot {
-        opacity: 0.5;
-    }
-
-    &.is-style-stripes {
-        > table {
-            //Same as table-striped in bootstrap
-            tbody tr:nth-of-type(odd) {
-                background-color: $table-accent-bg;
-            }
-
-            border: none;
-
-            td {
-                border: none;
-            }
-        }
-    }
+  }
 }

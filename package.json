@@ -45,7 +45,8 @@
         "prod": "webpack --mode production --config assets/webpack/production.js --progress",
         "config": "node ./.bin/config",
         "test": "eslint assets/scripts",
-        "prettier-check": "prettier --check 'assets/**/*.js' 'assets/**/*.scss'"
+        "prettier-check": "prettier --check 'assets/scripts/**/*.js' 'assets/admin/**/*.js' 'assets/styles/**/*.scss' 'assets/admin/**/*.scss'",
+        "prettify": "prettier --write 'assets/scripts/**/*.js' 'assets/admin/**/*.js' 'assets/styles/**/*.scss' 'assets/admin/**/*.scss'"
     },
     "engines": {
         "node": "= 19.9.0"

@@ -1,29 +1,29 @@
 // Inline code
 code {
-    word-wrap: break-word;
+  word-wrap: break-word;
 
-    // Streamline the style when inside anchors to avoid broken underline and more
-    a > & {
-        color: inherit;
-    }
+  // Streamline the style when inside anchors to avoid broken underline and more
+  a > & {
+    color: inherit;
+  }
 }
 
 // Blocks of code
 pre {
-    display: block;
-    font-size: rem(16px);
-    color: $body-color;
+  display: block;
+  font-size: rem(16px);
+  color: $body-color;
 
-    // Account for some code outputs that place code tags in pre tags
-    code {
-        @include font-size(inherit);
-        color: inherit;
-        word-break: normal;
-    }
+  // Account for some code outputs that place code tags in pre tags
+  code {
+    @include font-size(inherit);
+    color: inherit;
+    word-break: normal;
+  }
 }
 
 // Enable scrollable blocks of code
 .pre-scrollable {
-    max-height: rem(400px);
-    overflow-y: scroll;
+  max-height: rem(400px);
+  overflow-y: scroll;
 }

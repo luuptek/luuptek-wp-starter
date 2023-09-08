@@ -1,35 +1,35 @@
 @mixin create-button($button-color: $primary) {
-    display: inline-block;
-    font-family: $font-family--heading;
-    font-weight: $font-weight-bold;
+  display: inline-block;
+  font-family: $font-family--heading;
+  font-weight: $font-weight-bold;
+  color: color-yiq($button-color);
+  background-color: $button-color;
+  text-align: center;
+  text-decoration: if($link-decoration == none, null, none);
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  border: none;
+  padding: rem(10px 30px);
+  font-size: rem(18px);
+  border-radius: rem(20px);
+  line-height: 1.5;
+  @include transition($btn-transition);
+
+  @include hover() {
     color: color-yiq($button-color);
-    background-color: $button-color;
-    text-align: center;
-    text-decoration: if($link-decoration == none, null, none);
-    white-space: nowrap;
-    vertical-align: middle;
-    user-select: none;
-    border: none;
-    padding: rem(10px 30px);
-    font-size: rem(18px);
-    border-radius: rem(20px);
-    line-height: 1.5;
-    @include transition($btn-transition);
+    text-decoration: none;
+    background-color: darken($primary, 7%);
+  }
 
-    @include hover() {
-        color: color-yiq($button-color);
-        text-decoration: none;
-        background-color: darken($primary, 7%);
-    }
+  &:focus {
+    outline: 0;
+  }
 
-    &:focus {
-        outline: 0;
-    }
-
-    // Disabled comes first so active can properly restyle
-    &.disabled,
-    &:disabled {
-        opacity: 0.8;
-        @include box-shadow(none);
-    }
+  // Disabled comes first so active can properly restyle
+  &.disabled,
+  &:disabled {
+    opacity: 0.8;
+    @include box-shadow(none);
+  }
 }

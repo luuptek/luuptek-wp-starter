@@ -1,28 +1,28 @@
 .pagination {
-    margin-top: rem(30px);
+  margin-top: rem(30px);
 
-    a {
-        &.page-numbers {
-            padding: rem(8px 16px);
-            background-color: $primary;
-            color: #fff;
-            text-decoration: none;
-            font-size: rem(16px);
+  a {
+    &.page-numbers {
+      padding: rem(8px 16px);
+      background-color: $primary;
+      color: #fff;
+      text-decoration: none;
+      font-size: rem(16px);
 
-            &:hover,
-            &:focus,
-            &:active {
-                background-color: lighten($primary, 15%);
-            }
+      &:hover,
+      &:focus,
+      &:active {
+        background-color: lighten($primary, 15%);
+      }
 
-            &.current {
-                color: #000;
-                background-color: transparent;
-            }
-        }
+      &.current {
+        color: #000;
+        background-color: transparent;
+      }
     }
+  }
 
-    .page-numbers {
-        padding: rem(8px 16px);
-    }
+  .page-numbers {
+    padding: rem(8px 16px);
+  }
 }

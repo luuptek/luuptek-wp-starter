@@ -8,16 +8,16 @@ h3,
 h4,
 h5,
 h6 {
-    margin-bottom: $headings-margin-bottom;
-    font-family: $headings-font-family;
-    font-weight: $headings-font-weight;
-    line-height: $headings-line-height;
-    color: inherit;
+  margin-bottom: $headings-margin-bottom;
+  font-family: $headings-font-family;
+  font-weight: $headings-font-weight;
+  line-height: $headings-line-height;
+  color: inherit;
 }
 
 .lead {
-    font-size: clamp(rem(16px), 2vw, rem(18px));
-    font-weight: 700;
+  font-size: clamp(rem(16px), 2vw, rem(18px));
+  font-weight: 700;
 }
 
 //
@@ -25,10 +25,10 @@ h6 {
 //
 
 hr {
-    margin-top: rem(30px);
-    margin-bottom: rem(30px);
-    border: 0;
-    border-top: 2px solid #ccc;
+  margin-top: rem(30px);
+  margin-bottom: rem(30px);
+  border: 0;
+  border-top: 2px solid #ccc;
 }
 
 //
@@ -36,65 +36,65 @@ hr {
 //
 
 small {
-    font-size: clamp(rem(13px), 2vw, rem(14px));
-    font-weight: $font-weight-normal;
+  font-size: clamp(rem(13px), 2vw, rem(14px));
+  font-weight: $font-weight-normal;
 }
 
 mark {
-    padding: rem(4px);
-    background-color: #fff;
+  padding: rem(4px);
+  background-color: #fff;
 }
 
 // Blockquotes
 .blockquote {
-    margin-bottom: rem(16px);
-    font-size: clamp(rem(18px), 3vw, rem(20px));
+  margin-bottom: rem(16px);
+  font-size: clamp(rem(18px), 3vw, rem(20px));
 }
 
 //
 // Font sizes
 
 h1 {
-    font-size: clamp(rem(34px), 3vw, rem(44px));
+  font-size: clamp(rem(34px), 3vw, rem(44px));
 }
 
 h2 {
-    font-size: clamp(rem(30px), 3vw, rem(38px));
+  font-size: clamp(rem(30px), 3vw, rem(38px));
 }
 
 h3 {
-    font-size: clamp(rem(27px), 3vw, rem(34px));
+  font-size: clamp(rem(27px), 3vw, rem(34px));
 }
 
 h4 {
-    font-size: clamp(rem(25px), 3vw, rem(30px));
+  font-size: clamp(rem(25px), 3vw, rem(30px));
 }
 
 h5 {
-    font-size: clamp(rem(22px), 3vw, rem(25px));
+  font-size: clamp(rem(22px), 3vw, rem(25px));
 }
 
 h6 {
-    font-size: clamp(rem(18px), 3vw, rem(22px));
+  font-size: clamp(rem(18px), 3vw, rem(22px));
 }
 
 // Gutenberg margins
 
 .gutenberg {
-    > h2 {
-        margin-top: rem(35px);
-        margin-bottom: rem(16px);
-    }
+  > h2 {
+    margin-top: rem(35px);
+    margin-bottom: rem(16px);
+  }
 
-    > h3 {
-        margin-top: rem(30px);
-        margin-bottom: rem(16px);
-    }
+  > h3 {
+    margin-top: rem(30px);
+    margin-bottom: rem(16px);
+  }
 
-    > h4,
-    > h5,
-    > h6 {
-        margin-top: rem(25px);
-        margin-bottom: rem(16px);
-    }
+  > h4,
+  > h5,
+  > h6 {
+    margin-top: rem(25px);
+    margin-bottom: rem(16px);
+  }
 }

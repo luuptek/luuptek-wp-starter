@@ -5,16 +5,16 @@
 
 // Gutenberg stuff
 $opacitys: (
-    "10": 0.1,
-    "20": 0.2,
-    "30": 0.3,
-    "40": 0.4,
-    "50": 0.5,
-    "60": 0.6,
-    "70": 0.7,
-    "80": 0.8,
-    "90": 0.9,
-    "100": 1,
+  "10": 0.1,
+  "20": 0.2,
+  "30": 0.3,
+  "40": 0.4,
+  "50": 0.5,
+  "60": 0.6,
+  "70": 0.7,
+  "80": 0.8,
+  "90": 0.9,
+  "100": 1,
 );
 
 //Brand colors
@@ -62,10 +62,10 @@ $main-nav-dropdown-theme-color: $primary;
 // Gutenberg color options
 // -- see editor-color-palette in functions.php
 $page-theme-colors: (
-    "theme-primary": $primary,
-    "theme-secondary": $secondary,
-    "solid-black": #000,
-    "solid-white": #fff,
+  "theme-primary": $primary,
+  "theme-secondary": $secondary,
+  "solid-black": #000,
+  "solid-white": #fff,
 );
 
 // Body
@@ -90,7 +90,6 @@ $link-decoration: none !default;
 $link-hover-color: darken($link-color, 15%) !default;
 $link-hover-decoration: underline !default;
 
-
 // Paragraphs
 //
 // Style p element.
@@ -103,12 +102,12 @@ $paragraph-margin-bottom: 16px !default;
 // adapting to different screen sizes, for use in media queries.
 
 $grid-breakpoints: (
-    xs: 0,
-    sm: 576px,
-    md: 768px,
-    lg: 992px,
-    xl: 1200px,
-    xxl: 1400px,
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
 ) !default;
 
 //@include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
@@ -119,11 +118,11 @@ $grid-breakpoints: (
 // Define the maximum width of `.container` for different screen sizes.
 
 $container-max-widths: (
-    sm: 540px,
-    md: 720px,
-    lg: 960px,
-    xl: 1140px,
-    xxl: 1360px
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1360px,
 ) !default;
 
 //@include _assert-ascending($container-max-widths, "$container-max-widths");
@@ -134,12 +133,11 @@ $container-max-widths: (
 
 // stylelint-disable value-keyword-case
 $font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+  "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+  "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 $font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
-    "Liberation Mono", "Courier New", monospace !default;
+  "Liberation Mono", "Courier New", monospace !default;
 $font-family-base: $font-family--body !default;
-
 
 $font-weight-normal: 400 !default;
 $font-weight-bold: 700 !default;
@@ -154,8 +152,11 @@ $headings-font-weight: 700 !default;
 $headings-line-height: 1.2 !default;
 
 // Buttons
-$btn-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
-border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out !default;
+$btn-transition:
+  color 0.15s ease-in-out,
+  background-color 0.15s ease-in-out,
+  border-color 0.15s ease-in-out,
+  box-shadow 0.15s ease-in-out !default;
 
 // Tables
 $table-accent-bg: rgba($black, 0.05) !default;

@@ -1,9 +1,9 @@
 .figure {
-    // Ensures the caption's text aligns with the image.
-    display: inline-block;
+  // Ensures the caption's text aligns with the image.
+  display: inline-block;
 }
 
 .figure-caption {
-    font-size: clamp(rem(14px), 2vw, rem(15px));
-    color: $body-color;
+  font-size: clamp(rem(14px), 2vw, rem(15px));
+  color: $body-color;
 }

@@ -7,57 +7,57 @@ $lg-spacer-multiplier: 1.25;
 $xl-spacer-multiplier: 1.4;
 
 .wp-block-spacer {
+  &.is-style-responsive-large {
+    height: $large-spacer !important;
+  }
+
+  &.is-style-responsive-medium {
+    height: $medium-spacer !important;
+  }
+
+  &.is-style-responsive-small {
+    height: $small-spacer !important;
+  }
+
+  @include media-breakpoint-up(md) {
     &.is-style-responsive-large {
-        height: $large-spacer !important;
+      height: $large-spacer * $md-spacer-multiplier !important;
     }
 
     &.is-style-responsive-medium {
-        height: $medium-spacer !important;
+      height: $medium-spacer * $md-spacer-multiplier !important;
     }
 
     &.is-style-responsive-small {
-        height: $small-spacer !important;
+      height: $small-spacer * $md-spacer-multiplier !important;
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    &.is-style-responsive-large {
+      height: $large-spacer * $lg-spacer-multiplier !important;
     }
 
-    @include media-breakpoint-up(md) {
-        &.is-style-responsive-large {
-            height: $large-spacer * $md-spacer-multiplier !important;
-        }
-
-        &.is-style-responsive-medium {
-            height: $medium-spacer * $md-spacer-multiplier !important;
-        }
-
-        &.is-style-responsive-small {
-            height: $small-spacer * $md-spacer-multiplier !important;
-        }
+    &.is-style-responsive-medium {
+      height: $medium-spacer * $lg-spacer-multiplier !important;
     }
 
-    @include media-breakpoint-up(lg) {
-        &.is-style-responsive-large {
-            height: $large-spacer * $lg-spacer-multiplier !important;
-        }
+    &.is-style-responsive-small {
+      height: $small-spacer * $lg-spacer-multiplier !important;
+    }
+  }
 
-        &.is-style-responsive-medium {
-            height: $medium-spacer * $lg-spacer-multiplier !important;
-        }
-
-        &.is-style-responsive-small {
-            height: $small-spacer * $lg-spacer-multiplier !important;
-        }
+  @include media-breakpoint-up(xl) {
+    &.is-style-responsive-large {
+      height: $large-spacer * $xl-spacer-multiplier !important;
     }
 
-    @include media-breakpoint-up(xl) {
-        &.is-style-responsive-large {
-            height: $large-spacer * $xl-spacer-multiplier !important;
-        }
-
-        &.is-style-responsive-medium {
-            height: $medium-spacer * $xl-spacer-multiplier !important;
-        }
-
-        &.is-style-responsive-small {
-            height: $small-spacer * $xl-spacer-multiplier !important;
-        }
+    &.is-style-responsive-medium {
+      height: $medium-spacer * $xl-spacer-multiplier !important;
     }
+
+    &.is-style-responsive-small {
+      height: $small-spacer * $xl-spacer-multiplier !important;
+    }
+  }
 }

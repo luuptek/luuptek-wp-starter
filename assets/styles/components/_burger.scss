@@ -21,47 +21,47 @@ $hamburger-active-hover-filter: $hamburger-hover-filter !default;
 // Types (Remove or comment out what you don’t need)
 // ==================================================
 $hamburger-types: (
-    //3dx,
-        //3dx-r,
-        //3dy,
-        //3dy-r,
-        //3dxy,
-        //3dxy-r,
-        //arrow,
-        //arrow-r,
-        //arrowalt,
-        //arrowalt-r,
-        //arrowturn,
-        //arrowturn-r,
-        //boring,
-        //collapse,
-        //collapse-r,
-        elastic,
-    //elastic-r,
-        //emphatic,
-        //emphatic-r,
-        //minus,
-        //slider,
-        //slider-r,
-        //spin,
-        //spin-r,
-        //spring,
-        //spring-r,
-        //stand,
-        //stand-r,
-        //squeeze,
-        //vortex,
-        //vortex-r
+  //3dx,
+  //3dx-r,
+  //3dy,
+  //3dy-r,
+  //3dxy,
+  //3dxy-r,
+  //arrow,
+  //arrow-r,
+  //arrowalt,
+  //arrowalt-r,
+  //arrowturn,
+  //arrowturn-r,
+  //boring,
+  //collapse,
+  //collapse-r,
+  elastic,
+  //elastic-r,
+  //emphatic,
+  //emphatic-r,
+  //minus,
+  //slider,
+  //slider-r,
+  //spin,
+  //spin-r,
+  //spring,
+  //spring-r,
+  //stand,
+  //stand-r,
+  //squeeze,
+  //vortex,
+  //vortex-r
 ) !default;
 
-@import '~hamburgers/_sass/hamburgers/hamburgers';
+@import "~hamburgers/_sass/hamburgers/hamburgers";
 
 //Overriding to fit better vertical align
 
 .hamburger {
-    line-height: 1;
+  line-height: 1;
 }
 
 .hamburger-box {
-    display: block;
+  display: block;
 }

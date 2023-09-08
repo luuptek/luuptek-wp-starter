@@ -4,7 +4,7 @@ export const toggleAria = (el, ariaLabel) => {
     });
 };
 
-export const toggleTabIndex = el => {
+export const toggleTabIndex = (el) => {
     el.attr("tabindex", (i, attr) => {
         return attr === "-1" ? "0" : "-1";
     });

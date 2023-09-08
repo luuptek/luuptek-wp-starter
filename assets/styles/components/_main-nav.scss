@@ -1,72 +1,72 @@
 .main-nav {
-    background-color: $main-nav-bg-color;
+  background-color: $main-nav-bg-color;
 
-    &__nav-logo {
-        height: rem(30px);
+  &__nav-logo {
+    height: rem(30px);
 
-        @include media-breakpoint-up(lg) {
-            height: rem(40px);
-        }
+    @include media-breakpoint-up(lg) {
+      height: rem(40px);
+    }
+  }
+
+  &__brand-link {
+    line-height: 1;
+    min-width: rem(230px);
+  }
+
+  &__mobile-menu-toggler {
+    margin-left: auto;
+
+    @include media-breakpoint-up($main-menu-breakpoint) {
+      display: none;
+    }
+  }
+
+  &__container {
+    max-width: rem($main-nav-container-width);
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: rem(15px);
+
+    @include media-breakpoint-up($main-menu-breakpoint) {
+      flex-wrap: nowrap;
+    }
+  }
+
+  &__main-menu-wrapper {
+    order: 4;
+    flex-basis: 100%;
+    padding-top: rem(15px);
+    display: none;
+
+    &.main-nav__main-menu-wrapper--show {
+      display: block;
     }
 
-    &__brand-link {
-        line-height: 1;
-        min-width: rem(230px);
+    @include media-breakpoint-up($main-menu-breakpoint) {
+      order: 2;
+      padding-top: 0;
+      display: block;
     }
+  }
 
-    &__mobile-menu-toggler {
-        margin-left: auto;
+  &__search {
+    border: none;
+    background-color: transparent;
+    margin-left: rem(20px);
+    order: 3;
 
-        @include media-breakpoint-up($main-menu-breakpoint) {
-            display: none;
-        }
+    > svg {
+      height: rem(30px);
+      width: auto;
+
+      path {
+        fill: color-yiq($main-nav-bg-color);
+      }
     }
-
-    &__container {
-        max-width: rem($main-nav-container-width);
-        margin-right: auto;
-        margin-left: auto;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        padding: rem(15px);
-
-        @include media-breakpoint-up($main-menu-breakpoint) {
-            flex-wrap: nowrap;
-        }
-    }
-
-    &__main-menu-wrapper {
-        order: 4;
-        flex-basis: 100%;
-        padding-top: rem(15px);
-        display: none;
-
-        &.main-nav__main-menu-wrapper--show {
-            display: block;
-        }
-
-        @include media-breakpoint-up($main-menu-breakpoint) {
-            order: 2;
-            padding-top: 0;
-            display: block;
-        }
-    }
-
-    &__search {
-        border: none;
-        background-color: transparent;
-        margin-left: rem(20px);
-        order: 3;
-
-        > svg {
-            height: rem(30px);
-            width: auto;
-
-            path {
-                fill: color-yiq($main-nav-bg-color);
-            }
-        }
-    }
+  }
 }

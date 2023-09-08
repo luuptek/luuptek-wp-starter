@@ -9,7 +9,7 @@ import { toggleAria } from "./toggleStates";
 const mainNav = $("#mainNav");
 
 const toggleBurger = () => {
-    $(".main-nav__mobile-menu-toggler").on("click", e => {
+    $(".main-nav__mobile-menu-toggler").on("click", (e) => {
         e.preventDefault();
         const target = $(e.currentTarget);
         toggleAria(target, "aria-expanded");
@@ -24,10 +24,8 @@ const subMenuToggler = () => {
     button.on("click", (e) => {
         e.preventDefault();
         const target = $(e.currentTarget);
-        toggleAria(target, 'aria-expanded');
-        const closestLi = target.closest(
-            "li.primary-menu__item--has-children"
-        );
+        toggleAria(target, "aria-expanded");
+        const closestLi = target.closest("li.primary-menu__item--has-children");
         closestLi.toggleClass("sub-menu-opened");
     });
 };
@@ -35,7 +33,7 @@ const subMenuToggler = () => {
 const escCloser = () => {
     const mainNav = $(".primary-menu-lvl-1");
     const mainNavItem = $(
-        ".primary-menu-lvl-1__item.primary-menu__item--has-children"
+        ".primary-menu-lvl-1__item.primary-menu__item--has-children",
     );
     $(document).keyup((e) => {
         if (e.keyCode === 27) {
@@ -63,7 +61,7 @@ const escCloser = () => {
             mainNavItem
                 .find(".primary-menu-lvl-2")
                 .removeClass("primary-menu-lvl-2--hidden");
-        }
+        },
     );
 };
 

@@ -3,25 +3,25 @@
  */
 
 .gutenberg {
-    .wp-block-cover {
-        &.alignfull {
-            margin-left: -15px;
-            margin-right: -15px;
-        }
+  .wp-block-cover {
+    &.alignfull {
+      margin-left: -15px;
+      margin-right: -15px;
     }
+  }
 }
 
 .wp-block-cover {
-    width: auto;
+  width: auto;
 
-    .wp-block-cover__inner-container {
-        padding: rem(0 15px);
-        margin: 0 auto;
+  .wp-block-cover__inner-container {
+    padding: rem(0 15px);
+    margin: 0 auto;
 
-        @each $name, $width in $container-max-widths {
-            @include media-breakpoint-up(#{$name}) {
-                max-width: $width;
-            }
-        }
+    @each $name, $width in $container-max-widths {
+      @include media-breakpoint-up(#{$name}) {
+        max-width: $width;
+      }
     }
+  }
 }

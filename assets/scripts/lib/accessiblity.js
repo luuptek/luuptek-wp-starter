@@ -6,7 +6,7 @@ import $ from "jquery";
 const body = $("body");
 
 const escCloser = () => {
-    $(document).keyup(e => {
+    $(document).keyup((e) => {
         // escape key maps to keycode `27`
         if (e.keyCode === 27) {
             $(".main-nav__main-menu")

@@ -1,35 +1,35 @@
 .gb-page-lifts {
-    margin: rem(32px auto);
+  margin: rem(32px auto);
 
-    &.has-background {
-        padding: rem(30px 15px);
+  &.has-background {
+    padding: rem(30px 15px);
+  }
+
+  &__container {
+    @include luuptek-create-container($align-wide-container-width, 0);
+  }
+
+  &.gb-page-lifts--no-top-padding {
+    padding: rem(0 0 30px 0);
+  }
+
+  &__row {
+    @include make-row();
+
+    @include media-breakpoint-up(md) {
+      grid-template-columns: repeat(2, 1fr);
     }
 
-    &__container {
-        @include luuptek-create-container($align-wide-container-width, 0);
+    @include media-breakpoint-up(lg) {
+      grid-template-columns: repeat(3, 1fr);
     }
+  }
 
-    &.gb-page-lifts--no-top-padding {
-        padding: rem(0 0 30px 0);
+  &__title {
+    @include make-heading(21px, 0, 32px);
+
+    &.gb-page-lifts__title--h1 {
+      @include make-heading($h1-base-font-size, 0, 32px);
     }
-
-    &__row {
-        @include make-row();
-
-        @include media-breakpoint-up(md) {
-            grid-template-columns: repeat(2, 1fr);
-        }
-
-        @include media-breakpoint-up(lg) {
-            grid-template-columns: repeat(3, 1fr);
-        }
-    }
-
-    &__title {
-        @include make-heading(21px, 0, 32px);
-
-        &.gb-page-lifts__title--h1 {
-            @include make-heading($h1-base-font-size, 0, 32px);
-        }
-    }
+  }
 }

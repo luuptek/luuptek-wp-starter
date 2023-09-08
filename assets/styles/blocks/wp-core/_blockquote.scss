@@ -1,21 +1,21 @@
 .wp-block-quote {
-    &.is-style-default {
-        border-left: rem(25px) solid $primary;
-        margin: rem(25px) auto;
-        padding-left: rem(25px);
-    }
+  &.is-style-default {
+    border-left: rem(25px) solid $primary;
+    margin: rem(25px) auto;
+    padding-left: rem(25px);
+  }
 
-    > p {
-        font-size: rem(20px);
-    }
+  > p {
+    font-size: rem(20px);
+  }
 
-    > cite {
-        font-size: rem(14px);
-        opacity: 0.8;
-    }
+  > cite {
+    font-size: rem(14px);
+    opacity: 0.8;
+  }
 }
 
 .wp-block-pullquote {
-    border-top: rem(8px) solid $primary;
-    border-bottom: rem(8px) solid $primary;
+  border-top: rem(8px) solid $primary;
+  border-bottom: rem(8px) solid $primary;
 }
