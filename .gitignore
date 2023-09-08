@@ -16,3 +16,6 @@ bower_components
 
 # log-files
 *.log
+
+# dev ongoing file
+.DEV-ONGOING

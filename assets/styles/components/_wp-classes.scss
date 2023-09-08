@@ -32,11 +32,6 @@
     }
 }
 
-// Captions
-.wp-caption {
-    @extend .img-thumbnail;
-}
-
 //Avoiding overflow
 img,
 figure {
