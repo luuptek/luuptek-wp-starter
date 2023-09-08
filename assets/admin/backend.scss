@@ -28,35 +28,22 @@
  */
 
 .editor-styles-wrapper {
-  @each $name, $color in $page-theme-colors {
 
-    .has-text-color, .has-inline-color {
-      &.has-#{$name}-color {
-        color: $color;
+    @import "../styles/common/boot-up";
 
-        a {
-          color: $color;
+    // Components
+    @import "../styles/components/all";
 
-          &:hover, &:focus, &:active {
-            color: $color;
-          }
-        }
-      }
-    }
+    // Layouts & pages
+    @import "../styles/layouts/all";
 
-    .has-background, .wp-block-cover {
-      &.has-#{$name}-background-color {
-        background-color: $color;
-      }
-    }
-  }
+    // WP blocks / Gutenberg
+    @import "../styles/blocks/wp-core/wp-core-blocks";
+    @import "../styles/blocks/acf/acf-gb-blocks";
+    @import "../styles/blocks/blocks";
+}
 
-  @import "../styles/blocks/wp-core/button";
-  @import "../styles/blocks/wp-core/spacer";
-  @import "../styles/blocks/wp-core/blockquote";
-
-  @import "../styles/components/post-lift";
-
-  @import "../styles/blocks/acf/acf-gb-blocks";
-  @import "../styles/blocks/blocks";
+// Disable links in ACF block when in preview mode
+.acf-block-preview a {
+    pointer-events: none !important;
 }

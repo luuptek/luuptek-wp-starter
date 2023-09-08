@@ -52,7 +52,7 @@ section {
 body {
     margin: 0; // 1
     font-family: $font-family-base;
-    @include font-size($font-size-base);
+    font-size: clamp(rem(16px), 2vw, rem(18px));
     font-weight: $font-weight-base;
     line-height: $line-height-base;
     color: $body-color;
@@ -100,7 +100,7 @@ h4,
 h5,
 h6 {
     margin-top: 0;
-    margin-bottom: $headings-margin-bottom;
+    margin-bottom: rem($headings-margin-bottom);
 }
 
 // Reset margins on paragraphs
@@ -109,7 +109,7 @@ h6 {
 // bottom margin to use `rem` units instead of `em`.
 p {
     margin-top: 0;
-    margin-bottom: $paragraph-margin-bottom;
+    margin-bottom: rem($paragraph-margin-bottom);
 }
 
 // Abbreviations
@@ -151,7 +151,7 @@ ul ol {
 }
 
 dt {
-    font-weight: $dt-font-weight;
+    font-weight: 700;
 }
 
 dd {
@@ -169,7 +169,7 @@ strong {
 }
 
 small {
-    @include font-size(80%); // Add the correct font size in all browsers
+    font-size: clamp(rem(12px), 2vw, rem(13px));
 }
 
 //
@@ -180,7 +180,7 @@ small {
 sub,
 sup {
     position: relative;
-    @include font-size(75%);
+    font-size: rem(12px);
     line-height: 0;
     vertical-align: baseline;
 }
@@ -231,9 +231,7 @@ code,
 kbd,
 samp {
     font-family: $font-family-monospace;
-    @include font-size(
-        1em
-    ); // Correct the odd `em` font sizing in all browsers.
+    font-size: rem(16px);
 }
 
 pre {
@@ -254,7 +252,7 @@ pre {
 
 figure {
     // Apply a consistent margin strategy (matches our type styles).
-    margin: 0 0 1rem;
+    margin: rem(0 0 16px);
 }
 
 //
@@ -282,9 +280,9 @@ table {
 }
 
 caption {
-    padding-top: $table-cell-padding;
-    padding-bottom: $table-cell-padding;
-    color: $table-caption-color;
+    padding-top: rem(14px);
+    padding-bottom: rem(14px);
+    color: #333;
     text-align: left;
     caption-side: bottom;
 }
@@ -294,7 +292,7 @@ caption {
 // 3. Fix alignment for Safari
 
 th {
-    font-weight: $table-th-font-weight; // 1
+    font-weight: 700; // 1
     text-align: inherit; // 2
     text-align: -webkit-match-parent; // 3
 }
@@ -306,7 +304,7 @@ th {
 label {
     // Allow labels to use `margin` for spacing.
     display: inline-block;
-    margin-bottom: $label-margin-bottom;
+    margin-bottom: rem(16px);
 }
 
 // Remove the default `border-radius` that macOS Chrome adds.
@@ -333,7 +331,7 @@ optgroup,
 textarea {
     margin: 0; // Remove the margin in Firefox and Safari
     font-family: inherit;
-    @include font-size(inherit);
+    font-size: inherit;
     line-height: inherit;
 }
 
@@ -371,15 +369,12 @@ button,
     -webkit-appearance: button; // 2
 }
 
-// Opinionated: add "hand" cursor to non-disabled button elements.
-@if $enable-pointer-cursor-for-buttons {
-    button,
-    [type="button"],
-    [type="reset"],
-    [type="submit"] {
-        &:not(:disabled) {
-            cursor: pointer;
-        }
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+    &:not(:disabled) {
+        cursor: pointer;
     }
 }
 
@@ -425,7 +420,7 @@ legend {
     max-width: 100%; // 1
     padding: 0;
     margin-bottom: 0.5rem;
-    @include font-size(1.5rem);
+    font-size: clamp(rem(16px), 2vw, rem(19px));
     line-height: inherit;
     color: inherit; // 2
     white-space: normal; // 1

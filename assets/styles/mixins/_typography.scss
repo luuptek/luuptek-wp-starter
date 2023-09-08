@@ -28,7 +28,7 @@
 
 @mixin add-block-text-sizes() {
     .has-small-font-size {
-        font-size: rem(14px);
+        font-size: clamp(rem(13px), 2vw, rem(14px));
 
         &.has-drop-cap {
             &:first-letter {
@@ -40,7 +40,7 @@
     }
 
     .has-normal-font-size {
-        font-size: rem(16px);
+        font-size: clamp(rem(16px), 2vw, rem(18px));
 
         &.has-drop-cap {
             &:first-letter {
@@ -52,7 +52,7 @@
     }
 
     .has-medium-font-size {
-        font-size: rem(22px);
+        font-size: clamp(rem(17px), 2vw, rem(19px));
 
         &.has-drop-cap {
             &:first-letter {
@@ -64,7 +64,7 @@
     }
 
     .has-large-font-size {
-        font-size: rem(32px);
+        font-size: clamp(rem(20px), 2vw, rem(25px));
 
         &.has-drop-cap {
             &:first-letter {
@@ -76,7 +76,7 @@
     }
 
     .has-huge-font-size {
-        font-size: rem(40px);
+        font-size: clamp(rem(24px), 2vw, rem(30px));
 
         &.has-drop-cap {
             &:first-letter {
@@ -84,10 +84,6 @@
                 font-size: rem(80px);
                 padding: rem(8px);
             }
-        }
-
-        @include media-breakpoint-up(lg) {
-            font-size: rem(50px);
         }
     }
 }
