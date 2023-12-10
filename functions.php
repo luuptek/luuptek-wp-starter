@@ -162,26 +162,6 @@ add_filter(
 );
 
 /**
- * Move WP-templates to templates-folder for cleaner experience on dev
- */
-add_filter(
-	'stylesheet',
-	function ( $stylesheet ) {
-		return dirname( $stylesheet );
-	}
-);
-
-add_action(
-	'after_switch_theme',
-	function () {
-		$stylesheet = get_option( 'stylesheet' );
-		if ( basename( $stylesheet ) !== 'templates' ) {
-			update_option( 'stylesheet', $stylesheet . '/templates' );
-		}
-	}
-);
-
-/**
  * Register local ACF-json
  */
 add_filter(
