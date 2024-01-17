@@ -111,9 +111,14 @@
 //.ginput_container {
 //  position: relative;
 //
-//  > input,
+//  > input[type="text"],
+//  > input[type="email"],
 //  > select {
-//	@extend .luuptek-form-control;
+//    @extend .luuptek-form-control;
+//  }
+//
+//  > input[type="checkbox"] {
+//    margin-right: rem(15px);
 //  }
 //
 //  > select {
