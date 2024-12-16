@@ -31,7 +31,7 @@ class BEM_Nav_Walker extends Walker_Nav_Menu {
 
 		if ( $this->sub_menu_toggles ) {
 			$aria_label = pll_esc_html__( 'Avaa alavalikko' );
-			$output     .= "{$n}{$indent}<button class=\"{$menu_class}-lvl-{$parent_lvl}__sub-menu-toggle sub-menu-toggle\" data-${menu_name}-toggle=\"sub-menu\" aria-label=\"${aria_label}\" aria-expanded=\"false\">${icon}</button>{$n}";
+			$output     .= "{$n}{$indent}<button class=\"{$menu_class}-lvl-{$parent_lvl}__sub-menu-toggle sub-menu-toggle\" data-{$menu_name}-toggle=\"sub-menu\" aria-label=\"{$aria_label}\" aria-expanded=\"false\">{$icon}</button>{$n}";
 		}
 
 		$output .= "{$n}{$indent}<ul class=\"{$menu_class}-lvl-{$child_lvl} {$menu_class}-lvl\">{$n}";
